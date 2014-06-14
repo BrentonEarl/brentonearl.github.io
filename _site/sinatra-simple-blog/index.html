@@ -116,7 +116,8 @@
     <span class="n">gem</span> <span class="s2">&quot;rspec&quot;</span>
     <span class="n">gem</span> <span class="s2">&quot;cucumber&quot;</span>
     <span class="n">gem</span> <span class="s2">&quot;capybara&quot;</span>
-<span class="k">end</span></code></pre></div>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p><em>(More on rspec, cucumber and capybara in another post.)</em></p>
@@ -145,7 +146,8 @@
 
     <span class="n">validates_uniqueness_of</span> <span class="ss">:title</span><span class="p">,</span> <span class="ss">:body</span><span class="p">,</span> <span class="ss">:permalink</span>
 <span class="k">end</span>
-<span class="no">DataMapper</span><span class="o">.</span><span class="n">auto_upgrade!</span></code></pre></div>
+<span class="no">DataMapper</span><span class="o">.</span><span class="n">auto_upgrade!</span>
+</code></pre></div>
 
 
 <p><em>(The columns of each table obviously should have more structure to guarantee the correct data is inserted.  Simplicity was important so I left the defaults that Data mapper sets for strings and text fields.  The created_at column should use the DateTime property, but I havent figured out how to make Data Mapper format the date as I wanted.)</em></p>
@@ -182,7 +184,8 @@
   <span class="n">error</span> <span class="k">do</span>
     <span class="n">erb</span> <span class="ss">:&#39;505&#39;</span>
   <span class="k">end</span> 
-<span class="k">end</span></code></pre></div>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>The search page reads all records in the database and pulls out any news article by title and body that matches the keyword in the query.</p>
@@ -197,7 +200,8 @@
 
 <span class="c1">#\ -p 4567</span>
 
-<span class="n">run</span> <span class="no">ExitStatusOne</span></code></pre></div>
+<span class="n">run</span> <span class="no">ExitStatusOne</span>
+</code></pre></div>
 
 
 <h4>Views</h4>

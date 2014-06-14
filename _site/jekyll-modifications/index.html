@@ -117,7 +117,8 @@
 {% if paginator.next_page %}
     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/page{{ paginator.next_page }}&quot;</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;</span>
 {% endif %}
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
 
 
 <p>You will notice how exceedingly simple it is to add functionality to an entire web site with just a few lines of code.</p>
@@ -134,14 +135,16 @@
 
 <p>Here is what I added to the Apache2 virtual host configuration:</p>
 
-<div class="highlight"><pre><code class="bash">ErrorDocument 404 /404.html</code></pre></div>
+<div class="highlight"><pre><code class="bash">ErrorDocument 404 /404.html
+</code></pre></div>
 
 
 <p>After that I added the following to the default layout template:</p>
 
 <div class="highlight"><pre><code class="html">{% if page.url == 404.html  %}
     <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;refresh&quot;</span> <span class="na">content=</span><span class="s">&quot;10; url=/&quot;</span><span class="nt">&gt;</span>
-{% endif %}</code></pre></div>
+{% endif %}
+</code></pre></div>
 
 
 <p>Once that was in place, non-existant URLs would be sent to the 404.html page and then the meta tag would refresh the page and send visitors to the index.</p>

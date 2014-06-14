@@ -137,7 +137,8 @@ iptables -A FORWARD -m limit --limit 5/min -j LOG --log-prefix <span class="s2">
 
 <span class="c"># Drop all other traffic</span>
 iptables -A INPUT -j DROP
-iptables -A FORWARD -j DROP</code></pre></div>
+iptables -A FORWARD -j DROP
+</code></pre></div>
 
 
 <h4>Intrusion Detection and Log Analysis</h4>
@@ -166,7 +167,8 @@ DANGER_LEVEL5               10000<span class="p">;</span>
 
 ENABLE_AUTO_IDS             Y<span class="p">;</span>
 AUTO_IDS_DANGER_LEVEL       2<span class="p">;</span> <span class="c"># Or your desired danger level</span>
-IPTABLES_BLOCK_METHOD       Y<span class="p">;</span></code></pre></div>
+IPTABLES_BLOCK_METHOD       Y<span class="p">;</span>
+</code></pre></div>
 
 
 <p>The rest of the options in the psad.conf should be left at defaults unless you have some sort of specific configuration.</p>
@@ -189,7 +191,8 @@ IPTABLES_BLOCK_METHOD       Y<span class="p">;</span></code></pre></div>
 <span class="nv">port</span>    <span class="o">=</span> 3000
 <span class="nv">filter</span>  <span class="o">=</span> sshd
 <span class="nv">logpath</span>  <span class="o">=</span> /var/log/auth.log
-<span class="nv">maxretry</span> <span class="o">=</span> 1</code></pre></div>
+<span class="nv">maxretry</span> <span class="o">=</span> 1
+</code></pre></div>
 
 
 <p>Take it one step further and ban all DDoS attempts on SSH.  Again I chose to ban any activity that had more than one connection attempt.</p>
@@ -200,7 +203,8 @@ IPTABLES_BLOCK_METHOD       Y<span class="p">;</span></code></pre></div>
 <span class="nv">port</span>    <span class="o">=</span> ssh
 <span class="nv">filter</span>  <span class="o">=</span> sshd-ddos
 <span class="nv">logpath</span>  <span class="o">=</span> /var/log/auth.log
-<span class="nv">maxretry</span> <span class="o">=</span> 1</code></pre></div>
+<span class="nv">maxretry</span> <span class="o">=</span> 1
+</code></pre></div>
 
 
 <h4>Password Strength</h4>
@@ -225,7 +229,8 @@ ofdynErvEif5 <span class="o">(</span>of-dyn-Erv-Eif-FIVE<span class="o">)</span>
 UrtUttetEk8 <span class="o">(</span>Urt-Utt-et-Ek-EIGHT<span class="o">)</span>
 JocNadEnVam1 <span class="o">(</span>Joc-Nad-En-Vam-ONE<span class="o">)</span>
 Ur6Oboykyet <span class="o">(</span>Ur-SIX-Ob-oyk-yet<span class="o">)</span>
-CedsidIn3 <span class="o">(</span>Ceds-id-In-THREE<span class="o">)</span></code></pre></div>
+CedsidIn3 <span class="o">(</span>Ceds-id-In-THREE<span class="o">)</span>
+</code></pre></div>
 
 
 <hr />
