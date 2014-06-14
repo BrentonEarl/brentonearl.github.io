@@ -9,5 +9,3 @@ url: http://exitstatusone.com
 
 markdown: rdiscount
 permalink: /:title/
-
-gems: rdiscount, sass
