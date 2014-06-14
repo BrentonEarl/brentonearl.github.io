@@ -18,6 +18,7 @@
 		{% endif %}
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" herf="/css/styles.css" type="text/css">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -25,21 +26,51 @@
 		<![endif]-->
 	</head>
 	<body>
-		<h1>{{ site.title }}</h1>
-		<p>{{ site.tagline }}</p>
-		<p>
-			<a href="/" title="{{ site.name }} Index">Home</a>
-			{% assign sorted_pages = site.pages | sort:"name" %}
-			{% for node in sorted_pages %}
-			{% if node.link_title %}
-			<a href="{{node.url}}" title="{{ node.title }}">{{node.link_title}}</a>
-			{% endif %}
-			{% endfor %}
-		</p>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"></a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/" title="{{ site.name }} Index">Home</a></li>
+						{% assign sorted_pages = site.pages | sort:"name" %}
+						{% for node in sorted_pages %}
+						{% if node.link_title %}
+						<li><a href="{{node.url}}" title="{{ node.title }}">{{node.link_title}}</a></li>
+						{% endif %}
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="container">
+				<div class="page-header">
+					<h1>{{ site.title }} <br /><small>{{ site.tagline }}</small></h1>
+				</div>
+			</div>
+		</header>
+	
+		<div class="container">
 		{{ content }}
-		<p>
-			Designed by {{ site.user }}<br />&copy; {{ site.time | date: '%Y'}} {{ site.title }}.  All Rights Reserved.
-		</p>	
+		</div>
+	
+		<footer>
+			<div class="container">
+				<div class="row">
+					<p class="col-sm-8">
+						Designed by {{ site.user }} | &copy; {{ site.time | date: '%Y'}} {{ site.title }}. All Rights Reserved.
+					</p>
+				</div>
+			</div>
+		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	</body>

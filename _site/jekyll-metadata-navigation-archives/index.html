@@ -12,73 +12,90 @@
 		
 		<meta name="keywords" content="jekyll" />
 		
-		<link href="/css/reset.css" rel="stylesheet" type="text/css">
-		<link href="http://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet" type="text/css">
-		<link href="http://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-		<link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
-		<link href="/css/styles.css" rel="stylesheet" type="text/css">
-		<link href="/css/syntax.css" rel="stylesheet" type="text/css">
-
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" herf="/css/styles.css" type="text/css">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-		<body>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"></a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/" title=" Index">Home</a></li>
+						
+						
+						
+						<li><a href="/about.html" title="About the Author">About</a></li>
+						
+						
+						
+						<li><a href="/archive.html" title="Site Archives">Archives</a></li>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li><a href="/rss.xml" title="RSS News Feed">News Feed</a></li>
+						
+						
+						
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="container">
+				<div class="page-header">
+					<h1>Exit Status One <br /><small>Possesion of anything begins in the mind...</small></h1>
+				</div>
+			</div>
+		</header>
+	
 		<div class="container">
-			<nav>
-				<a class="nav-link" href="/" title=" Index">Home</a>
-				
-				
-				
-				<a class="nav-link" href="/about.html" title="About the Author">About</a>
-				
-				
-				
-				<a class="nav-link" href="/archive.html" title="Site Archives">Archives</a>
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link" href="/rss.xml" title="RSS News Feed">News Feed</a>
-				
-				
-			</nav>
-		</div>
-		<div class="container">
-			<header>
-				<h1 class="blog-title">Exit Status One</h1>
-				<p class="tagline">Possesion of anything begins in the mind...</p>
-			</header>
-		</div>
-		<div class="container">
-			<div class="content">
-			<article>
-	<h2 class="article-title">Jekyll -  Metadata, Navigation, and Archives</h2>
-	<p class="article-meta">07-21-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a></p>
-	<p class="article-meta">Category <a href="/categories/jekyll/">jekyll</a></p>
-
-<p>I have been using Jekyll for about a month.  I continually find ways to improve my code and add more functionality.  I added a few new things to make my job easier and also make the site easier to navigate.  The header of each web site contains what is called "metadata" that tells your web browser and search engines how to interpret it.  I programmed the site to automatically generate metadata so I will not have to add it.  I also added the ability to automatically generate a new links to the navigation menu as new pages are added to the site.  Finally, I added an Archvies page and Category page, because it is important for viewers to find older posts that are no longer listed on the front page.</p>
+					<div class="row">
+				<div class="col-sm-8">
+						<article>
+						<h4>Jekyll -  Metadata, Navigation, and Archives</h4>
+						<p>
+						07-21-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a>
+						</p>
+						<p>
+						Category <a href="/categories/jekyll/">jekyll</a>
+						</p>
+						<p>I have been using Jekyll for about a month.  I continually find ways to improve my code and add more functionality.  I added a few new things to make my job easier and also make the site easier to navigate.  The header of each web site contains what is called "metadata" that tells your web browser and search engines how to interpret it.  I programmed the site to automatically generate metadata so I will not have to add it.  I also added the ability to automatically generate a new links to the navigation menu as new pages are added to the site.  Finally, I added an Archvies page and Category page, because it is important for viewers to find older posts that are no longer listed on the front page.</p>
 
 <p>If you have no idea what Jekyll is, please see: <a href="/new-site-design/">This Post</a></p>
 
@@ -220,209 +237,208 @@
 
 <p>I am pretty sure that everything I used in wordpress is now present on this site.  Time will tell. (O.o)   The only thing I do not have is an image gallery, which I am not all that crazy about, but may add as time progresses.</p>
 
-</article>
-
-
-<div class="widget">
-	<aside>
-	<h4>Related Posts</h4>
-		<ol class="list-unstyled">
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-			<li><a href="/jekyll-related-posts-widget/" title="Jekyll: Related and Recent Posts Widget">Jekyll: Related and Recent Posts Widget</a></li>
-		
-		
-		
-		
-		
-		
-		
-			<li><a href="/example-jekyll-site-build/" title="Learn to build your own Jekyll Website">Learn to build your own Jekyll Website</a></li>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-			<li><a href="/jekyll-modifications/" title="Jekyll: Pagination, Site Map and 404 Redirects">Jekyll: Pagination, Site Map and 404 Redirects</a></li>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-			<li><a href="/new-site-design/" title="New Site Design">New Site Design</a></li>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	</aside>
-</div>
-
-<div class="comments">
-<div id="disqus_thread" style="padding:1%;"></div>
-<script type="text/javascript">
-var disqus_shortname = 'exitstatusone';
-
-(function() {
-var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-
-
+					</article>
+				</div>
+				<div class="col-sm-4">
+					<div class="list-group">
+						<h4 class="list-group-item">Related Posts</h4>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/jekyll-related-posts-widget/" title="Jekyll: Related and Recent Posts Widget">Jekyll: Related and Recent Posts Widget</a>
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/example-jekyll-site-build/" title="Learn to build your own Jekyll Website">Learn to build your own Jekyll Website</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/jekyll-modifications/" title="Jekyll: Pagination, Site Map and 404 Redirects">Jekyll: Pagination, Site Map and 404 Redirects</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/new-site-design/" title="New Site Design">New Site Design</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="container">
-			<footer>
-				<p class="credits">
-					Designed by Brent Earl<br />&copy; 2014 Exit Status One.  All Rights Reserved.
-				</p>
-			</footer>
-		</div>
+
+<div class="row">
+	<div class="col-sm-8">
+		<div id="disqus_thread" style="padding:1%;"></div>
 		<script type="text/javascript">
-			$(document).ready(function () {
-				$('head').append('<link href="/css/chrome.css" rel="stylesheet" />');
-			});
+		var disqus_shortname = 'exitstatusone';
+		(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
 		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	</div>
+</div>
+
+
+
+		</div>
+	
+		<footer>
+			<div class="container">
+				<div class="row">
+					<p class="col-sm-8">
+						Designed by Brent Earl | &copy; 2014 Exit Status One. All Rights Reserved.
+					</p>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	</body>
 </html>

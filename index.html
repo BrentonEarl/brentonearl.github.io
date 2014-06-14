@@ -3,18 +3,22 @@ layout: default
 title: Sharing Knowledge Since 2007
 ---
 
-	{% for post in site.posts limit: 5 %}
-		<h4>{{ post.title }}</h4>
-		<p>{{ post.date | date: "%m-%d-%Y" }}</p>
-		{{ post.excerpt }}
-		<a href="{{ post.url }}">View Full Post</a>
-	{% endfor %}
-
-		<div>
-			<h4>Categories</h4>
-			<ol>
-			{% for cat in site.categories %}
-				<li><a href="/categories/{{ cat[0] }}">{{ cat[0] }}</a></li>
-			{% endfor %}
-			</ol>
-		</div>
+			<div class="row">
+				<div class="col-sm-8">
+					{% for post in site.posts limit: 5 %}
+					<h4>{{ post.title }}</h4>
+					<p>{{ post.date | date: "%m-%d-%Y" }}</p>
+					{{ post.excerpt }}
+					<a href="{{ post.url }}">View Full Post</a>
+					{% endfor %}
+				</div>
+				
+				<div class="col-sm-4">
+					<div class="list-group">
+						<h4 class="list-group-item">All Categories</h4>
+						{% for cat in site.categories %}
+						<a class="list-group-item" href="/categories/{{ cat[0] }}">{{ cat[0] }}</a>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
