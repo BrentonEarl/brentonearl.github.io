@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html>
+	<head>       
+		<meta charset=utf-8>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<title>Exit Status One - New Site Design</title>
+		<meta name="author" content="Brent Earl" />
+		
+		<meta name="description" content="Exit Status One has been revamped." />
+		
+		
+		<meta name="keywords" content="jekyll" />
+		
+		<link href="/css/reset.css" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+		<link href="/css/styles.css" rel="stylesheet" type="text/css">
+		<link href="/css/syntax.css" rel="stylesheet" type="text/css">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		<body>
+		<div class="container">
+			<nav>
+				<a class="nav-link" href="/" title=" Index">Home</a>
+				
+				
+				
+				<a class="nav-link" href="/about.html" title="About the Author">About</a>
+				
+				
+				
+				<a class="nav-link" href="/archive.html" title="Site Archives">Archives</a>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/rss.xml" title="RSS News Feed">News Feed</a>
+				
+				
+			</nav>
+		</div>
+		<div class="container">
+			<header>
+				<h1 class="blog-title">Exit Status One</h1>
+				<p class="tagline">Possesion of anything begins in the mind...</p>
+			</header>
+		</div>
+		<div class="container">
+			<div class="content">
+			<article>
+	<h2 class="article-title">New Site Design</h2>
+	<p class="article-meta">07-08-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a></p>
+	<p class="article-meta">Category <a href="/categories/jekyll/">jekyll</a></p>
+
+<p>For several years Wordpress has been the content management system of choice for Exit Status one. Recently this web site moved from shared hosting to a virtual private server.  At this point it became important to minimize the memory footprint that Apache created in order to run Exit Status One.  After all, a VPS can be used for more than just web site hosting- and I intend to do so.  However, it is difficult to estimate how much system resources a web site uses when it is running on a shared host.  After analyzing the logs, bandwidth, system load, it was more than obvious that Wordpress was bogging down the rest of the running services.</p>
+
+<p>The issue at hand was deciding to continue publishing with Wordpress, or to move on to a new approach to blogging.  That is when I found <a href="http://jekyllrb.com/">Jekyll</a>.  Jekyll is simple, blog-aware, and it generates static web sites.  It is written in <a href="http://www.ruby-lang.org/">Ruby</a>, yet ruby code is not used to display the generated web site once it is time to go live with your site.</p>
+
+<p>Jekyll differs from Wordpress in a number of ways.  There is no database because your web site content is generated directly into the web site as HTML.  No administrative panel is necessary because all posts, feeds, uploads, and site modifications are done on your computer and then uploaded directly to your web host.  Comments are not included in the default site.  I found it to be a pain to moderate comments that were an infinite list of spammers anyway...  Jekyll gives you the ability to deploy your web site anywhere because every page is written in HTML and formatted with CSS- no PHP required.</p>
+
+<p>Jekyll does include many of the features that Wordpress also includes.  Permalinks, Categories, Custom Layouts, Media Galleries, Plugins and RSS / Atom news feeds are all included.  Essentially, all you are missing out on with Jekyll is comments.  You can program your site to allow comments, no big deal.</p>
+
+<p>Jekyll is much much simpler to operate once you have developed your web site.  Create your pages and posts, your plugins installed and configured, everything customized, you are ready to build your web site.  It really is very simple.  With knowledge of <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> and <a href="https://en.wikipedia.org/wiki/CSS">CSS</a> you can create your web site without writing a single piece of ruby code.  Creating posts to a Jekyll blog is trivial.  Just write text files, rebuild your site, and reupload your site to your host.</p>
+
+<p>There are a number of ways to upload a Jekyll generated site to a web host or server.  My favorite, and the method preferred by the Jekyll community, is using Git.  The other options are: <a href="http://en.wikipedia.org/wiki/File_Transfer_Protocol">FTP</a>, <a href="http://en.wikipedia.org/wiki/Secure_Copy_Protocol">SCP</a>, and <a href="http://en.wikipedia.org/wiki/Rsync">Rsync</a>.  Generally speaking, it is a better idea to stick with Git.</p>
+
+<p>Reasons to use Git:</p>
+
+<ul>
+<li>Ability to roll back changes</li>
+<li>Site back ups</li>
+<li>Share your code with the world</li>
+<li>Fork a site to develop another site</li>
+</ul>
+
+
+<p>Installing Jekyll and building a web site is <a href="http://jekyllrb.com/docs/quickstart/">quick and easy</a>.  You can have a web site up and running in 5 minutes using Jekyll's default site templates.  Basic usage is described <a href="http://jekyllrb.com/docs/usage/">Here</a> and the full installation documentation is <a href="http://jekyllrb.com/docs/installation/">Here</a>.  For a full listing of web sites using Jekyll please check out the <a href="https://github.com/mojombo/jekyll/wiki/Sites">Jekyll Wiki Page</a>.</p>
+
+<p>All in all, the migration from Wordpress to Jekyll has been enjoyable.  The process of developing my site became easier and easier as I adjusted to the working environment.  Now all I have to do to write a new post is open a terminal with Vim!  There is no need to worry about Wordpress getting hacked.  There is nowhere to log in, inject code, or database to sql inject- no moving parts.  I will continually provide updates regarding my experiences with Jekyll.  I have plans to implement new plug ins, so keep checking back!</p>
+
+</article>
+
+
+<div class="widget">
+	<aside>
+	<h4>Related Posts</h4>
+		<ol class="list-unstyled">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<li><a href="/jekyll-related-posts-widget/" title="Jekyll: Related and Recent Posts Widget">Jekyll: Related and Recent Posts Widget</a></li>
+		
+		
+		
+		
+		
+		
+		
+			<li><a href="/example-jekyll-site-build/" title="Learn to build your own Jekyll Website">Learn to build your own Jekyll Website</a></li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<li><a href="/jekyll-metadata-navigation-archives/" title="Jekyll -  Metadata, Navigation, and Archives">Jekyll -  Metadata, Navigation, and Archives</a></li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<li><a href="/jekyll-modifications/" title="Jekyll: Pagination, Site Map and 404 Redirects">Jekyll: Pagination, Site Map and 404 Redirects</a></li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</aside>
+</div>
+
+<div class="comments">
+<div id="disqus_thread" style="padding:1%;"></div>
+<script type="text/javascript">
+var disqus_shortname = 'exitstatusone';
+
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+
+			</div>
+		</div>
+		<div class="container">
+			<footer>
+				<p class="credits">
+					Designed by Brent Earl<br />&copy; 2014 Exit Status One.  All Rights Reserved.
+				</p>
+			</footer>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('head').append('<link href="/css/chrome.css" rel="stylesheet" />');
+			});
+		</script>
+	</body>
+</html>

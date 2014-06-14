@@ -1,0 +1,11 @@
+title: "Exit Status One"
+description: "A compilation of News, Programming, Linux, Web design and Ruby."
+keywords: "Software, Development, Ruby, Jekyll, Sinatra, Linux, Security, Programming, Tutorial, Technology"
+tagline: "Possesion of anything begins in the mind..."
+user: Brent Earl
+
+baseurl: ""
+url: http://exitstatusone.com
+
+markdown: rdiscount
+permalink: /:title/

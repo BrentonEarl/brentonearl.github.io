@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<article>
+	<h2 class="article-title">{{ page.title }}</h2>
+	<p class="article-meta">{{page.date | date: "%m-%d-%Y" }} by <a href="https://twitter.com/BrentonLeeEarl">{{ site.user }}</a></p>
+	<p class="article-meta">Category <a href="/categories/{{page.category | downcase}}/">{{ page.category | downcase }}</a></p>
+
+{{ content }}
+</article>
+
+
+<div class="widget">
+	<aside>
+	<h4>Related Posts</h4>
+		<ol class="list-unstyled">
+		{% for post in site.posts %}
+		{% for category in post.category %}
+		{% if category == page.category %}
+		{% if post.title != page.title %}
+			<li><a href="{{ post.url}}" title="{{ post.title }}">{{ post.title }}</a></li>
+		{% endif %}
+		{% endif %}
+		{% endfor %}
+		{% endfor %}
+	</aside>
+</div>
+{% include disqus_comments.html %}

@@ -1,0 +1,52 @@
+---
+layout: post
+title: The Fuzz
+date: 2013-12-13
+category: Security
+description: Fuzzing is the automated process of testing software using random input or input that would not otherwise be sent to a program in order to discover design errors.
+comments: yes
+---
+
+Fuzz testing is the process of sending random or semi random data as input to a piece of software, network protocol, or file format in order to discover design flaws.  The process is generally automated but can be semi-automated to give the auditor the ability to modify input to achieve faster results.  There are two forms of fuzzing, mutation based and generation based, and it can be utilized by means of white-box, grey-box or black-box testing.  Today I will be talking about grey-box testing using a generation-based fuzzer on a network based application.
+
+The network based application I chose to test was the game Urban Terror.  My reasoning in choosing to test this particular software was that I have access to partial [source code](https://github.com/Barbatos/ioq3-for-UrbanTerror-4) and I also have the ability to set up a gaming server.  This game is not 100% open source.  There is a portion of the code that is closed source that has not been released by the Frozen Sand Development team.  (Particularly the game server virtual machine code.)
+
+Now, I have never done anything like this before so I had to do quite a bit of research.  Here is a list of the software I used in my testing:
+
+*  [GDB](https://www.gnu.org/software/gdb/)
+*  [Valgrind](http://valgrind.org/)
+*  [zzuf](http://caca.zoy.org/wiki/zzuf)
+*  [netcat](http://netcat.sourceforge.net/)
+*  [Good Old Bash](http://www.gnu.org/software/bash/)
+
+The approach I took was quite simple.  My aim was to create an environment where the server binary ran in gdb.  I would then send data that zzuf created to the server using netcat.  If something went badly I would restart the server in Valgrind. I would then recreate the issue while the server binary ran in Valgrind so that I could determine exactly what failed.
+
+Interestingly enough, I found that the game server can be crashed just by sending data to it.  In addition, the way the Quake 3 network protocol is designed, it is susceptible to very simple Denial of Service attacks.  My experiment started off with a simple bash script that later grew into something larger.  Replacing the fuzz variable with your input source can yield many different results.  Here is what I started out with:
+
+{% highlight bash %}
+#!/bin/bash
+ 
+host="localhost"
+port="27960"
+nc="$(which nc)"
+pass="cat"
+timeout="3"
+fuzz=`dd if=/dev/urandom bs=1K count=1b`
+
+while :; do
+	echo -e "\xff\xff\xff\xffrcon $pass $fuzz" | $nc -q $timeout -u $host $port
+done
+{% endhighlight %}
+
+Being that I play this game, I will not be releasing specific results due to the fact that I do not want to be banned from every remaining Urban Terror server on the internet.  I do enjoy the game and do not wish any ill-will on Urban Terror server administrators or the game developers.  It should be interesting how long it takes for the game developers to patch up some of these security holes.  Until then...
+
+General security measures to circumvent my results:
+
+Above all, I recommend that Urban Terror server administrators run their game server binaries in a jailed environment.  I also suggest that administrators devise an iptables script that filters out packet types that should never be received by their server.  This also includes fragmented packets.  Brute Force attacks are possible over a Rcon connection to an Urban Terror server, so be sure to use strong passwords.  Finally, administrators should also be sure to implement some type of Quality of Service, or general bandwidth throttling on the network interface running Urban Terror.
+
+#### Linux Security Implementation Resources
+
+*  Jail/Chroot Environment - [makejail](http://www.floc.net/makejail/)
+*  Firewall - [Starter Iptables Script](http://exitstatusone.com/assets/firewall.sh.txt)
+*  Brute Force Attack - [Psad, Fail2Ban, AGP]({% post_url 2013-08-14-block-port-scan-brute-force %})
+*  Routing and Traffic Countrol - [Linux Advanced Routing & Traffic Control](http://lartc.org/)

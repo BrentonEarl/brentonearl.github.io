@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html>
+	<head>       
+		<meta charset=utf-8>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<title>Exit Status One - Upgrade Debian Squeeze to Backports Kernel Version 3.2</title>
+		<meta name="author" content="Brent Earl" />
+		
+		<meta name="description" content="Debian Squeeze runs kernel 2.6.32.  An extremely stable Linux Kernel Release, but in my case, not so much.  This article discusses the process of upgrading to Linux Kernel version 3.2 using the Debian Backports mirrors." />
+		
+		
+		<meta name="keywords" content="linux" />
+		
+		<link href="/css/reset.css" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+		<link href="/css/styles.css" rel="stylesheet" type="text/css">
+		<link href="/css/syntax.css" rel="stylesheet" type="text/css">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		<body>
+		<div class="container">
+			<nav>
+				<a class="nav-link" href="/" title=" Index">Home</a>
+				
+				
+				
+				<a class="nav-link" href="/about.html" title="About the Author">About</a>
+				
+				
+				
+				<a class="nav-link" href="/archive.html" title="Site Archives">Archives</a>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/rss.xml" title="RSS News Feed">News Feed</a>
+				
+				
+			</nav>
+		</div>
+		<div class="container">
+			<header>
+				<h1 class="blog-title">Exit Status One</h1>
+				<p class="tagline">Possesion of anything begins in the mind...</p>
+			</header>
+		</div>
+		<div class="container">
+			<div class="content">
+			<article>
+	<h2 class="article-title">Upgrade Debian Squeeze to Backports Kernel Version 3.2</h2>
+	<p class="article-meta">02-20-2012 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a></p>
+	<p class="article-meta">Category <a href="/categories/linux/">linux</a></p>
+
+<p>Upon realizing there is a bug in my kernel suspend feature, which also seems to cause a kernel Stack errors, I decided to upgrade my Debian Squeeze Kernel from 2.6.32-5-amd64 to 3.2.0-0.bpo.1-amd64.  After completing this task, I figured I would share with the world how easy it is to get a newer kernel than what Debian Squeeze offers in the regular repos.  I used the Debian Backports repo to pull this newer kernel down.</p>
+
+<p><strong>Step 1:</strong></p>
+
+<ul>
+<li>Open up a root terminal.</li>
+<li>Edit /etc/apt/sources.list</li>
+<li>Append the Squeeze Backports</li>
+</ul>
+
+
+<p>deb http://backports.debian.org/debian-backports squeeze-backports main contrib non-free</p>
+
+<p>deb-src http://backports.debian.org/debian-backports squeeze-backports main contrib non-free</p>
+
+<ul>
+<li>Update aptitude</li>
+<li>aptitude update</li>
+</ul>
+
+
+<p><strong>Step 2:</strong></p>
+
+<p>There are quite a few different kernels available between the standard respositories and the backports repository.  What you will need to do next is assure you are installing the correct kernel by searching with aptitude for the correct name of the linux-image package.  After that you will want to also find the correct name for the linux-headers package so you can compile any kernel modules needed with the new kernel.  Once you have found the package names install them from backports.</p>
+
+<ul>
+<li>Open a root terminal</li>
+<li>Type: aptitude search linux-image-</li>
+<li>Copy the name of the kernel you wish to install</li>
+<li>Type: aptitude search linux-headers-</li>
+<li>Copy the linux-header name that matches your kernel version</li>
+<li><p>Next install the packages
+In my case I chose linux-image 3.2 amd64.  So I would type and run the following in a root terminal:</p></li>
+<li><p>apt-get install -t squeeze-backports linux-image-2.6.39-bpo.2-amd64linux-headers-3.2.0-0.bpo.1-amd64</p></li>
+</ul>
+
+
+<p><strong>Step 3:</strong></p>
+
+<p>Now you are ready to reboot your system into the new kernel.  Upon reboot you will see a new entry in the Grub bootloader with your old kernel and your new kernel.  You should wait to remove the old kernel from your system. After you are sure that everything works in your new kernel you can remove the old one.  I have taken the approach of simply removing the old kernel entry from my grub menu, and leaving the old linux-image package installed on my system.</p>
+
+</article>
+
+
+<div class="widget">
+	<aside>
+	<h4>Related Posts</h4>
+		<ol class="list-unstyled">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<li><a href="/backports-upgrade-iceweasel/" title="Debian Backports - Upgrade Iceweasel to a Newer Version">Debian Backports - Upgrade Iceweasel to a Newer Version</a></li>
+		
+		
+		
+		
+		
+		
+		
+			<li><a href="/create-minimal-debian-live-system/" title="Creating a Minimal Debian Live System">Creating a Minimal Debian Live System</a></li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<li><a href="/command-line-desktop-debian/" title="Full CLI Desktop in Debian Linux">Full CLI Desktop in Debian Linux</a></li>
+		
+		
+		
+		
+		
+		
+		
+			<li><a href="/broadcom-4313-wifi-debian-linux/" title="Broadcom 4313 WiFi Debian Linux">Broadcom 4313 WiFi Debian Linux</a></li>
+		
+		
+		
+		
+	</aside>
+</div>
+
+<div class="comments">
+<div id="disqus_thread" style="padding:1%;"></div>
+<script type="text/javascript">
+var disqus_shortname = 'exitstatusone';
+
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+
+			</div>
+		</div>
+		<div class="container">
+			<footer>
+				<p class="credits">
+					Designed by Brent Earl<br />&copy; 2014 Exit Status One.  All Rights Reserved.
+				</p>
+			</footer>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('head').append('<link href="/css/chrome.css" rel="stylesheet" />');
+			});
+		</script>
+	</body>
+</html>

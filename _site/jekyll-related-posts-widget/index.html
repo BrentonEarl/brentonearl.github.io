@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html>
+	<head>       
+		<meta charset=utf-8>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<title>Exit Status One - Jekyll: Related and Recent Posts Widget</title>
+		<meta name="author" content="Brent Earl" />
+		
+		<meta name="description" content="Short article discussing the code behind a widget that adds a small blurb with links to related posts and categories to a page or post." />
+		
+		
+		<meta name="keywords" content="jekyll" />
+		
+		<link href="/css/reset.css" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+		<link href="/css/styles.css" rel="stylesheet" type="text/css">
+		<link href="/css/syntax.css" rel="stylesheet" type="text/css">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		<body>
+		<div class="container">
+			<nav>
+				<a class="nav-link" href="/" title=" Index">Home</a>
+				
+				
+				
+				<a class="nav-link" href="/about.html" title="About the Author">About</a>
+				
+				
+				
+				<a class="nav-link" href="/archive.html" title="Site Archives">Archives</a>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/rss.xml" title="RSS News Feed">News Feed</a>
+				
+				
+			</nav>
+		</div>
+		<div class="container">
+			<header>
+				<h1 class="blog-title">Exit Status One</h1>
+				<p class="tagline">Possesion of anything begins in the mind...</p>
+			</header>
+		</div>
+		<div class="container">
+			<div class="content">
+			<article>
+	<h2 class="article-title">Jekyll: Related and Recent Posts Widget</h2>
+	<p class="article-meta">07-26-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a></p>
+	<p class="article-meta">Category <a href="/categories/jekyll/">jekyll</a></p>
+
+<p>Creating a web site that is easily navigated is important.  It is also important to make it easy for viewers to find content that is related to what they are reading.  I wrote a piece of code that can be nested inside a page or post, preferably a page/post that has a category set.  The code will check if the current page has a category and inserts links to other pages with the same category.  It also adds a list to the most recent posts on the web site.  I added it inside a div tag and floated it right, works well.</p>
+
+<h4>Related Categories</h4>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;h4&gt;</span>Related Posts<span class="nt">&lt;/h4&gt;</span>
+{% for post in site.posts %}
+  {% for category in post.category %}
+    {% if category == page.category %}
+      {% if post.title != page.title %}
+      <span class="nt">&lt;p&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ post.url }}&quot;</span> <span class="na">rel=</span><span class="s">&quot;bookmark&quot;</span> <span class="na">title=</span><span class="s">&quot;Permanent link to &quot;</span><span class="nt">&gt;</span>{{ post.title }}<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;span&gt;</span>{{ post.date | date: %B }} {{ post.date | date: %e }}, {{ post.date | date: %Y }}<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/p&gt;</span>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}</code></pre></div>
+
+
+<ol>
+<li>Loop through all of the posts on the web site</li>
+<li>Open each post and find it's category</li>
+<li>If the Category of the current page matches, add it to the list</li>
+<li>If the Title of the current page matches the page in the list, remove it. (There is no reason to list a link to the current page.)</li>
+<li>Create a link with the post's corresponding URL, date and title</li>
+</ol>
+
+
+<p>The only problem with this code is that if you have 500 posts with the same category name, the list will expand down the page and push your post content out of the way.  I will have to fix this another time, provided it becomes an issue.</p>
+
+<h4>Recent Posts</h4>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;h4&gt;</span>Latest Posts<span class="nt">&lt;/h4&gt;</span>
+{% for post in site.posts limit:4 %}
+{% if post.title != page.title %}
+<span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ post.url }}&quot;</span> <span class="na">rel=</span><span class="s">&quot;bookmark&quot;</span> <span class="na">title=</span><span class="s">&quot;{{ post.title }}&quot;</span><span class="nt">&gt;</span>{{ post.title }}<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;span&gt;</span>{{ post.date | date: &#39;%B&#39; }} {{ post.date | date: &#39;%e&#39; }}<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+{% endif %}
+{% endfor %}</code></pre></div>
+
+
+<ol>
+<li>Loop through all of the posts on the web site, but only keep the 3 most recent posts</li>
+<li>List each page, but omit the page if it has the same title as the current page</li>
+<li>Create a link for each post, with it's corrensponding URL, Title, and Date</li>
+</ol>
+
+
+<p>This works great unless the current page is a recent post.  If the current page comes up as one of the last 4 posts, then this code will only show the last three current posts.</p>
+
+<hr />
+
+<p>With that, please be sure to check the blurb at the top right of the page that shows recent and similar posts!  Thanks for reading.</p>
+
+</article>
+
+
+<div class="widget">
+	<aside>
+	<h4>Related Posts</h4>
+		<ol class="list-unstyled">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<li><a href="/example-jekyll-site-build/" title="Learn to build your own Jekyll Website">Learn to build your own Jekyll Website</a></li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<li><a href="/jekyll-metadata-navigation-archives/" title="Jekyll -  Metadata, Navigation, and Archives">Jekyll -  Metadata, Navigation, and Archives</a></li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<li><a href="/jekyll-modifications/" title="Jekyll: Pagination, Site Map and 404 Redirects">Jekyll: Pagination, Site Map and 404 Redirects</a></li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<li><a href="/new-site-design/" title="New Site Design">New Site Design</a></li>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</aside>
+</div>
+
+<div class="comments">
+<div id="disqus_thread" style="padding:1%;"></div>
+<script type="text/javascript">
+var disqus_shortname = 'exitstatusone';
+
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+
+			</div>
+		</div>
+		<div class="container">
+			<footer>
+				<p class="credits">
+					Designed by Brent Earl<br />&copy; 2014 Exit Status One.  All Rights Reserved.
+				</p>
+			</footer>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('head').append('<link href="/css/chrome.css" rel="stylesheet" />');
+			});
+		</script>
+	</body>
+</html>

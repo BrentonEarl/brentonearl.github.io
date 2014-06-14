@@ -1,0 +1,126 @@
+html {
+margin:0;
+padding:0;
+height:100%;
+}
+
+body {
+margin: 0;
+padding 0;
+height: 100%;
+background:#333;
+color:#B6B6B6;
+font-family: 'Nunito', sans-serif;
+line-height: 1.88889;
+}
+
+a, p { font-size:85%; }
+
+a.nav-link {
+padding:2%;
+}
+
+a:active, .article-meta a:active, a.nav-link:active, a:visited, .article-meta a:visited, a.nav-link:visited {
+color:#fc0;
+text-decoration:none;
+}
+
+a:hover, .article-meta a:hover, a.nav-link:hover {
+color: #f5f5f5;
+}
+
+.container {
+margin:0;
+padding:0;
+}
+
+.container nav {
+width:100%;
+height:5%;
+margin:0;
+padding:0;
+background:#202020;
+text-align:center;
+}
+
+.container header, .content, .container footer {
+width:98%;
+margin:auto;
+margin-top:2%;
+border-radius:30px 30px 30px 30px;
+box-shadow:0 0 80px #3F1F1F;
+color:#B6B6B6;
+background:#202020;
+}
+
+.blog-title {
+font-size:200%;
+font-family: 'Luckiest Guy', cursive;
+color: #B81D18;
+text-align:right;
+padding:2%;
+}
+
+.tagline {
+font-family: 'Pacifico', cursive;
+text-align:right;
+padding:2%;
+}
+
+.content {
+}
+
+.container footer {
+}
+
+.credits {
+padding:1%;
+}
+
+/* Article/Post template */
+
+.content {
+}
+
+.content p, .content article p, .content h4 {
+padding:1%;
+}
+
+.content article {
+}
+
+.article-title, .content h2, .content h4 {
+font-size:150%;
+font-family: 'Luckiest Guy', cursive;
+color: #B81D18;
+padding:1%;
+}
+
+.article-meta, .content article ul {
+padding:1%;
+}
+
+
+/* Widgets */
+
+.widget {
+}
+
+.widget aside {
+}
+
+.list-unstyled {
+list-style-type:none;
+padding:2%;
+}
+
+/* Categories */
+
+.categories {
+}
+
+/* Comments */
+
+.comments {
+width:98%;
+}

@@ -1,0 +1,25 @@
+---
+layout: default
+title: Sharing Knowledge Since 2007
+---
+
+
+{% for post in site.posts limit: 5 %}
+<article>
+	<h4 class="article-title">{{ post.title }}</h4>
+	<p class="article-meta">{{ post.date | date: "%m-%d-%Y" }}</p>
+	{{ post.excerpt }}
+	<p class="article-meta"><a href="{{ post.url }}">View Full Post</a></p>
+</article>
+{% endfor %}
+
+<div class="sidebar">
+  <aside>
+		<h4>Categories</h4>
+		<ol class="list-unstyled">
+		{% for cat in site.categories %}
+			<li><a href="/categories/{{ cat[0] }}">{{ cat[0] }}</a></li>
+		{% endfor %}
+		</ol>
+	</aside>
+</div>
