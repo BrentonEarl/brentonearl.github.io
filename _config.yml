@@ -9,3 +9,5 @@ url: http://www.exitstatusone.com
 
 markdown: rdiscount
 permalink: /:title/
+
+category_dir: "categories/"

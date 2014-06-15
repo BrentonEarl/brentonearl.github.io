@@ -15,9 +15,9 @@ title: Sharing Knowledge Since 2007
 				
 				<div class="col-sm-4">
 					<div class="list-group">
-						<h4 class="list-group-item">All Categories</h4>
-						{% for cat in site.categories %}
-						<a class="list-group-item" href="/categories/{{ cat[0] }}">{{ cat[0] }}</a>
+						<h4 class="list-group-item">Post by Category</h4>
+						{% for category in site.categories %}
+						<a class="list-group-item" href="{{site.category_dir}}{{ category[0] }}">{{ category[0] | capitalize}}</a>
 						{% endfor %}
 					</div>
 				</div>
