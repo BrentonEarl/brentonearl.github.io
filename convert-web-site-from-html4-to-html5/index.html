@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>       
+		<meta charset=utf-8>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<title>Exit Status One - Convert Your Web Site To HTML5</title>
+		<meta name="author" content="Brent Earl" />
+		
+		<meta name="description" content="Discusion regarding the process of moving an existing web site from HTML4 to the new web standard of HTML5." />
+		
+		
+		<meta name="keywords" content="html5" />
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" herf="/css/styles.css" type="text/css">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<p class="navbar-brand" href="#">Menu</p>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/" title=" Index">Home</a></li>
+						
+						
+						
+						<li><a href="/about.html" title="About the Author">About</a></li>
+						
+						
+						
+						<li><a href="/archive.html" title="Site Archives">Archives</a></li>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li><a href="/rss.xml" title="RSS News Feed">News Feed</a></li>
+						
+						
+						
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="container">
+				<div class="page-header">
+					<h1>Exit Status One <br /><small>The only source of knowledge is experience...</small></h1>
+				</div>
+			</div>
+		</header>
+	
+		<div class="container">
+					<div class="row">
+				<div class="col-sm-8">
+						<article>
+						<h4>Convert Your Web Site To HTML5</h4>
+						<p>
+						08-08-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a>
+						</p>
+						<p>
+						Category <a href="/categories/html5/">html5</a>
+						</p>
+						<p>The <a href="http://www.w3.org/">World Wide Web Consortium</a> announced version 5 of the HTML standard in December, 2012.  During the time between last December and the present, HTML5 has gained a lot of traction. In the present state of the internet, HTML5 is supported by the most recent versions of Internet Explorer, Firefox, Google Chrome, Safari, Apple and Android Mobile web browsers.  HTML5 provides new tags that were created to match the needs of modern websites.  In my opinnion, Search Engine Optimization becomes much more manageable after converting your site to HTML5.  In adition, cascading style sheets are less of a headache.  Throughout the rest of this article I will build a case to help you decide whether your web site should be running HTML4 or HTML5.</p>
+
+<h4>What does HTML5 Solve?</h4>
+
+<p>Surely more than a few people have wondered what the purpose of switching to HTML5 actually is.  Every piece of software eventually needs to be upgraded.  Software aside, the tools and programing languages that create that software must be updated as well.  The amount of people using the internet continues to grow, and developers are always in a race to produce fuller media rich content.  The process of designing code that will create that sort of environment requires more and more effort. Essentially, HTML5 solves a lot of the issues web developers work around in order to serve the web content that is expected by users.</p>
+
+<p>How HTML5 pages are programmed in comparison to HTML4 pages is not much different.  A number of new elements and attributes were added that will undoubtedly make the process of organizing the code on an HTML page much more manageable.  As it stands, HTML4 web sites are dominantly organized by the div element. HTML5 aims to make code easier to read and easier to implement.  The following is a full list of <a href="http://www.w3schools.com/html/html5_new_elements.asp">New Elements</a> added to HTML5.</p>
+
+<h4>HTML5 Template</h4>
+
+<p>This basic example shows how HTML5 really tells the reader what is happening in the code.  If you are unfamiliar with HTML in general, just try to imagine that the header, nav, section, article and footer tags are all replaced with an opening and closing div tag.  Imagine all of those tags using the same tag.  That is what web developers have been working with for several long years.  While HTML is not difficult to learn, it isn't the least tedious programming language.</p>
+
+<div class="highlight"><pre><code class="html"><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Site Title<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Site Title<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;nav&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Link to Home Page<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Link to Second Page<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Link to etc. etc. <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;article&gt;</span>
+      <span class="nt">&lt;header&gt;</span>
+        <span class="nt">&lt;h5&gt;</span>News Title<span class="nt">&lt;/h5&gt;</span>
+      <span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;p&gt;</span>News Article Content<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/article&gt;</span> 
+  <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Copyright 2013 Some Site at somesite.com<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+
+
+<h4>To Switch Or Not To Switch?</h4>
+
+<p>The way I chose to make the switch to HTML5 on <a href="exitstatusone.com">exitstatusone.com</a> was by weighing the pros and cons.  On one had I had the issue of browser compatibility.  On the other hand HTML5 provided a way to easily restructure the code on my web site to make it cleaner and provide a faster execution time.  The compatibility issues will soon enough disappear as full HTML5 support is implemented in all of the major and minor web browsers.  This is happening much faster than you would think.  Code execution and structure are far more important to me because the way I had my site designed was getting difficult to manage.  Not due to poor coding technique, but due to the fact that <a href="jekyllrb.com">Jekyll</a> generates templates into static web pages based on a number of different source files.  Each source file had so many different div tags it was getting confusing.</p>
+
+<p>I think that most web developers will find the readability of HTML5 to be a big plus.  Just the implementation of the new elements and attributes should be more than enough to prompt web developers to make the switch.  In the end, the decision ultimately lies in what type of web site you are running and what type of web application software is being deployed.</p>
+
+					</article>
+				</div>
+				<div class="col-sm-4">
+					<div class="list-group">
+						<h4 class="list-group-item">Related Posts</h4>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/responsive-web-design/" title="Responsive Web Design">Responsive Web Design</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+
+<div class="row">
+	<div class="col-sm-8">
+		<div id="disqus_thread" style="padding:1%;"></div>
+		<script type="text/javascript">
+		var disqus_shortname = 'exitstatusone';
+		(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	</div>
+</div>
+
+
+
+		</div>
+	
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<p class="footer">
+						Designed by Brent Earl | &copy; 2014 Exit Status One. All Rights Reserved.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	</body>
+</html>

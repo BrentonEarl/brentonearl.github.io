@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>       
+		<meta charset=utf-8>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<title>Exit Status One - How to Jailbreak Droid 2 Global</title>
+		<meta name="author" content="Brent Earl" />
+		
+		<meta name="description" content="Learn how to jail break your Android Droid 2 Global." />
+		
+		
+		<meta name="keywords" content="android" />
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" herf="/css/styles.css" type="text/css">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<p class="navbar-brand" href="#">Menu</p>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/" title=" Index">Home</a></li>
+						
+						
+						
+						<li><a href="/about.html" title="About the Author">About</a></li>
+						
+						
+						
+						<li><a href="/archive.html" title="Site Archives">Archives</a></li>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li><a href="/rss.xml" title="RSS News Feed">News Feed</a></li>
+						
+						
+						
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="container">
+				<div class="page-header">
+					<h1>Exit Status One <br /><small>The only source of knowledge is experience...</small></h1>
+				</div>
+			</div>
+		</header>
+	
+		<div class="container">
+					<div class="row">
+				<div class="col-sm-8">
+						<article>
+						<h4>How to Jailbreak Droid 2 Global</h4>
+						<p>
+						06-22-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a>
+						</p>
+						<p>
+						Category <a href="/categories/android/">android</a>
+						</p>
+						<p>In this article I will discuss the process of Jail breaking / rooting a Droid 2 Global.  This process should work on newer versions of the Motorola Droid as well.  I will explain how to gain root access using a Terminal Emulator from the Google Play Store.  Gaining root access to a smart phone allows the user to unlock the full capability of the phone and the installed Operating System.</p>
+
+<p><strong><strong>Important:  You must have significant knowledge on how to use Linux and a good understanding of how your Android device functions in order to complete this tutorial.  I am not responsible if you “brick” your phone.</strong></strong></p>
+
+<p>Phone Specifications:</p>
+
+<ul>
+<li>System Version: 4.5.629.A956.Verizon.en.US</li>
+<li>Model Number: Droid2 Global</li>
+<li>Android Version: 2.3.4</li>
+<li>Kernel Version: 2.6.32.9</li>
+</ul>
+
+
+<p>In order to jail break / root my phone I used an application called Framaroot 1.4.2.  This app is not included in the Google Play store.  To install non-Market apps you need to go to your application settings on your phone and check the box for “Unknown Sources”.  Once that is completed you can then head over <a href="http://forum.xda-developers.com/showthread.php?t=2130276">Here</a> and download Framaroot 1.4.2 at the bottom of the post.  You can do this in Windows or in Linux.</p>
+
+<p>Install Framaroot 1.4.2 and root phone:</p>
+
+<ul>
+<li>Connect your phone to your laptop and set the USB connection so that “USB Mass Storage” is selected.</li>
+<li>Copy Framaroot-1.4.2.apk to your phone sdcard</li>
+<li>Open your phone file manager and touch the Framaroot-1.4.2.apk</li>
+<li>Your Android package installer should pop up and install the app, follow the prompts.</li>
+<li>Once the application is installed go to the drop down menu and select “Install Superuser” and then select exploit “Gimli”.</li>
+<li>Your phone should now be rooted and ready to install Busybox.</li>
+</ul>
+
+
+<p>Once you have installed Framaroot and rooted your phone you will need to install the “Busybox Installer” app.  The “Busybox Installer” application can be found in the Google Play store, install it.  You will need to run a few scripts once it is installed.  After you have installed Busybox, go to the Google Play store and install an app called “Android Terminal Emulator”.  There are many other terminal emulators on the App market, choose the one you like the most.  After you have installed your terminal emulator open it and log in as root to verify you can access the root shell.  Here is a step by step walk through on installing Busybox, Android Terminal Emulator, and changing to the super user (root) on your android phone:</p>
+
+<p>Install Busybox 1.2.0, Android Terminal Emulator, and change to super user:</p>
+
+<ul>
+<li>Download, install Busybox, and open Busybox</li>
+<li>Select Busybox version 1.2.0 and Install Location /system/xbin</li>
+<li>Check Symlink applets and leave Advanced Install unchecked, then Click install.</li>
+<li>Once again go to the Select Busybox Version drop down and select zipalign</li>
+<li>Check Symlink applets and leave Advanced Install unchecked, then Click install.</li>
+<li>Once Busybox is installed, move right in the Busybox app to the Scripter section.</li>
+<li>Run Scripts: Fix Permissions, Mount System R/W, Zipalign Apks</li>
+<li>Exit the Busybox app</li>
+<li>Install Android Terminal Emulator from the Google Play app store and open it</li>
+<li>Type “su” and hit enter</li>
+</ul>
+
+
+<p>You now have root level permissions on your Android Phone.</p>
+
+					</article>
+				</div>
+				<div class="col-sm-4">
+					<div class="list-group">
+						<h4 class="list-group-item">Related Posts</h4>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/useful-android-apps/" title="Useful, Free Android Apps">Useful, Free Android Apps</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/android-system-vulnerabilities/" title="Android Operating System Vulnerabilities">Android Operating System Vulnerabilities</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/install-debian-on-droid-2-global-a956/" title="Install Debian on Droid 2 Global A956">Install Debian on Droid 2 Global A956</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+
+<div class="row">
+	<div class="col-sm-8">
+		<div id="disqus_thread" style="padding:1%;"></div>
+		<script type="text/javascript">
+		var disqus_shortname = 'exitstatusone';
+		(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	</div>
+</div>
+
+
+
+		</div>
+	
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<p class="footer">
+						Designed by Brent Earl | &copy; 2014 Exit Status One. All Rights Reserved.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	</body>
+</html>

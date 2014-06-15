@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>       
+		<meta charset=utf-8>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<title>Exit Status One - Anonymity</title>
+		<meta name="author" content="Brent Earl" />
+		
+		<meta name="description" content="How to become anonymous in the 21st century." />
+		
+		
+		<meta name="keywords" content="security" />
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" herf="/css/styles.css" type="text/css">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<p class="navbar-brand" href="#">Menu</p>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/" title=" Index">Home</a></li>
+						
+						
+						
+						<li><a href="/about.html" title="About the Author">About</a></li>
+						
+						
+						
+						<li><a href="/archive.html" title="Site Archives">Archives</a></li>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li><a href="/rss.xml" title="RSS News Feed">News Feed</a></li>
+						
+						
+						
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="container">
+				<div class="page-header">
+					<h1>Exit Status One <br /><small>The only source of knowledge is experience...</small></h1>
+				</div>
+			</div>
+		</header>
+	
+		<div class="container">
+					<div class="row">
+				<div class="col-sm-8">
+						<article>
+						<h4>Anonymity</h4>
+						<p>
+						07-10-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a>
+						</p>
+						<p>
+						Category <a href="/categories/security/">security</a>
+						</p>
+						<p>It is public knowledge that the NSA, among other Federal and State level agencies, have been monitoring Internet activity, voice, text and written digital communications.  I find it difficult to listen to the opinion of some people regarding this topic.  Some people say that they have nothing to hide, who cares if Big Brother is on the watch.  Others say they will not change a thing about their day to day habits.  A larger group of people are outraged and want to do everything they can to secure their digital habits and communications.  Freedom of speech is a fundamental part of being an American.  In this article I will outline what is being monitored, and how you can potentially become anonymous not only on the Internet or in your communications, but also out in the world.</p>
+
+<h3>The Basics: Food, Gas, Clothes, Shopping</h3>
+
+<p>When we go to the store to buy food, clothes, or to the gas station, our every move is being monitored.  Department stores do studies on how consumers think and what they buy.  Gas Stations have cameras and keep consumer data as well.  Grocery stores take it to a similar level in order to attract consumers to their stores for the hottest deals.  Web sites like eBay or similar also use consumer tracking.  It is true that the data collected on individuals is likely to never be reviewed by law enforcement or the government. (Assuming you are not a fugitive or in some other volatile situation.)</p>
+
+<p>The simplest way to thwart consumer data collection is by using cash or pre-paid credit cards.  Pre-paid credit cards are a great option because you can load it up with your whole pay check each pay period and head out to make your purchases.  Pre-paid credit cards also work in conjunction with services like PayPal.  This is the easiest tep to take to to achieve anonymity.</p>
+
+<h3>Communications</h3>
+
+<h4>Email</h4>
+
+<p>Email is used by everyone.  It is likely the single largest source of data collection conducted by Federal and State agencies.  Email addresses, the topics of discussion and even the location of the sender and addressee can be recorded with minimal effort.  In order to remain anonymous and still be able to send Email, there are a few things you can do.  All of which require some form of technical knowledge.</p>
+
+<ul>
+<li><a href="http://www.gnupg.org/">GNUPG / OpenPGP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/STARTTLS">STARTTLS</a></li>
+<li>Private Email Server</li>
+</ul>
+
+
+<p>The easiest step to take is to start encrypting your emails using PGP encryption.  In order to implement PGP encryption on your Email you must create a PGP signed key.  Each key has a public version and a private version.  You need to share your public key with each person you plan to communicate via email to.  When other people wish to send you encrypted emails they just need to use your public key to encrypt the email.  When you receive said email, your private key will decrypt the message.  This works both ways.  If they also create a PGP signed key, encrypted messages can be sent both ways.</p>
+
+<p>The drawback to PGP encrypted Emails is that the header information, the meta data if you will, of each email is still visible.  The meta data includes, the subject, who sent the email, who received it, where it was sent from, and where it ended up. PGP encrypted emails only encrypt the message body.</p>
+
+<p>To take your email encryption a step further, you can use STARTTLS.  To use STARTTLS, the email server you send email from must have this option enabled.  It can be implemented for IMAP, POP3, and SMTP email protocols.  STARTTLS will hide the previously mentioned meta data in each sent and received email.</p>
+
+<p>Now that your emails are all encrypted and very secure, its time to move on to the next step.</p>
+
+<p>The last step to take is to create your own <strong>private</strong> email server.  Companies like Google, Yahoo and Microsoft outlook are all subject to subpoena by government agencies.  Each year they hand over millions upon millions of communications that take place with the use of their "free" email accounts.  By running your own email server, it is guaranteed that a free email service will not be sharing your communications.</p>
+
+<h4>Phone calls</h4>
+
+<p>If you are the typical consumer and have purchased a cell phone from a large wireless company like Verizon or Sprint, you will have a lot of difficulty keeping your phone calls anonymous.  Just like Google, Microsoft and Yahoo, cell phone companies are also subject to subpoena.  When a large company like Verizon is issued a subpoena, they hand over massive amounts of consumer data.  Even if you have nothing to do with the reason the government is issuing this request, it is likely your information will be handed over as well.</p>
+
+<p>There are a few ways to make anonymous phone calls.  All practical methods include using VoIP (voice over Internet protocol).  Other options include purchasing a pre-paid credit card with cash at a gas station or convenience store, and using this pre-paid credit card to buy a pre-paid cell phone.  Land lines, such as a phone plugged into the wall at your house, are impossible to keep anonymous.</p>
+
+<p><a href="http://www.voipnow.org/2007/04/how_to_encrypt_.html">Encrypt VoIP Conversations</a></p>
+
+<h4>Text and Instant Messages</h4>
+
+<p>There are a number of ways to send anonymous text messages, but simply put, they are not end all solutions.  In addition,  the average person will not know how to implement said techniques.  The best option is to install an instant messenger client like Pidgin and use the plug-in called Off-the-Record.  There are other instant messenger clients that support similar behavior, but I personally enjoy using pidgin the most.  Pidgin supports nearly every text based communication protocol out there.  In order to use Pidgin you need to have Internet access.  I do not believe Pidgin is available for cell phones.</p>
+
+<p><a href="http://www.pidgin.im/">Pidgin IM Web Site</a>      <a href="http://www.cypherpunks.ca/otr/">Off-the-Record Plug-in</a></p>
+
+<h3>Web Browsing</h3>
+
+<p>Web browsing is by far the easiest to obfuscate, if you know a little bit about computer networking and Internet protocols.  I previously wrote an article covering a piece of software called "proxychains" which outlines a decent level of anonymity.  What I did not outline in that article was that you can take your proxychains configuration a step further and add the ability to chain your connections through TOR servers as well as other servers not on the TOR network.  Ideally it is best not to log into your bank account or your investment accounts over Proxied connections, due to the simple fact that anyone can be eavesdropping.</p>
+
+<p>Normal web traffic on an Internet connection starts at one point, goes out the servers of an Internet service provider (comcast, cox, att, etc) and takes the shortest route to its destination.  Web traffic that uses proxies in conjunction with software like Proxychains and Tor looks something like this:</p>
+
+<p><img src="/assets/posts/Proxied_Network.png" alt="Alt text" /></p>
+
+<p>Essentially, your web traffic becomes extremely difficult to track.  If someone was to eavesdrop, it would be very difficult to keep track of all the data, unless they are on your local network.</p>
+
+<p><a href="https://www.torproject.org/">Tor Web Site</a>      <a href="http://exitstatusone.com/proxy-chains-anonymous-web-browsing/">Proxychains</a></p>
+
+<hr />
+
+<h3>Conclusion</h3>
+
+<p>In the age of Information Technology convenience is at its highest.  Staying in touch with friends, family, and co-workers are essential to keep up with the fast paced envrionment we live in today.  Everything is digitalized.  Coporations and Companies rely on today's technolgies to communicate.  All communications, whether we like it or not, cross public and private internet space.  The government makes no exception to how or when they eavesdrop or monitor American citizens, but there are some precautions we can take.  As we move forward each day it is important to protect your privacy and retain our rights to freedom of speech.</p>
+
+					</article>
+				</div>
+				<div class="col-sm-4">
+					<div class="list-group">
+						<h4 class="list-group-item">Related Posts</h4>
+						
+						
+						
+						
+						<a class="list-group-item" href="/the-fuzz/" title="The Fuzz">The Fuzz</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/block-port-scan-brute-force/" title="Block Port Scans and Brute Force Attacks">Block Port Scans and Brute Force Attacks</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/medusa-log-in-auditor/" title="Medusa - Parallel Network Login Auditor">Medusa - Parallel Network Login Auditor</a>
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/crunch-word-list-generator/" title="Crunch Word List Generator">Crunch Word List Generator</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/proxy-chains-anonymous-web-browsing/" title="Proxy Chains – Anonymous Web Browsing">Proxy Chains – Anonymous Web Browsing</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/penetration-testing-nessus-metasploit/" title="Penetration Testing with Metasploit 4 and Nessus 5.2">Penetration Testing with Metasploit 4 and Nessus 5.2</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+
+<div class="row">
+	<div class="col-sm-8">
+		<div id="disqus_thread" style="padding:1%;"></div>
+		<script type="text/javascript">
+		var disqus_shortname = 'exitstatusone';
+		(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	</div>
+</div>
+
+
+
+		</div>
+	
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<p class="footer">
+						Designed by Brent Earl | &copy; 2014 Exit Status One. All Rights Reserved.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	</body>
+</html>

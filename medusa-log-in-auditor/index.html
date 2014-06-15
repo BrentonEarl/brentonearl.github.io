@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>       
+		<meta charset=utf-8>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<title>Exit Status One - Medusa - Parallel Network Login Auditor</title>
+		<meta name="author" content="Brent Earl" />
+		
+		<meta name="description" content="Learn how to brute force network service credentials using Medusa Log In Auditor" />
+		
+		
+		<meta name="keywords" content="security" />
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" herf="/css/styles.css" type="text/css">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<p class="navbar-brand" href="#">Menu</p>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/" title=" Index">Home</a></li>
+						
+						
+						
+						<li><a href="/about.html" title="About the Author">About</a></li>
+						
+						
+						
+						<li><a href="/archive.html" title="Site Archives">Archives</a></li>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li><a href="/rss.xml" title="RSS News Feed">News Feed</a></li>
+						
+						
+						
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="container">
+				<div class="page-header">
+					<h1>Exit Status One <br /><small>The only source of knowledge is experience...</small></h1>
+				</div>
+			</div>
+		</header>
+	
+		<div class="container">
+					<div class="row">
+				<div class="col-sm-8">
+						<article>
+						<h4>Medusa - Parallel Network Login Auditor</h4>
+						<p>
+						07-16-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a>
+						</p>
+						<p>
+						Category <a href="/categories/security/">security</a>
+						</p>
+						<p>Medusa is a login credential auditor.  It has the ability to remotely brute force many different network protocols.  This article discusses the process of auditing the SSH (secure shell) protocol.  SSH is a service installed on systems that require access to the command line via a remote connection.  The remote system in this scenario is located on the local area network running the Metasploitable Virtual Machine.  Metasploitable was built by Rapid7, creator of the Metasploit Penetration Testing Framework.  The process discussed includes the usage of Virtual Box (Virtualization Software), nmap (Port Scanner), and Medusa (Brute Force Software).</p>
+
+<p><strong>Please remember that attacks such as these should only be used in a controlled environment, on a network where you have authorization from the network administrator.</strong></p>
+
+<h4>Scenario</h4>
+
+<p>An attacker identified a remote service that is connected to the network at 192.168.2.4.  This was discovered by port scanning the subnet 192.168.2.0/24.  The remote server had various services running on it that are vulnerable to a number of exploits.  The attacker also discovered that a remote network share provided open access to anyone on the network.  By probing the network share, it was possible to determine a number of user accounts available to log into remotely.  After executing a network mapping using nmap to port scan the remote server, the attacker confirmed that the remote server had the SSH service running on port 22.  With the network mapping and enumeration completed, the attacker executed Medusa to Brute Force the log in credentials required to log into the administrative account on the remote system.</p>
+
+<p><strong>Short Video Example:</strong></p>
+
+<p id="video">
+    <object width="560" height="315"><param name="movie" value="//www.youtube.com/v/ue9PR44_pBU?hl=en_US&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/ue9PR44_pBU?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+</p>
+
+
+
+
+					</article>
+				</div>
+				<div class="col-sm-4">
+					<div class="list-group">
+						<h4 class="list-group-item">Related Posts</h4>
+						
+						
+						
+						
+						<a class="list-group-item" href="/the-fuzz/" title="The Fuzz">The Fuzz</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/block-port-scan-brute-force/" title="Block Port Scans and Brute Force Attacks">Block Port Scans and Brute Force Attacks</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/crunch-word-list-generator/" title="Crunch Word List Generator">Crunch Word List Generator</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/anonymity/" title="Anonymity">Anonymity</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/proxy-chains-anonymous-web-browsing/" title="Proxy Chains – Anonymous Web Browsing">Proxy Chains – Anonymous Web Browsing</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/penetration-testing-nessus-metasploit/" title="Penetration Testing with Metasploit 4 and Nessus 5.2">Penetration Testing with Metasploit 4 and Nessus 5.2</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+
+<div class="row">
+	<div class="col-sm-8">
+		<div id="disqus_thread" style="padding:1%;"></div>
+		<script type="text/javascript">
+		var disqus_shortname = 'exitstatusone';
+		(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	</div>
+</div>
+
+
+
+		</div>
+	
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<p class="footer">
+						Designed by Brent Earl | &copy; 2014 Exit Status One. All Rights Reserved.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	</body>
+</html>
