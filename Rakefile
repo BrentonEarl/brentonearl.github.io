@@ -12,7 +12,7 @@ namespace :blog do
 	# bundle exec rake blog:publish
 	desc "Build and publish blog on github"
 
-	task :publish do
+	task :build do
 		# Build Jekyll site from parent directory
 		# and put the generated files in _site/ dir
 		print "Making sure we are in the right directory and the right branch\n"
@@ -31,24 +31,28 @@ namespace :blog do
 		system "git commit -a"
 		system "git push"
 
+	end
+
+
+	#task :publish do
 		# Empties master branch, which contains 
 		# all previously generated files. Then 
 		# copies _site dir and assets dir to master.
 		# Finally, pushes changes to git hub
-		print "Switch to master branch and delete old site files\n"
-		system "git checkout master"
-		system "rm -rf *"
+		#print "Switch to master branch and delete old site files\n"
+		#system "git checkout master"
+		#system "rm -rf *"
 
-		print "Checking out _site and assets directories into master\n"
-		system "git checkout source _site/ assets/"
-		system "cp -R _site/* ."
-		system "rm -rf _site"
+		#print "Checking out _site and assets directories into master\n"
+		#system "git checkout source _site/ assets/"
+		#system "cp -R _site/* ."
+		#system "rm -rf _site"
 
-		print "Adding, commiting and pushing changes to master branch\n"
-		system "git add ."
-		system "git commit -a"
-		system "git push"
-		print "\n\n"
-		print "Updated site published"
-	end
+		#print "Adding, commiting and pushing changes to master branch\n"
+		#system "git add ."
+		#system "git commit -a"
+		#system "git push"
+		#print "\n\n"
+		#print "Updated site published"
+	#end
 end
