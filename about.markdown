@@ -14,6 +14,6 @@ I enjoy expanding my horizons.  The content on this site is written in a tutoria
 
 In the passed I was mostly interested in using software, breaking software and securing software.  Recently I have taken a deep interest in creating software.  My programming language of choice is Ruby.  I pride myself in being able to know a bit of everything about a topic.  I plan to change that habit and gain some expertise in specific areas of interest.  I enjoy building web applications using [Sinatra](http://sinatrarb.com) and I also enjoy building static sites using [Jekyll](http://jekyllrb.com).  You can expect to see a majority of the remaining articles on this site cover Ruby, Sinatra and jekyll related topics. 
 
-Feel free to connect with me on [Twitter](https://twitter.com/BrentonLeeEarl).
+I'm a pretty cool guy, feel free to connect with me on [Twitter](https://twitter.com/BrentonLeeEarl).
 
-Please head over to my [Facebook Page](https://www.facebook.com/exitstatusone) and show me some love with a like.
+This site has a [Facebook Page](https://www.facebook.com/exitstatusone) where I will post updates when I am actively writting content.
