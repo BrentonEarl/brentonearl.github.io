@@ -14,6 +14,11 @@ namespace :blog do
 	task :build do
 		# Build Jekyll site from parent directory
 		# and put the generated files in _site/ dir
+		print "Making sure we are in the right directory and the right branch\n"
+		system "cd ~/Projects/Jekyll/brentonearl.github.io"
+		system "git checkout source"
+
+		print "Building site with jekyll\n"
 		Jekyll::Site.new(Jekyll.configuration({
 			"source"			=> ".",
 			"destination"	=> "_site",
