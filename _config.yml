@@ -1,7 +1,7 @@
 title: "Exit Status One"
-description: "A compilation of News, Programming, Linux, Web design and Ruby."
-keywords: "Software, Development, Ruby, Jekyll, Sinatra, Linux, Security, Programming, Tutorial, Technology"
-tagline: "The only source of knowledge is experience..."
+description: "A compilation of information about various interesting and uninteresting topics."
+keywords: "Software, Development, Ruby, Jekyll, Sinatra, Linux, Security, Programming, Technology"
+tagline: "while : ; do echo 'Tinker, explore, hack, learn...' ; sleep 28800 ; clear ; done"
 user: Brent Earl
 
 baseurl: ""
