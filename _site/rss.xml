@@ -4,10 +4,10 @@
 	<title>Exit Status One</title>
 	<link>http://www.exitstatusone.com</link>
 	<atom:link href="http://www.exitstatusone.com/rss.xml" rel="self" type="application/rss+xml" />
-	<description>A compilation of News, Programming, Linux, Web design and Ruby.</description>
+	<description>A compilation of information about various interesting and uninteresting topics.</description>
 	<language>en-us</language>
-	<pubDate>Mon, 16 Jun 2014 11:25:17 -0500</pubDate>
-	<lastBuildDate>Mon, 16 Jun 2014 11:25:17 -0500</lastBuildDate>
+	<pubDate>Tue, 02 Dec 2014 16:25:45 -0600</pubDate>
+	<lastBuildDate>Tue, 02 Dec 2014 16:25:45 -0600</lastBuildDate>
 
 	
 	<item>
@@ -26,7 +26,7 @@
 	<pubDate>Sat, 16 Nov 2013 00:00:00 -0600</pubDate>
 	<author>Brent Earl</author>
 	<guid>http://www.exitstatusone.com/urban-terror</guid>
-	<description>&lt;p&gt;Way back in the day I played Doom, Quake 2, Quake 3, Action Quake, Medal of Honor: Allied Assault, Medal of Honor: Breakthrough.  I was a big fan of first person shooters.  Out of nostalgia I decided to start playing &lt;a href=&quot;http://www.urbanterror.info&quot;&gt;Urban Terror&lt;/a&gt; because it is based on the code from Quake 3 Arena.  Of course it has different player models and maps, but there are a few maps people recreated that I played in the previously mentioned first person shooters.  I used to be very strict about the realism involved in the games I played, but that all went away with my long time binge of MMO's. Some aspects of Urban Terror are realistic but Urban Terror plays more like Quake 2, which was not realistic at all.&lt;/p&gt;
+	<description>&lt;p&gt;Way back in the day I played Doom, Quake 2, Quake 3, Action Quake, Medal of Honor: Allied Assault, Medal of Honor: Breakthrough.  I was a big fan of first person shooters.  Out of nostalgia I decided to start playing &lt;a href=&quot;http://www.urbanterror.info&quot;&gt;Urban Terror&lt;/a&gt; because it is based on the code from Quake 3 Arena.  Of course it has different player models and maps, but there are a few maps people recreated that I played in the previously mentioned first person shooters.  I used to be very strict about the realism involved in the games I played, but that all went away with my long time binge of MMO&#39;s. Some aspects of Urban Terror are realistic but Urban Terror plays more like Quake 2, which was not realistic at all.&lt;/p&gt;
 </description>
 	</item>
 	
@@ -186,7 +186,7 @@
 	<pubDate>Tue, 09 Jul 2013 00:00:00 -0500</pubDate>
 	<author>Brent Earl</author>
 	<guid>http://www.exitstatusone.com/cloud-based-storage</guid>
-	<description>&lt;p&gt;On July 9th, 2013 Dropbox is having it's first Developer's Conference for a day of creativity and exploration.  This conference aims to inform various developers of latest releases and the capabilities of the Dropbox platform.  One of the topics that will be discussed is how Dropbox plans to develop the Dropbox API to completely replace hard drives and integrate their system into an operating system.&lt;/p&gt;
+	<description>&lt;p&gt;On July 9th, 2013 Dropbox is having it&#39;s first Developer&#39;s Conference for a day of creativity and exploration.  This conference aims to inform various developers of latest releases and the capabilities of the Dropbox platform.  One of the topics that will be discussed is how Dropbox plans to develop the Dropbox API to completely replace hard drives and integrate their system into an operating system.&lt;/p&gt;
 </description>
 	</item>
 	
@@ -346,7 +346,7 @@
 	<pubDate>Wed, 15 Feb 2012 00:00:00 -0600</pubDate>
 	<author>Brent Earl</author>
 	<guid>http://www.exitstatusone.com/cisco-packet-tracer-debian-64bit</guid>
-	<description>&lt;p&gt;I am taking a class that requires me to use Cisco's Packet Tracer to do labs.  I grew tired of being forced to boot into Windows 7 to do class work, as I would rather stay using Linux for all of my needs.  After trying to install the Windows .exe in wine and receiving errors, and shortly after a crash, I found: &lt;a href=&quot;http://www.ubuntubuzz.com/2011/05/installing-and-running-cisco-packet.html&quot;&gt;Installing Cisco Packet Tracer 5.3 in Ubuntu&lt;/a&gt;.  This tutorial, however, did not meet 100% of my needs.  I am running Debian Squeeze on AMD64, so the binary package gave the error after the EULA:&lt;/p&gt;
+	<description>&lt;p&gt;I am taking a class that requires me to use Cisco&#39;s Packet Tracer to do labs.  I grew tired of being forced to boot into Windows 7 to do class work, as I would rather stay using Linux for all of my needs.  After trying to install the Windows .exe in wine and receiving errors, and shortly after a crash, I found: &lt;a href=&quot;http://www.ubuntubuzz.com/2011/05/installing-and-running-cisco-packet.html&quot;&gt;Installing Cisco Packet Tracer 5.3 in Ubuntu&lt;/a&gt;.  This tutorial, however, did not meet 100% of my needs.  I am running Debian Squeeze on AMD64, so the binary package gave the error after the EULA:&lt;/p&gt;
 </description>
 	</item>
 	
@@ -356,7 +356,7 @@
 	<pubDate>Sun, 12 Feb 2012 00:00:00 -0600</pubDate>
 	<author>Brent Earl</author>
 	<guid>http://www.exitstatusone.com/command-line-desktop-debian</guid>
-	<description>&lt;p&gt;Let's say you wanted to do away with Gnome, KDE, Xfce, LXDE, or any other GUI based desktop environment on your Debian system. There are many reasons somebody would want to do this.... save disk space, novelty, minimalism, or you simply want to use a different interface.&lt;/p&gt;
+	<description>&lt;p&gt;Let&#39;s say you wanted to do away with Gnome, KDE, Xfce, LXDE, or any other GUI based desktop environment on your Debian system. There are many reasons somebody would want to do this.... save disk space, novelty, minimalism, or you simply want to use a different interface.&lt;/p&gt;
 </description>
 	</item>
 	
