@@ -1,3 +1,4 @@
+require "rubygems"
 require "jekyll"
 
 namespace :blog do
@@ -17,17 +18,15 @@ namespace :blog do
 		print "Making sure we are in the right directory and the right branch\n"
 		system "cd ~/Projects/Jekyll/brentonearl.github.io"
 		system "git checkout source"
-
 		print "Building site with jekyll\n"
 		Jekyll::Site.new(Jekyll.configuration({
 			"source"			=> ".",
 			"destination"	=> "_site",
 			"config"			=> "_config.yml"
 		})).process
-
 		print "Adding, committing and pushing changes to source branch\n"
 		system "git add ."
-		system "git commit -m 'Generated New Site'"
+		system "git commit -a"
 		system "git push"
 		print "\n\n"
 		print "Run 'bundle exec jekyll server' to verify site before publishing\n"
@@ -38,6 +37,30 @@ namespace :blog do
 		# all previously generated files. Then 
 		# copies _site dir and assets dir to master.
 		# Finally, pushes changes to git hub
-	end
+		answer = ""
+		print "Delete old site files?"
+		answer = gets
+		if answer == 'y'
+			puts "You answered '#{answer}'\n"
+			print "We are in the right directory and the right branch\n"
+			system "cd ~/Projects/Jekyll/brentonearl.github.io"
+			system "git checkout master"
+			system "rm -rf *"
 
+			print "Checking out _site and assets directories into master\n"
+			system "git checkout source _site assets/"
+			system "cp -R _site/* ."
+			system "rm -rf _site"
+
+			print "Adding, commiting and pushing changes to master branch\n"
+			system "git add ."
+			system "git commit -a"
+			system "git push"
+			print "\n\n"
+			print "Updated site published"
+		else
+			puts "You answered '#{answer}', exiting now."
+			exit
+		end
+	end
 end
