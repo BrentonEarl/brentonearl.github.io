@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<!-- Use HTML5 -->
+<html lang = "en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+    <!-- Make site Mobile Device Friendly -->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maxi    mum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
+
+    <!-- Pull Just Site Name if Index -->
+    <!-- Pull Site Name and Page Title if it's a Post-->
+    <title>{{ site.name }} - {{ page.title }}</title>
+
+    <!-- Pull Site Author that is in _config.yml -->
+    <meta name="author" content="{{ site.user }}" />
+
+    <!-- Pull Metadate Description -->
+    {% if page.description %} <!-- If it's a page -->
+    <!-- Pull the Page Description -->
+    <meta name="description" content="{{page.description}}" />
+    {% else %} <!-- Otherwise... -->
+    <!-- Set Site description in _config.yml -->
+    <meta name="description" content="{{site.description}}" />
+    {% endif %}
+
+    <!-- Pull Metadata Keywords -->
+    {% if page.categories %} <!-- If the page or post has a category -->
+    <!-- Set Page Keywords using the Category -->
+    <meta name="keywords" content="{{page.categories | join: ','}}" />
+    {% else %} <!-- Otherwise... -->
+    <!-- Set Site Keywords in _config.yml -->
+    <meta name="keywords" content="{{site.keywords | join: ','}}" />
+    {% endif %}
+
+    <link rel="stylesheet" href="/css/main.css" /> <!-- Main Site Styles -->
+    <link rel="stylesheet" href="/css/syntax.css" /><!-- Syntax Highlight -->
+</head>
+
+<body>
+
+<div id="header"> <!-- Header -->
+    <h1> {{ site.name }} </h1>
+
+    <!-- Navigation Menu -->
+    <ul id="menu">
+        <li>
+            <a href="/" title="{{ site.name }} Index">Home</a>
+        </li> 
+    {% assign sorted_pages = site.pages | sort:"name" %}
+    <!-- Generate Menu -->
+    <!-- All Pages and Posts that include the link_title attribute -->
+    {% for node in sorted_pages %}
+        {% if node.link_title %}
+        <li>
+            <a href="{{ node.url }}" title="{{ node.title }}">{{ node.title }}</a>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</div> <!-- End Header -->
+
+<div id="page"> <!-- Page Content -->
+    <!-- This is generated from what is within a page or post -->
+    {{ content }}
+</div> <!-- End Page Content -->
+
+<div id="footer"> <!-- Footer --> 
+    <p>&copy; {{ site.time | date: '%Y'}} {{ site.name}} | Powered By <a href="jekyllrb.com" title="Jekyll Site Generator">Jekyll</a></p>
+</div> <!-- End Footer -->
+</body>
+</html>
+
+
