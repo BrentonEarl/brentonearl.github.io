@@ -107,45 +107,42 @@
 
 <p>Take this example of a menu using a div element:</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ul&gt;</span>
     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>Index Page<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/about&quot;</span><span class="nt">&gt;</span>Products<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/services&quot;</span><span class="nt">&gt;</span>Services<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/contact&quot;</span><span class="nt">&gt;</span>Contact Us<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 
 <p>This menu is styled using the following style sheet:</p>
 
-<div class="highlight"><pre><code class="css"><span class="nf">#menu</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#menu</span> <span class="p">{</span>
   <span class="k">width</span><span class="o">:</span> <span class="m">500px</span><span class="p">;</span>
   <span class="k">height</span><span class="o">:</span> <span class="m">50px</span><span class="p">;</span>
   <span class="k">padding</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
   <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="nf">#menu</span> <span class="nt">ul</span> <span class="p">{</span> <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span> <span class="p">}</span>
-<span class="nf">#menu</span> <span class="nt">ul</span> <span class="nt">li</span> <span class="p">{</span> <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="p">;</span> <span class="k">padding</span><span class="o">:</span> <span class="m">3px</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div>
+<span class="nf">#menu</span> <span class="nt">ul</span> <span class="nt">li</span> <span class="p">{</span> <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="p">;</span> <span class="k">padding</span><span class="o">:</span> <span class="m">3px</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
 
 
 <p>If you were using a layout geared to <strong>respond</strong> to different viewing resolutions, you would be using Responsive Web Design or RWD.  In RWD you do not set static pixelated values for any element on the page - not even font fonts, headings, bold or italic faced text.  By setting static values to any element on your web site, your web site will not scale with different screen resolutions.  The above example can easily become a RWD by converting every pixelated value into a percentage.  Lets look at the menu example again.  The HTML will stay the same.  You just need to change the style sheet to apply RWD.</p>
 
-<div class="highlight"><pre><code class="css"><span class="nf">#menu</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">90</span><span class="o">%</span><span class="p">;</span>
-  <span class="k">margin-left</span><span class="o">:</span> <span class="m">5</span><span class="o">%</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">10</span><span class="o">%</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#menu</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">90%</span><span class="p">;</span>
+  <span class="k">margin-left</span><span class="o">:</span> <span class="m">5%</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">10%</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="nf">#menu</span> <span class="nt">ul</span> <span class="p">{</span> <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span> <span class="p">}</span>
-<span class="nf">#menu</span> <span class="nt">ul</span> <span class="nt">li</span> <span class="p">{</span> <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="p">;</span> <span class="k">padding</span><span class="o">:</span> <span class="m">1</span><span class="o">%</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div>
+<span class="nf">#menu</span> <span class="nt">ul</span> <span class="nt">li</span> <span class="p">{</span> <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="p">;</span> <span class="k">padding</span><span class="o">:</span> <span class="m">1%</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
 
 
 <p>You will notice that every dimension and alignment is set using a percentage.  The document size, margin are set and the menu width, margin, height and spacing are set.  Lets adjust the layout to not only include the menu, but to also include a header, a content pane and a footer.  The menu will be located on the left side.</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;html&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span>
   <span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;title&gt;</span>Site Title<span class="nt">&lt;/title&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
@@ -169,35 +166,32 @@
     <span class="nt">&lt;p&gt;</span> Copyright 2013 - Site Title - Creator <span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-  
-</code></pre></div>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
 
 
 <p>Please note that each element has an id that defines its purpose in one word.  The simpler you make your site layout, the faster your web page will load on every mobile or stationary device.  Let take a look at the corresponding style sheet for the previous HTML snippet.</p>
 
-<div class="highlight"><pre><code class="css"><span class="nf">#header</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">90</span><span class="o">%</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">15</span><span class="o">%</span><span class="p">;</span>
-  <span class="k">margin-left</span><span class="o">:</span> <span class="m">5</span><span class="o">%</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#header</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">90%</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">15%</span><span class="p">;</span>
+  <span class="k">margin-left</span><span class="o">:</span> <span class="m">5%</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="nf">#menu</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">30</span><span class="o">%</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">10</span><span class="o">%</span><span class="p">;</span>
-  <span class="k">margin-left</span><span class="o">:</span> <span class="m">5</span><span class="o">%</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">30%</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">10%</span><span class="p">;</span>
+  <span class="k">margin-left</span><span class="o">:</span> <span class="m">5%</span><span class="p">;</span>
   <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="nf">#content</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">60</span><span class="o">%</span><span class="p">;</span>
-  <span class="k">margin-left</span><span class="o">:</span> <span class="m">5</span><span class="o">%</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">60%</span><span class="p">;</span>
+  <span class="k">margin-left</span><span class="o">:</span> <span class="m">5%</span><span class="p">;</span>
   <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="nf">#footer</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">90</span><span class="o">%</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">10</span><span class="o">%</span><span class="p">;</span>
-  <span class="k">margin-left</span><span class="o">:</span> <span class="m">5</span><span class="o">%</span><span class="p">;</span>
-  <span class="p">}</span>
-</code></pre></div>
+  <span class="k">width</span><span class="o">:</span> <span class="m">90%</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">10%</span><span class="p">;</span>
+  <span class="k">margin-left</span><span class="o">:</span> <span class="m">5%</span><span class="p">;</span>
+  <span class="p">}</span></code></pre></div>
 
 
 <p>With this styling the web page will resize based on the size of the screen.  A screen size width of 1024 pixels means that the menu will be 307.2 pixels wide and the content will be 614.4 pixels wide.  The footer and header will be 921.6 pixels wide.  The margin of all of the content will add a spacing of 51.2 pixels around all content.  As a result of using precents, these pixel values with update automatically when the browser window is resized or if the web page is viewed on a device with a smaller screen.</p>
