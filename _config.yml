@@ -2,7 +2,7 @@ title: "Exit Status One"
 description: "A compilation of information about various interesting and uninteresting topics."
 keywords: "Software, Development, Ruby, Jekyll, Sinatra, Linux, Security, Programming, Technology"
 tagline: "while : ; do echo 'Tinker, explore, hack, learn...' ; sleep 28800 ; clear ; done"
-user: Brent Earl
+user: Brenton Earl
 
 baseurl: ""
 url: http://www.exitstatusone.com
