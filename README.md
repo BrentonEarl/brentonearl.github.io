@@ -6,7 +6,7 @@ A compilation of information about various interesting and uninteresting topics.
 *  [exitstatusone.com](http://exitstatusone.com)
 *  Powered by Jekyll
 *  Author: Brenton Earl
-*  Contact:  <brent@exitstatusone.comm>
+*  Contact:  <brent@exitstatusone.com>
 
 #### Directions to install
 
