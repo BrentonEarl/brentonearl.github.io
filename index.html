@@ -14,11 +14,6 @@ title: Sharing Knowledge Since 2007
 				</div>
 				
 				<div class="col-sm-4">
-					<div class="list-group">
-						<h4 class="list-group-item">Post by Category</h4>
-						{% for category in site.categories %}
-						<a class="list-group-item" href="{{site.category_dir}}{{ category[0] }}">{{ category[0] | capitalize}}</a>
-						{% endfor %}
-					</div>
+					{% include category_widget.html %}
 				</div>
 			</div>

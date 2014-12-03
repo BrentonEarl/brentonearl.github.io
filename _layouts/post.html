@@ -16,18 +16,7 @@ layout: default
 					</article>
 				</div>
 				<div class="col-sm-4">
-					<div class="list-group">
-						<h4 class="list-group-item">Related Posts</h4>
-						{% for post in site.posts %}
-						{% for category in post.category %}
-						{% if category == page.category %}
-						{% if post.title != page.title %}
-						<a class="list-group-item" href="{{ post.url}}" title="{{ post.title }}">{{ post.title }}</a>
-						{% endif %}
-						{% endif %}
-						{% endfor %}
-						{% endfor %}
-					</div>
+				{% include related_posts_widget.html %}
 				</div>
 			</div>
 			{% include submit_pull_request.html %}
