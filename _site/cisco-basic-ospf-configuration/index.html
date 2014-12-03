@@ -88,17 +88,24 @@
 		<div class="container">
 					<div class="row">
 				<div class="col-sm-8">
-						<article>
-						<h4>Cisco - Basic OSPF Configuration</h4>
+						<article itemscope itemtype="http://schema.org/Article">
+						<h4 itemprop="name">Cisco - Basic OSPF Configuration</h4>
 						<p>
-						03-03-2012 by <a href="https://twitter.com/BrentonLeeEarl">Brenton Earl</a>
+							<span itemprop="datePublished" content="03-03-2012">03-03-2012</span> by 
+								<a href="https://twitter.com/BrentonLeeEarl">
+									<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+										<span itemprop="name">Brenton Earl</span>
+									</span>
+								</a>
+							</span>
 						</p>
 						
 
 						<p>
 						Category <a href="/categories/cisco/">cisco</a>
 						</p>
-						<p>In this article I will be walking my readers through the process of configuring a Cisco router to use the OSPF routing protocol.  OSPF stands for Open Shortest Path First.  OSPF is an adaptive routing protocol for internet protocol networks.  OSPF uses link state routing and it uses the link state routing algorithm.  OSPF falls into the category of interior routing protocols. It operates as a single autonomous system.  For protocol specific information, please view RFC 2328 and RFC 5340.  For an in depth backgroun on the OSPF routing protocol, please view: <a href="http://en.wikipedia.org/wiki/Open_Shortest_Path_First">Wikipedia: OSPF</a>.</p>
+						<span itemprop="articleBody">
+							<p>In this article I will be walking my readers through the process of configuring a Cisco router to use the OSPF routing protocol.  OSPF stands for Open Shortest Path First.  OSPF is an adaptive routing protocol for internet protocol networks.  OSPF uses link state routing and it uses the link state routing algorithm.  OSPF falls into the category of interior routing protocols. It operates as a single autonomous system.  For protocol specific information, please view RFC 2328 and RFC 5340.  For an in depth backgroun on the OSPF routing protocol, please view: <a href="http://en.wikipedia.org/wiki/Open_Shortest_Path_First">Wikipedia: OSPF</a>.</p>
 
 <p>In my configuration, I will deploying one router, one switch, and two workstations.  The router will be using the OSPF routing protocol and the switch will be be a mostly default configuration.  I will be using a Class B network with a CIDR Value of /24, a subnet mask of 255.255.255.0, and the network address 172.16.0.0.  The router will have the IP address 172.16.0.1, work station 1 will have the IP Address 172.16.0.2, and work station 2 will have the IP Address 172.16.0.3.  As stated, the switch will be mostly a default configuration, aside from passwords and hostname.  It is important to note that I am executing this tutorial with the use of the Packet Tracer program created by Cisco.</p>
 
@@ -132,6 +139,7 @@
 
 <p>This concludes the tutorial.  As usual, please email any questions regarding this article.  I will do my best to respond in an accurate timely fashion.</p>
 
+						</span>
 					</article>
 				</div>
 				<div class="col-sm-4">

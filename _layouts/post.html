@@ -3,16 +3,24 @@ layout: default
 ---
 			<div class="row">
 				<div class="col-sm-8">
-						<article>
-						<h4>{{ page.title }}</h4>
+						<article itemscope itemtype="http://schema.org/Article">
+						<h4 itemprop="name">{{ page.title }}</h4>
 						<p>
-						{{page.date | date: "%m-%d-%Y" }} by <a href="https://twitter.com/BrentonLeeEarl">{{ site.user }}</a>
+							<span itemprop="datePublished" content="{{ page.date | date: "%m-%d-%Y" }}">{{page.date | date: "%m-%d-%Y" }}</span> by 
+								<a href="https://twitter.com/BrentonLeeEarl">
+									<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+										<span itemprop="name">{{ site.user }}</span>
+									</span>
+								</a>
+							</span>
 						</p>
 						{% include outdated_articles.html %}
 						<p>
 						Category <a href="/categories/{{page.category | downcase}}/">{{ page.category | downcase }}</a>
 						</p>
-						{{ content }}
+						<span itemprop="articleBody">
+							{{ content }}
+						</span>
 					</article>
 				</div>
 				<div class="col-sm-4">
