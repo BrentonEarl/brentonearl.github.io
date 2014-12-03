@@ -13,3 +13,6 @@ permalink: /:title/
 category_dir: "categories/"
 
 exclude: [Gemfile, Gemfile.lock, README.md, .gitignore, Rakefile]
+
+gems:
+  - jekyll-sitemap

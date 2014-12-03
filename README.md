@@ -19,10 +19,9 @@ A compilation of information about various interesting and uninteresting topics.
 #### Software requirements
 
 *  Built using ruby 2.1.5
-*  Gems:  jekyll, rdiscount, github-pages
+*  Gems:  jekyll, rdiscount, github-pages, jekyll-sitemap
 
 #### Required Plugins
 
 *  Located at _plugins/
-*  sitemap_generator.rb
 *  category_generator.rb
