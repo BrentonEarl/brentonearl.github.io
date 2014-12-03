@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>       
+		<meta charset=utf-8>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<title>Exit Status One - Install Cisco Packet Tracer on Debian 64 bit</title>
+		<meta name="author" content="Brent Earl" />
+		
+		<meta name="description" content="Cisco Packet Tracer is software that allows students and professionals to create a virtual environment of Cisco network devices on a variety of networks.  This article discusses the process of installing Cisco Packet Tracer within a 64 bit Debian Linux System." />
+		
+		
+		<meta name="keywords" content="cisco" />
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" herf="/css/styles.css" type="text/css">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<p class="navbar-brand" href="#">Menu</p>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/" title=" Index">Home</a></li>
+						
+						
+						
+						<li><a href="/about.html" title="About the Author">About</a></li>
+						
+						
+						
+						<li><a href="/archive.html" title="Site Archives">Archives</a></li>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li><a href="/rss.xml" title="RSS News Feed">News Feed</a></li>
+						
+						
+						
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="container">
+				<div class="page-header">
+					<h1>Exit Status One</h1>
+					<small>while : ; do echo 'Tinker, explore, hack, learn...' ; sleep 28800 ; clear ; done</small>
+				</div>
+			</div>
+		</header>
+	
+		<div class="container">
+					<div class="row">
+				<div class="col-sm-8">
+						<article>
+						<h4>Install Cisco Packet Tracer on Debian 64 bit</h4>
+						<p>
+						02-15-2012 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a>
+						</p>
+						
+	<p>This article may be <i><mark>outdated...</mark></i></p>
+
+
+						<p>
+						Category <a href="/categories/cisco/">cisco</a>
+						</p>
+						<p>I am taking a class that requires me to use Cisco's Packet Tracer to do labs.  I grew tired of being forced to boot into Windows 7 to do class work, as I would rather stay using Linux for all of my needs.  After trying to install the Windows .exe in wine and receiving errors, and shortly after a crash, I found: <a href="http://www.ubuntubuzz.com/2011/05/installing-and-running-cisco-packet.html">Installing Cisco Packet Tracer 5.3 in Ubuntu</a>.  This tutorial, however, did not meet 100% of my needs.  I am running Debian Squeeze on AMD64, so the binary package gave the error after the EULA:</p>
+
+<blockquote><p>Attempting to install package now
+dpkg: error processing PacketTracer-5.3-u.i386.deb (--install):
+package architecture (i386) does not match system (amd64)
+Errors were encountered while processing:
+PacketTracer-5.3-u.i386.deb</p></blockquote>
+
+<p>After searching around on the web I came to find a solution to installing this package on a 64bit system.  I first installed ia32-libs and ia32-libs-gtk, but I am unsure this was necessary for packet tracer to run.  After that I had to do a bit of a hack to get the .deb package out of the .bin installer to bypass the dpkg architecture error.</p>
+
+<p>First I ran:
+    chmod +x PacketTracer53_i386_installer-deb.bin
+    sudo ./PacketTracer53_i386_installer-deb.bin</p>
+
+<p>Next, the tricky part.  Leave the .bin running at the EULA.  Then go to a new terminal window and head over to /tmp/selfextract.XXXX.  The self extract directory will have a different ending where the XXXX portion of the directory name is labeled.  Notice that after executing 'ls' you will see the eula, installer, and the .deb package.  Copy the whole directory to some place in your user's home directory.</p>
+
+<pre><code>user@exitstatusone~# sudo su
+root@exitstatusone:/tmp# cd selfextract.2zDwDM/
+root@exitstatusone:/tmp/selfextract.2zDwDM# ls eula.txt  installer  PacketTracer-5.3-u.i386.deb
+user@exitstatusone:/tmp/selfextract.2zDwDM# cp * /home/user/Cisco_Packet_Tracer/debian_package
+</code></pre>
+
+<p>From here you can exit the .bin installer and close that terminal window.  Head into the directory that contains the .deb package.  You will now need to install the package with the --force-all option.</p>
+
+<pre><code>user@exitstatusone:~/Cisco_Packet_Tracer/debian_package$ sudo dpkg -i --force-all PacketTracer-5.3-u.i386.deb
+[sudo] password for user:
+dpkg: warning: overriding problem because --force enabled:
+package architecture (i386) does not match system (amd64)
+Selecting previously deselected package packettracer.
+(Reading database ... 134888 files and directories currently installed.)
+Unpacking packettracer (from PacketTracer-5.3-u.i386.deb) ...
+Setting up packettracer (5.3) ...
+Installed files. Please wait for post-install operations to finish..
+gtk-update-icon-cache: Cache file created successfully.
+Writing PT5HOME environment variable to /etc/profile
+Processing triggers for man-db ...
+Processing triggers for gnome-icon-theme ...
+</code></pre>
+
+<p>Next you will need to create a symlink from /usr/local/PacketTracer5/packettracer to /usr/local/bin to allow the Packet Tracer binary into your user's $PATH.</p>
+
+<pre><code>user@exitstatusone:~/Cisco_Packet_Tracer/debian_package$ sudo ln -s /usr/local/PacketTracer5/packettracer /usr/local/bin
+</code></pre>
+
+<p>After you have installed the .deb package and created the symlink you can execute the "packettracer" binary from your user's shell prompt.</p>
+
+<pre><code>user@exitstatusone:~/Cisco_Packet_Tracer/debian_package$ bash packettracer
+Starting Packet Tracer 5.3
+</code></pre>
+
+<p>Profit!  You should now see a window similar to this:</p>
+
+<p><img src="/assets/posts/Screenshot-Cisco-Packet-Tracer.png" alt="Alt text" /></p>
+
+<p>I have not tested the software for bugs in Linux, but as far as I can tell Packet Tracer runs just fine in Debian Squeeze AMD64.  I will have to report back if at some point the software starts to crash.</p>
+
+					</article>
+				</div>
+				<div class="col-sm-4">
+					<div class="list-group">
+						<h4 class="list-group-item">Related Posts</h4>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/cisco-basic-router-configuration/" title="Cisco - Basic Router Configuration">Cisco - Basic Router Configuration</a>
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/cisco-basic-ripv2-configuration/" title="Cisco Basic Ripv2 Configuration">Cisco Basic Ripv2 Configuration</a>
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/cisco-basic-ospf-configuration/" title="Cisco - Basic OSPF Configuration">Cisco - Basic OSPF Configuration</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+			<hr />
+<p>Is the information here outdated or incorrect? <a href="https://github.com/BrentonEarl/brentonearl.github.io/edit/source/_posts/2012-02-15-cisco-packet-tracer-debian-64bit.markdown"> Submit a pull request!</a></p>
+<hr />
+
+			
+<div class="row">
+	<div class="col-sm-8">
+		<div id="disqus_thread" style="padding:1%;"></div>
+		<script type="text/javascript">
+		var disqus_shortname = 'exitstatusone';
+		(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	</div>
+</div>
+
+
+
+		</div>
+	
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<p class="footer">
+						&copy; 2014 Brent Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	</body>
+</html>

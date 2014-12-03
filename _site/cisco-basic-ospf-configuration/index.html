@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>       
+		<meta charset=utf-8>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<title>Exit Status One - Cisco - Basic OSPF Configuration</title>
+		<meta name="author" content="Brent Earl" />
+		
+		<meta name="description" content="Covers the rudimentary process of configuring a Cisco router to run the Open Shortest Path First protocol." />
+		
+		
+		<meta name="keywords" content="cisco" />
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" herf="/css/styles.css" type="text/css">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<p class="navbar-brand" href="#">Menu</p>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/" title=" Index">Home</a></li>
+						
+						
+						
+						<li><a href="/about.html" title="About the Author">About</a></li>
+						
+						
+						
+						<li><a href="/archive.html" title="Site Archives">Archives</a></li>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li><a href="/rss.xml" title="RSS News Feed">News Feed</a></li>
+						
+						
+						
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="container">
+				<div class="page-header">
+					<h1>Exit Status One</h1>
+					<small>while : ; do echo 'Tinker, explore, hack, learn...' ; sleep 28800 ; clear ; done</small>
+				</div>
+			</div>
+		</header>
+	
+		<div class="container">
+					<div class="row">
+				<div class="col-sm-8">
+						<article>
+						<h4>Cisco - Basic OSPF Configuration</h4>
+						<p>
+						03-03-2012 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a>
+						</p>
+						
+
+						<p>
+						Category <a href="/categories/cisco/">cisco</a>
+						</p>
+						<p>In this article I will be walking my readers through the process of configuring a Cisco router to use the OSPF routing protocol.  OSPF stands for Open Shortest Path First.  OSPF is an adaptive routing protocol for internet protocol networks.  OSPF uses link state routing and it uses the link state routing algorithm.  OSPF falls into the category of interior routing protocols. It operates as a single autonomous system.  For protocol specific information, please view RFC 2328 and RFC 5340.  For an in depth backgroun on the OSPF routing protocol, please view: <a href="http://en.wikipedia.org/wiki/Open_Shortest_Path_First">Wikipedia: OSPF</a>.</p>
+
+<p>In my configuration, I will deploying one router, one switch, and two workstations.  The router will be using the OSPF routing protocol and the switch will be be a mostly default configuration.  I will be using a Class B network with a CIDR Value of /24, a subnet mask of 255.255.255.0, and the network address 172.16.0.0.  The router will have the IP address 172.16.0.1, work station 1 will have the IP Address 172.16.0.2, and work station 2 will have the IP Address 172.16.0.3.  As stated, the switch will be mostly a default configuration, aside from passwords and hostname.  It is important to note that I am executing this tutorial with the use of the Packet Tracer program created by Cisco.</p>
+
+<p><strong>Network Diagram:</strong></p>
+
+<p><img src="/assets/posts/Switch_Router_2_WorkStations_ClassB.png" alt="Alt text" /></p>
+
+<p>Please refer to the article Cisco: Basic Router Configuration if you need help getting the basic settings on your router.  Also, please view the article Dia – The Diagram Creation Program for some insight as to how I created my network diagram.</p>
+
+<p><strong>Step 1:</strong></p>
+
+<p>First you must give your router an IP Address.  As stated, this router will be using the IP Address 172.16.0.1.  Type and Execute in global configuration mode, <strong>interface fa0/0</strong>.  Next, Type and Execute <strong>ip address 172.16.0.1</strong>. Finally, bring up the interface to the active state: <strong>no shutown</strong>.</p>
+
+<p><img src="/assets/posts/Cisco_Set_IP_Address1.png" alt="Alt text" /></p>
+
+<p><strong>Step 2:</strong></p>
+
+<p>Second, you need to enable and configure OSPF on your router.  In global configuration mode, Type and Execute <strong>router ospf 1</strong>.  Where 1 is the OSPF process ID, it can be any number between 1 and 65535.  Next, Type and Execute <strong>network 172.16.0.0 0.0.0.255 area 0</strong>.  Where 172.16.0.0 is your network address, 0.0.0.255 is the inverse of your subnet mask, and area 0 is routing area ID of your network.  If you choose to use more than one router in your network implimentation, this is the place to enter other consecutive network statements.  Finally, Type and Execute the word <strong>exit</strong> to exit back into global configuration mode.</p>
+
+<p><img src="/assets/posts/CIsco_OSPF_Network_Statement.png" alt="Alt text" /></p>
+
+<p><strong>Step 3:</strong></p>
+
+<p>Remember to save your work.  Do this by Typing and Executing <strong>copy running-config startup-config</strong>.  Your work is saved now.  In Packet Tracer you should be able to ping from the router to each workstation, and from workstation to workstation.</p>
+
+<p><img src="/assets/posts/Cisco_Copy_Run_Start1.png" alt="Alt text" /></p>
+
+<p>And a quick ping to verify that network connectivity exists:</p>
+
+<p><img src="/assets/posts/Cisco_Ping_Workstation1.png" alt="Alt text" /></p>
+
+<p>This concludes the tutorial.  As usual, please email any questions regarding this article.  I will do my best to respond in an accurate timely fashion.</p>
+
+					</article>
+				</div>
+				<div class="col-sm-4">
+					<div class="list-group">
+						<h4 class="list-group-item">Related Posts</h4>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/cisco-basic-router-configuration/" title="Cisco - Basic Router Configuration">Cisco - Basic Router Configuration</a>
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/cisco-basic-ripv2-configuration/" title="Cisco Basic Ripv2 Configuration">Cisco Basic Ripv2 Configuration</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/cisco-packet-tracer-debian-64bit/" title="Install Cisco Packet Tracer on Debian 64 bit">Install Cisco Packet Tracer on Debian 64 bit</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+			<hr />
+<p>Is the information here outdated or incorrect? <a href="https://github.com/BrentonEarl/brentonearl.github.io/edit/source/_posts/2012-03-03-cisco-basic-ospf-configuration.markdown"> Submit a pull request!</a></p>
+<hr />
+
+			
+<div class="row">
+	<div class="col-sm-8">
+		<div id="disqus_thread" style="padding:1%;"></div>
+		<script type="text/javascript">
+		var disqus_shortname = 'exitstatusone';
+		(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	</div>
+</div>
+
+
+
+		</div>
+	
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<p class="footer">
+						&copy; 2014 Brent Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	</body>
+</html>

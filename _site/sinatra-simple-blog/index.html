@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>       
+		<meta charset=utf-8>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<title>Exit Status One - Basic Sinatra Blog</title>
+		<meta name="author" content="Brent Earl" />
+		
+		<meta name="description" content="How to create a basic Sinatra blog with search capability." />
+		
+		
+		<meta name="keywords" content="sinatra" />
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" herf="/css/styles.css" type="text/css">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<p class="navbar-brand" href="#">Menu</p>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/" title=" Index">Home</a></li>
+						
+						
+						
+						<li><a href="/about.html" title="About the Author">About</a></li>
+						
+						
+						
+						<li><a href="/archive.html" title="Site Archives">Archives</a></li>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li><a href="/rss.xml" title="RSS News Feed">News Feed</a></li>
+						
+						
+						
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="container">
+				<div class="page-header">
+					<h1>Exit Status One</h1>
+					<small>while : ; do echo 'Tinker, explore, hack, learn...' ; sleep 28800 ; clear ; done</small>
+				</div>
+			</div>
+		</header>
+	
+		<div class="container">
+					<div class="row">
+				<div class="col-sm-8">
+						<article>
+						<h4>Basic Sinatra Blog</h4>
+						<p>
+						08-03-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a>
+						</p>
+						
+
+						<p>
+						Category <a href="/categories/sinatra/">sinatra</a>
+						</p>
+						<p>In my effort to learn <a href="http://www.sinatrarb.com/">Sinatra</a> I decided to create a few simple web applications that I will later combine into one full web application.  For now I created a basic blog that reads data from a MySQL database and displays a feed on the home page for each article.  When clicked on, each article is displayed in its own window.  The typical basic blog.  I also added the ability to search the database for Articles.</p>
+
+<p>Rather than run my application using the default ruby web server <a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/webrick/rdoc/WEBrick.html">WEBrick</a>, I chose to use <a href="http://code.macournoyer.com/thin/">Thin</a> web server.  I chose this option because Thin is faster than WEBrick, in my opinion anyway.</p>
+
+<h4>Application Dependencies</h4>
+
+<p>In entirety, my web application uses the following Gemfile in order to meet dependencies.  Obviously including Sinatra and Thin.  Data mapper is used to connect to the database and dm-mysql-adapter is to tell Data mapper to use MySQL to connect to the database.</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="c1"># Gemfile</span>
+<span class="n">source</span> <span class="s1">&#39;https://rubygems.org&#39;</span>
+
+<span class="n">gem</span> <span class="s1">&#39;sinatra&#39;</span>
+<span class="n">gem</span> <span class="s1">&#39;data_mapper&#39;</span>
+<span class="n">gem</span> <span class="s1">&#39;dm-mysql-adapter&#39;</span>
+<span class="n">gem</span> <span class="s1">&#39;thin&#39;</span>
+
+<span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
+    <span class="c1"># Testing</span>
+    <span class="n">gem</span> <span class="s2">&quot;rspec&quot;</span>
+    <span class="n">gem</span> <span class="s2">&quot;cucumber&quot;</span>
+    <span class="n">gem</span> <span class="s2">&quot;capybara&quot;</span>
+<span class="k">end</span>
+</code></pre></div>
+
+
+<p><em>(More on rspec, cucumber and capybara in another post.)</em></p>
+
+<h4>The Database Model</h4>
+
+<p>This web application uses <a href="http://datamapper.org/">Data Mapper</a> to interface with the MySQL database.  The current model establishes a field in the database for the title, author, body, permalink, category and the date the article was created.</p>
+
+<p>Here is the model.rb that contains the relevant information to connect to the database, create the required table and set column properties:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="c1">#!/usr/bin/env ruby</span>
+<span class="nb">require</span> <span class="s1">&#39;data_mapper&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;dm-mysql-adapter&#39;</span>
+
+<span class="no">DataMapper</span><span class="o">::</span><span class="no">Logger</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="vg">$stdout</span><span class="p">,</span> <span class="ss">:debug</span><span class="p">)</span>
+<span class="no">DataMapper</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="ss">:default</span><span class="p">,</span> <span class="s1">&#39;mysql://user:password@localhost/exitstatusone_dev&#39;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Content</span>
+    <span class="kp">include</span> <span class="no">DataMapper</span><span class="o">::</span><span class="no">Resource</span>
+    <span class="n">property</span> <span class="ss">:id</span><span class="p">,</span>         <span class="no">Serial</span>
+    <span class="n">property</span> <span class="ss">:title</span><span class="p">,</span>      <span class="nb">String</span><span class="p">,</span>  <span class="ss">:required</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+    <span class="n">property</span> <span class="ss">:body</span><span class="p">,</span>       <span class="no">Text</span><span class="p">,</span>    <span class="ss">:required</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+    <span class="n">property</span> <span class="ss">:permalink</span><span class="p">,</span>  <span class="no">Text</span><span class="p">,</span>    <span class="ss">:required</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+    <span class="n">property</span> <span class="ss">:author</span><span class="p">,</span>     <span class="nb">String</span><span class="p">,</span>  <span class="ss">:required</span> <span class="o">=&gt;</span> <span class="kp">false</span>
+    <span class="n">property</span> <span class="ss">:category</span><span class="p">,</span>   <span class="nb">String</span><span class="p">,</span>  <span class="ss">:required</span> <span class="o">=&gt;</span> <span class="kp">false</span>
+    <span class="n">property</span> <span class="ss">:created_at</span><span class="p">,</span> <span class="nb">String</span><span class="p">,</span>   <span class="ss">:required</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+
+    <span class="n">validates_uniqueness_of</span> <span class="ss">:title</span><span class="p">,</span> <span class="ss">:body</span><span class="p">,</span> <span class="ss">:permalink</span>
+<span class="k">end</span>
+<span class="no">DataMapper</span><span class="o">.</span><span class="n">auto_upgrade!</span>
+</code></pre></div>
+
+
+<p><em>(The columns of each table obviously should have more structure to guarantee the correct data is inserted.  Simplicity was important so I left the defaults that Data mapper sets for strings and text fields.  The created_at column should use the DateTime property, but I havent figured out how to make Data Mapper format the date as I wanted.)</em></p>
+
+<h4>The Sinatra Web Application</h4>
+
+<p>This is an extremely simple implementation of a Sinatra Web Application.  It provides an index page, a search page for search results, a route for articles (/permalink), a 404 page and 500 error page.</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;./model.rb&#39;</span>
+
+<span class="k">class</span> <span class="nc">ExitStatusOne</span> <span class="o">&lt;</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Base</span>
+
+  <span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
+    <span class="vi">@content</span> <span class="o">=</span> <span class="no">Content</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="ss">:order</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="ss">:created_at</span><span class="o">.</span><span class="n">desc</span> <span class="o">]</span><span class="p">,</span> <span class="ss">:limit</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">)</span> 
+    <span class="n">erb</span> <span class="ss">:index</span>
+  <span class="k">end</span> 
+  
+  <span class="n">get</span> <span class="s1">&#39;/search&#39;</span> <span class="k">do</span>
+    <span class="vi">@results</span> <span class="o">=</span> <span class="no">Content</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="ss">:title</span><span class="o">.</span><span class="n">like</span> <span class="o">=&gt;</span> <span class="s2">&quot;%</span><span class="si">#{</span><span class="n">params</span><span class="o">[</span><span class="ss">:query</span><span class="o">]</span><span class="si">}</span><span class="s2">%&quot;</span> <span class="p">)</span> <span class="o">|</span> 
+               <span class="no">Content</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="ss">:body</span><span class="o">.</span><span class="n">like</span> <span class="o">=&gt;</span> <span class="s2">&quot;%</span><span class="si">#{</span><span class="n">params</span><span class="o">[</span><span class="ss">:query</span><span class="o">]</span><span class="si">}</span><span class="s2">%&quot;</span> <span class="p">)</span>
+    <span class="n">erb</span> <span class="ss">:search</span>
+  <span class="k">end</span> 
+
+  <span class="n">get</span> <span class="s1">&#39;/:permalink&#39;</span> <span class="k">do</span>
+    <span class="vi">@content</span> <span class="o">=</span> <span class="no">Content</span><span class="o">.</span><span class="n">first</span><span class="p">(</span><span class="ss">:permalink</span> <span class="o">=&gt;</span> <span class="n">params</span><span class="o">[</span><span class="ss">:permalink</span><span class="o">]</span><span class="p">)</span> <span class="o">||</span> <span class="n">halt</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+    <span class="n">erb</span> <span class="ss">:article</span>
+  <span class="k">end</span> 
+
+  <span class="n">not_found</span> <span class="k">do</span>
+    <span class="n">erb</span> <span class="ss">:&#39;404&#39;</span>
+  <span class="k">end</span> 
+
+  <span class="n">error</span> <span class="k">do</span>
+    <span class="n">erb</span> <span class="ss">:&#39;505&#39;</span>
+  <span class="k">end</span> 
+<span class="k">end</span>
+</code></pre></div>
+
+
+<p>The search page reads all records in the database and pulls out any news article by title and body that matches the keyword in the query.</p>
+
+<h4>Thin Web Server</h4>
+
+<p>In order to serve up the web site I used Thin web server.  To launch Thin I used <a href="http://rack.github.io/">Rack</a> to configure the properties to launch Thin.  This is a pretty standard set up for Thin.</p>
+
+<p>Here is my Rack configuration file.  Its very minimal currently, and is stored in the file <em>config.ru</em>.</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="s1">&#39;./exitstatusone&#39;</span>
+
+<span class="c1">#\ -p 4567</span>
+
+<span class="n">run</span> <span class="no">ExitStatusOne</span>
+</code></pre></div>
+
+
+<h4>Views</h4>
+
+<p>I will not be listing the views because this post is already very lengthy.  The views is very similar to Ruby on Rails.  You can find information about Sinatra views <a href="http://www.sinatrarb.com/intro.html#Views%20/%20Templates">Here</a>.</p>
+
+<hr />
+
+<p>Sinatra is by far my favorite web application framework even though it is mostly a micro framework.  The part I like most about Sinatra is how easy it is to get a basic web site up.  I also like the fact that you get a lot of freedom to make an application that is completely customized to your needs.   Sinatra also doesn't force you to follow conventions like other frameworks, specifically Ruby on Rails.</p>
+
+					</article>
+				</div>
+				<div class="col-sm-4">
+					<div class="list-group">
+						<h4 class="list-group-item">Related Posts</h4>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/cucumber-capybara-with-sinatra/" title="Cucumber, Capybara and Sinatra">Cucumber, Capybara and Sinatra</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<a class="list-group-item" href="/introducing-sinatra-web-application-framework/" title="Introducing: Sinatra Web Application Framework">Introducing: Sinatra Web Application Framework</a>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+			<hr />
+<p>Is the information here outdated or incorrect? <a href="https://github.com/BrentonEarl/brentonearl.github.io/edit/source/_posts/2013-08-03-sinatra-simple-blog.markdown"> Submit a pull request!</a></p>
+<hr />
+
+			
+<div class="row">
+	<div class="col-sm-8">
+		<div id="disqus_thread" style="padding:1%;"></div>
+		<script type="text/javascript">
+		var disqus_shortname = 'exitstatusone';
+		(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	</div>
+</div>
+
+
+
+		</div>
+	
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<p class="footer">
+						&copy; 2014 Brent Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	</body>
+</html>
