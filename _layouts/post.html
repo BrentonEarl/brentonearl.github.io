@@ -3,12 +3,18 @@ layout: default
 ---
 			<div class="row">
 				<div class="col-sm-8">
-						<article itemscope itemtype="http://schema.org/Article">
+					<article itemscope itemtype="http://schema.org/Article">
 						<h4 itemprop="name">{{ page.title }}</h4>
 						<p>
-							<span itemprop="datePublished" content="{{ page.date | date: "%m-%d-%Y" }}">{{page.date | date: "%m-%d-%Y" }}</span> by 
-								<a href="https://plus.google.com/+Exitstatusone" rel="publisher">{{ site.user }}</a>
+							<span itemprop="datePublished" content="{{page.date | date: "%m-%d-%Y" }}">							
+								{{page.date | date: "%m-%d-%Y" }}
 							</span>
+							 by 
+							<a href="https://plus.google.com/+Exitstatusone" rel="publisher">
+								<span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+									<span itemprop="name">{{ site.user }}</span>
+								</span>
+							</a>
 						</p>
 						{% include outdated_articles.html %}
 						<p>
