@@ -5,6 +5,7 @@ date: 2012-03-03
 category: Linux
 description:  "Explanation of how to upgrade Iceweasel (Firefox) using the Debian Backport mirrors.  Good example of how to use the Debian Backports for any other type of software upgrade, in any release of Debian."
 comments: yes
+outdated: yes
 ---
 
 In this article I will be discussing for my viewers how to upgrade Iceweasel (Iceweasel is Debian’s Mozilla Firefox package) from version 3.5.16-12 to version 10.0.2-1 on Debian Squeeze.  Like many, I get complaints from Gmail or Google Apps stating that my browser is old and I need a newer version of Firefox to gain all of Google’s site features.  Basically this tutorial will give you a more recent version of Mozilla Firefox so that you can have more modern web browsing on your Debian System.  We will be using a combination of repository sources to complete this task.

@@ -6,8 +6,8 @@
 	<atom:link href="http://www.exitstatusone.com/rss.xml" rel="self" type="application/rss+xml" />
 	<description>A compilation of information about various interesting and uninteresting topics.</description>
 	<language>en-us</language>
-	<pubDate>Tue, 02 Dec 2014 17:46:09 -0600</pubDate>
-	<lastBuildDate>Tue, 02 Dec 2014 17:46:09 -0600</lastBuildDate>
+	<pubDate>Wed, 03 Dec 2014 07:32:13 -0600</pubDate>
+	<lastBuildDate>Wed, 03 Dec 2014 07:32:13 -0600</lastBuildDate>
 
 	
 	<item>
@@ -177,16 +177,6 @@
 	<author>Brent Earl</author>
 	<guid>http://www.exitstatusone.com/jekyll-modifications</guid>
 	<description>&lt;p&gt;Previously I discussed the new site design and introduced the Jekyll static site generator.  As mentioned, the site was migrated from Wordpress to Jekyll.  Beginning a new Jekyll project generates a basic set of files with a predefined style sheet and site layout.  After modifying the layouts and adding pages, a few features were still missing.  Pagination, Site Maps, and a 404 redirect page were amongst the missing features.  Not difficult to implement, but I feel I should share my experience so that new Jekyll users can find more of the basics in one documented spot.  The &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; web site does document &lt;em&gt;how&lt;/em&gt; to use the API, but it does not show in depth guides on how to add certain features.  Searching the web yielded many methods of implementing said features and other features I had not thought to add.&lt;/p&gt;
-</description>
-	</item>
-	
-	<item>
-	<title>Cloud Based Storage:  Is it really the best data storage solution?</title>
-	<link>http://www.exitstatusone.com/cloud-based-storage/</link>
-	<pubDate>Tue, 09 Jul 2013 00:00:00 -0500</pubDate>
-	<author>Brent Earl</author>
-	<guid>http://www.exitstatusone.com/cloud-based-storage</guid>
-	<description>&lt;p&gt;On July 9th, 2013 Dropbox is having it&#39;s first Developer&#39;s Conference for a day of creativity and exploration.  This conference aims to inform various developers of latest releases and the capabilities of the Dropbox platform.  One of the topics that will be discussed is how Dropbox plans to develop the Dropbox API to completely replace hard drives and integrate their system into an operating system.&lt;/p&gt;
 </description>
 	</item>
 	

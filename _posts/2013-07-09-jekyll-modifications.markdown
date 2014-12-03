@@ -5,6 +5,7 @@ date: 2013-07-09
 category: jekyll
 description: "How to list your posts on multiple pages, create a sitemap and create 404 Redirection page in Jekyll."
 comments: yes
+outdated: yes
 ---
 
 Previously I discussed the new site design and introduced the Jekyll static site generator.  As mentioned, the site was migrated from Wordpress to Jekyll.  Beginning a new Jekyll project generates a basic set of files with a predefined style sheet and site layout.  After modifying the layouts and adding pages, a few features were still missing.  Pagination, Site Maps, and a 404 redirect page were amongst the missing features.  Not difficult to implement, but I feel I should share my experience so that new Jekyll users can find more of the basics in one documented spot.  The [Jekyll](http://jekyllrb.com/) web site does document _how_ to use the API, but it does not show in depth guides on how to add certain features.  Searching the web yielded many methods of implementing said features and other features I had not thought to add.  

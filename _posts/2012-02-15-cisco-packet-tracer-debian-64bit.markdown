@@ -5,6 +5,7 @@ date: 2012-02-15
 category: Cisco
 description: "Cisco Packet Tracer is software that allows students and professionals to create a virtual environment of Cisco network devices on a variety of networks.  This article discusses the process of installing Cisco Packet Tracer within a 64 bit Debian Linux System."
 comments: yes
+outdated: yes
 ---
 
 I am taking a class that requires me to use Cisco's Packet Tracer to do labs.  I grew tired of being forced to boot into Windows 7 to do class work, as I would rather stay using Linux for all of my needs.  After trying to install the Windows .exe in wine and receiving errors, and shortly after a crash, I found: [Installing Cisco Packet Tracer 5.3 in Ubuntu](http://www.ubuntubuzz.com/2011/05/installing-and-running-cisco-packet.html).  This tutorial, however, did not meet 100% of my needs.  I am running Debian Squeeze on AMD64, so the binary package gave the error after the EULA:

@@ -92,6 +92,6 @@ For further reading please install the live-manual package. You can find the rel
 
 References:
 
-- http://live.debian.net/
-- http://packages.debian.org/squeeze/live-build
-- http://packages.debian.org/squeeze/live-manual
+- [http://live.debian.net/](http://live.debian.net/)
+- [http://packages.debian.org/squeeze/live-build](http://packages.debian.org/squeeze/live-build)
+- [http://packages.debian.org/squeeze/live-manual](http://packages.debian.org/squeeze/live-manual)

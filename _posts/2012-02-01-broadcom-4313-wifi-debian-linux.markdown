@@ -5,6 +5,7 @@ date:  2012-02-01
 category: Linux
 description: "Broadcom Wireless Cards are a pain to get working at times.  Short tutorial discussing how to get a Broadcom 4313 working under Debian."
 comments: yes
+outdated: yes
 ---
 
 **Background:**  Debian Linux does not come with working wireless card 

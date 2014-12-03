@@ -93,6 +93,8 @@
 						<p>
 						08-04-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a>
 						</p>
+						
+
 						<p>
 						Category <a href="/categories/sinatra/">sinatra</a>
 						</p>
@@ -132,12 +134,13 @@
 
 <p>The following is the Feature I added:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">Feature</span><span class="p">:</span> <span class="no">View</span> <span class="no">Articles</span>
+<div class="highlight"><pre><code class="ruby">  <span class="ss">Feature</span><span class="p">:</span> <span class="no">View</span> <span class="no">Articles</span>
       <span class="no">In</span> <span class="n">order</span> <span class="n">to</span> <span class="n">view</span> <span class="n">articles</span>
       <span class="no">As</span> <span class="n">a</span> <span class="n">user</span>
       <span class="n">I</span> <span class="n">must</span> <span class="n">visit</span> <span class="n">the</span> <span class="n">home</span> <span class="n">page</span>
       <span class="no">And</span> <span class="n">click</span> <span class="n">a</span> <span class="n">link</span> <span class="n">to</span> <span class="n">view</span> <span class="n">an</span> <span class="n">aritlce</span>
-      <span class="no">Then</span> <span class="n">the</span> <span class="n">article</span> <span class="n">will</span> <span class="n">be</span> <span class="n">displayed</span></code></pre></div>
+      <span class="no">Then</span> <span class="n">the</span> <span class="n">article</span> <span class="n">will</span> <span class="n">be</span> <span class="n">displayed</span>
+</code></pre></div>
 
 
 <p>The feature block is the most important portion of the story.  It describes the Feature you are going to implement in entirety.  It is important to keep it short and to the point in order to clearly express what you intend to do.  A description any longer than a few lines probably means you need to split your feature up into separate features.</p>
@@ -146,9 +149,10 @@
 
 <p>The Background is a block that sets the background of the feature. (Obviously) In my case this backround assures that each scenario has a news aritlce in the database to test against.  Backgrounds are not required, but in my case, I plan to add many many more scenarios in the future to test how and where News Articles are viewed throughout the blog. The Background allows reference to a created Article without having to repeat myself while developing the web application.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">Background</span><span class="p">:</span>  <span class="no">Create</span> <span class="n">news</span> <span class="n">article</span>
+<div class="highlight"><pre><code class="ruby">  <span class="ss">Background</span><span class="p">:</span>  <span class="no">Create</span> <span class="n">news</span> <span class="n">article</span>
     <span class="no">Given</span> <span class="n">I</span> <span class="n">create</span> <span class="n">a</span> <span class="n">news</span> <span class="n">article</span> <span class="n">named</span> <span class="s2">&quot;Hello World&quot;</span>
-    <span class="no">Then</span> <span class="n">I</span> <span class="n">should</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">find</span> <span class="n">the</span> <span class="n">article</span> <span class="s2">&quot;Hello World&quot;</span></code></pre></div>
+    <span class="no">Then</span> <span class="n">I</span> <span class="n">should</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">find</span> <span class="n">the</span> <span class="n">article</span> <span class="s2">&quot;Hello World&quot;</span>
+</code></pre></div>
 
 
 <p>Essentially, I create the article and do a quick query against the database to assure the inserted article did in fact get saved to the database.</p>
@@ -159,19 +163,21 @@
 
 <p>For example, I decided that I wanted to start on the Home Page.  Yes, in second scenario I repeat myself on the first line to state I am on the "/" (Root or Home Page) of my application.  By doing so I save myself the hastle of having to write more programing code to express that I am on the home page.  This is important to think about when you begin to write your step definitions.  <em>More on step definitions later in this post.</em></p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">Scenario</span><span class="p">:</span>  <span class="no">Display</span> <span class="n">the</span> <span class="n">last</span> <span class="mi">10</span> <span class="n">news</span> <span class="n">articles</span> <span class="n">on</span> <span class="n">home</span> <span class="n">page</span>
+<div class="highlight"><pre><code class="ruby">  <span class="ss">Scenario</span><span class="p">:</span>  <span class="no">Display</span> <span class="n">the</span> <span class="n">last</span> <span class="mi">10</span> <span class="n">news</span> <span class="n">articles</span> <span class="n">on</span> <span class="n">home</span> <span class="n">page</span>
     <span class="no">Given</span> <span class="n">I</span> <span class="n">am</span> <span class="n">on</span> <span class="n">the</span> <span class="n">site</span> <span class="n">page</span> <span class="s2">&quot;/&quot;</span> 
     <span class="no">Then</span> <span class="n">I</span> <span class="n">should</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">see</span> <span class="s2">&quot;Recent Posts&quot;</span>
-    <span class="no">And</span> <span class="n">the</span> <span class="n">first</span> <span class="n">article</span> <span class="n">named</span> <span class="s2">&quot;Hello World&quot;</span></code></pre></div>
+    <span class="no">And</span> <span class="n">the</span> <span class="n">first</span> <span class="n">article</span> <span class="n">named</span> <span class="s2">&quot;Hello World&quot;</span>
+</code></pre></div>
 
 
 <p>I think this block speaks for itself.  However the second line (Then ...) describes that I will see a heading on the Home page named "Recent Posts".  The third states I will see another heading named "Hello World" which is the name of the news article I inserted in the Background block above.  This allows the code to establish where to begin evaluating the Feature.  As I continue to write my Scenarios, I am adding more and more to the story of how I want my application to function.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">Scenario</span><span class="p">:</span> <span class="no">Click</span> <span class="n">the</span> <span class="n">link</span> <span class="n">to</span> <span class="n">go</span> <span class="n">to</span> <span class="n">view</span> <span class="n">an</span> <span class="n">article</span>
+<div class="highlight"><pre><code class="ruby">  <span class="ss">Scenario</span><span class="p">:</span> <span class="no">Click</span> <span class="n">the</span> <span class="n">link</span> <span class="n">to</span> <span class="n">go</span> <span class="n">to</span> <span class="n">view</span> <span class="n">an</span> <span class="n">article</span>
     <span class="no">Given</span> <span class="n">I</span> <span class="n">am</span> <span class="n">on</span> <span class="n">the</span> <span class="n">site</span> <span class="n">page</span> <span class="s2">&quot;/&quot;</span> 
     <span class="no">Then</span> <span class="n">I</span> <span class="n">should</span> <span class="n">see</span> <span class="s2">&quot;View Article&quot;</span> <span class="k">in</span> <span class="n">a</span> <span class="n">link</span>
     <span class="no">And</span> <span class="n">I</span> <span class="n">should</span> <span class="n">click</span> <span class="n">the</span> <span class="n">link</span> <span class="s2">&quot;View Article&quot;</span>
-    <span class="no">Then</span> <span class="n">I</span> <span class="n">should</span> <span class="n">see</span> <span class="s2">&quot;Hello World&quot;</span></code></pre></div>
+    <span class="no">Then</span> <span class="n">I</span> <span class="n">should</span> <span class="n">see</span> <span class="s2">&quot;Hello World&quot;</span>
+</code></pre></div>
 
 
 <p>Again, this Scenario is self explanatory, maybe even more so than the previous.  See how the story is building on itself?  As I write more and more, notice how the story develops into a detailed representation of the Feature.  This is sort of like writting an essay in school! Gasp, not that again.</p>
@@ -192,11 +198,12 @@
 
 <p>Next I will need to configure my development environment to ask Capybara to test the front end of my web application (the web page in the web browser).  In the support folder I created for Cucumber, I will add a file called env.rb. In this file I will insert the following:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;exitstatusone&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><code class="ruby"><span class="nb">require</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;exitstatusone&#39;</span><span class="p">)</span>
 <span class="nb">require</span> <span class="s1">&#39;capybara&#39;</span>
 <span class="nb">require</span> <span class="s1">&#39;capybara/cucumber&#39;</span>
 
-<span class="no">Capybara</span><span class="o">.</span><span class="n">app</span> <span class="o">=</span> <span class="no">ExitStatusOne</span></code></pre></div>
+<span class="no">Capybara</span><span class="o">.</span><span class="n">app</span> <span class="o">=</span> <span class="no">ExitStatusOne</span>
+</code></pre></div>
 
 
 <ol>
@@ -217,7 +224,7 @@
 
 <p>Step Definitions are the code that helps Cucumber find and execute your code within your web application code.  Each feature will have a corresponding file located in the "step_definitions" folder.  In this example, my feature is called "articles.feature" and it is located within the "feature" folder.  In order to implement my step definition I will need to create ruby file that contains the output of Cucumber.  Let me execute Cucumber and check the output.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">alk3</span><span class="vi">@exitstatusone</span><span class="ss">:~</span><span class="sr">/Learn/</span><span class="no">Sinatra</span><span class="o">/</span><span class="no">Projects</span><span class="o">/</span><span class="n">tutorial</span><span class="err">$</span> <span class="n">cucumber</span>
+<div class="highlight"><pre><code class="ruby"><span class="n">alk3</span><span class="vi">@exitstatusone</span><span class="ss">:~</span><span class="sr">/Learn/</span><span class="no">Sinatra</span><span class="o">/</span><span class="no">Projects</span><span class="o">/</span><span class="n">tutorial</span><span class="err">$</span> <span class="n">cucumber</span>
 <span class="ss">Feature</span><span class="p">:</span> <span class="no">View</span> <span class="no">Articles</span>
   <span class="no">In</span> <span class="n">order</span> <span class="n">to</span> <span class="n">view</span> <span class="n">articles</span>
   <span class="no">As</span> <span class="n">a</span> <span class="n">user</span>
@@ -241,14 +248,15 @@
 
 <span class="no">Then</span><span class="p">(</span><span class="sr">/^I should be able to find the article &quot;(.*?)&quot;$/</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">arg1</span><span class="o">|</span>
   <span class="n">pending</span> <span class="c1"># express the regexp above with the code you wish you had</span>
-<span class="k">end</span></code></pre></div>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>This shows the output of the Feature, how long it took to run, how many steps there are and how to run the code.</p>
 
 <p>I will now create my step definition.  I will name it articles.rb, put it in the "step_definitions" folder, and copy the suggested code snippets Cucumber gives me into that file.  I will then run Cucumber again.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">alk3</span><span class="vi">@exitstatusone</span><span class="ss">:~</span><span class="sr">/Learn/</span><span class="no">Sinatra</span><span class="o">/</span><span class="no">Projects</span><span class="o">/</span><span class="n">tutorial</span><span class="err">$</span> <span class="n">cucumber</span>
+<div class="highlight"><pre><code class="ruby"><span class="n">alk3</span><span class="vi">@exitstatusone</span><span class="ss">:~</span><span class="sr">/Learn/</span><span class="no">Sinatra</span><span class="o">/</span><span class="no">Projects</span><span class="o">/</span><span class="n">tutorial</span><span class="err">$</span> <span class="n">cucumber</span>
 <span class="ss">Feature</span><span class="p">:</span> <span class="no">View</span> <span class="no">Articles</span>
   <span class="no">In</span> <span class="n">order</span> <span class="n">to</span> <span class="n">view</span> <span class="n">articles</span>
   <span class="no">As</span> <span class="n">a</span> <span class="n">user</span>
@@ -265,12 +273,13 @@
 
 <span class="mi">0</span> <span class="n">scenarios</span>
 <span class="mi">2</span> <span class="n">steps</span> <span class="p">(</span><span class="mi">1</span> <span class="n">skipped</span><span class="p">,</span> <span class="mi">1</span> <span class="n">pending</span><span class="p">)</span>
-<span class="mi">0</span><span class="n">m0</span><span class="o">.</span><span class="mo">002</span><span class="n">s</span></code></pre></div>
+<span class="mi">0</span><span class="n">m0</span><span class="o">.</span><span class="mo">002</span><span class="n">s</span>
+</code></pre></div>
 
 
 <p>Sweet.  Now all I need to do is add the appropriate code to make my steps pass and to implement the first portion of my Feature.  I will add the following code into the articles.rb file located in the "step_definitions" folder.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Given</span><span class="p">(</span><span class="sr">/^I create a news article named &quot;(.*?)&quot;$/</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">arg1</span><span class="o">|</span>
+<div class="highlight"><pre><code class="ruby"><span class="no">Given</span><span class="p">(</span><span class="sr">/^I create a news article named &quot;(.*?)&quot;$/</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">arg1</span><span class="o">|</span>
   <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;Welcome to my web site.  This is the first post.  Keep checking back.&quot;</span>
   <span class="n">article</span> <span class="o">=</span> <span class="no">Content</span><span class="o">.</span><span class="n">first_or_create</span><span class="p">(</span>
     <span class="ss">:title</span> <span class="o">=&gt;</span> <span class="n">arg1</span><span class="p">,</span>
@@ -285,12 +294,14 @@
 
 <span class="no">Then</span><span class="p">(</span><span class="sr">/^I should be able to find the article &quot;(.*?)&quot;$/</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">arg1</span><span class="o">|</span>
   <span class="n">find</span> <span class="o">=</span> <span class="no">Content</span><span class="o">.</span><span class="n">first</span><span class="p">(</span><span class="ss">:title</span><span class="o">.</span><span class="n">like</span> <span class="o">=&gt;</span> <span class="s2">&quot;%</span><span class="si">#{</span><span class="n">arg1</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
-<span class="k">end</span></code></pre></div>
+<span class="k">end</span>
+ 
+</code></pre></div>
 
 
 <p>Great, let me run Cucumber and check the output.  Hopefull everything passes and we can move onto creating a Scenario.</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">alk3</span><span class="vi">@exitstatusone</span><span class="ss">:~</span><span class="sr">/Learn/</span><span class="no">Sinatra</span><span class="o">/</span><span class="no">Projects</span><span class="o">/</span><span class="n">tutorial</span><span class="err">$</span> <span class="n">cucumber</span>
+<div class="highlight"><pre><code class="ruby"><span class="n">alk3</span><span class="vi">@exitstatusone</span><span class="ss">:~</span><span class="sr">/Learn/</span><span class="no">Sinatra</span><span class="o">/</span><span class="no">Projects</span><span class="o">/</span><span class="n">tutorial</span><span class="err">$</span> <span class="n">cucumber</span>
 <span class="ss">Feature</span><span class="p">:</span> <span class="no">View</span> <span class="no">Articles</span>
   <span class="no">In</span> <span class="n">order</span> <span class="n">to</span> <span class="n">view</span> <span class="n">articles</span>
   <span class="no">As</span> <span class="n">a</span> <span class="n">user</span>
@@ -304,12 +315,13 @@
 
 <span class="mi">0</span> <span class="n">scenarios</span>
 <span class="mi">2</span> <span class="n">steps</span> <span class="p">(</span><span class="mi">2</span> <span class="n">passed</span><span class="p">)</span>
-<span class="mi">0</span><span class="n">m0</span><span class="o">.</span><span class="mo">017</span><span class="n">s</span></code></pre></div>
+<span class="mi">0</span><span class="n">m0</span><span class="o">.</span><span class="mo">017</span><span class="n">s</span>
+</code></pre></div>
 
 
 <p>Excellent.  Now it is time to add a Scenario.  As stated previously, I want to add a scenario that displays 10 of the most recent news articles on the home page.  Lets add that scenario:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">alk3</span><span class="vi">@exitstatusone</span><span class="ss">:~</span><span class="sr">/Learn/</span><span class="no">Sinatra</span><span class="o">/</span><span class="no">Projects</span><span class="o">/</span><span class="n">tutorial</span><span class="err">$</span> <span class="n">cucumber</span>
+<div class="highlight"><pre><code class="ruby"><span class="n">alk3</span><span class="vi">@exitstatusone</span><span class="ss">:~</span><span class="sr">/Learn/</span><span class="no">Sinatra</span><span class="o">/</span><span class="no">Projects</span><span class="o">/</span><span class="n">tutorial</span><span class="err">$</span> <span class="n">cucumber</span>
 <span class="ss">Feature</span><span class="p">:</span> <span class="no">View</span> <span class="no">Articles</span>
   <span class="no">In</span> <span class="n">order</span> <span class="n">to</span> <span class="n">view</span> <span class="n">articles</span>
   <span class="no">As</span> <span class="n">a</span> <span class="n">user</span>
@@ -342,12 +354,13 @@
 
 <span class="no">Then</span><span class="p">(</span><span class="sr">/^the first article named &quot;(.*?)&quot;$/</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">arg1</span><span class="o">|</span>
   <span class="n">pending</span> <span class="c1"># express the regexp above with the code you wish you had</span>
-<span class="k">end</span></code></pre></div>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>Ok, once again, let me add the code snippets and then add in the ruby code that will check for the heading "Recent Posts" and find the article "Hello World."</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Given</span><span class="p">(</span><span class="sr">/^I am on the site page &quot;(.*?)&quot;$/</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">arg1</span><span class="o">|</span>
+<div class="highlight"><pre><code class="ruby"><span class="no">Given</span><span class="p">(</span><span class="sr">/^I am on the site page &quot;(.*?)&quot;$/</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">arg1</span><span class="o">|</span>
   <span class="n">visit</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span>
 <span class="k">end</span>
 
@@ -357,12 +370,13 @@
 
 <span class="no">Then</span><span class="p">(</span><span class="sr">/^the first article named &quot;(.*?)&quot;$/</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">arg1</span><span class="o">|</span>
   <span class="n">page</span><span class="o">.</span><span class="n">should</span> <span class="n">have_content</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span>
-<span class="k">end</span></code></pre></div>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>This bit of code makes use of Capybara.  visit(arg1), tells Cucumber to use Capybara to visit the Home Page, as described in the Scenario.  Then Capybara checks if the page has the words described as well.  If all goes well, the step definition should pass.  I will run Cucumber again:</p>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">alk3</span><span class="vi">@exitstatusone</span><span class="ss">:~</span><span class="sr">/Learn/</span><span class="no">Sinatra</span><span class="o">/</span><span class="no">Projects</span><span class="o">/</span><span class="n">tutorial</span><span class="err">$</span> <span class="n">cucumber</span>
+<div class="highlight"><pre><code class="ruby"><span class="n">alk3</span><span class="vi">@exitstatusone</span><span class="ss">:~</span><span class="sr">/Learn/</span><span class="no">Sinatra</span><span class="o">/</span><span class="no">Projects</span><span class="o">/</span><span class="n">tutorial</span><span class="err">$</span> <span class="n">cucumber</span>
 <span class="ss">Feature</span><span class="p">:</span> <span class="no">View</span> <span class="no">Articles</span>
   <span class="no">In</span> <span class="n">order</span> <span class="n">to</span> <span class="n">view</span> <span class="n">articles</span>
   <span class="no">As</span> <span class="n">a</span> <span class="n">user</span>
@@ -381,7 +395,8 @@
 
 <span class="mi">1</span> <span class="n">scenario</span> <span class="p">(</span><span class="mi">1</span> <span class="n">passed</span><span class="p">)</span>
 <span class="mi">5</span> <span class="n">steps</span> <span class="p">(</span><span class="mi">5</span> <span class="n">passed</span><span class="p">)</span>
-<span class="mi">0</span><span class="n">m0</span><span class="o">.</span><span class="mi">143</span><span class="n">s</span></code></pre></div>
+<span class="mi">0</span><span class="n">m0</span><span class="o">.</span><span class="mi">143</span><span class="n">s</span>
+</code></pre></div>
 
 
 <hr />
@@ -544,14 +559,14 @@
 						
 						
 						
-						
-						
-						
-						
 					</div>
 				</div>
 			</div>
+			<hr />
+<p>Is the information here outdated or incorrect? <a href="https://github.com/BrentonEarl/brentonearl.github.io/edit/source/_posts/2013-08-04-cucumber-capybara-with-sinatra.markdown"> Submit a pull request!</a></p>
+<hr />
 
+			
 <div class="row">
 	<div class="col-sm-8">
 		<div id="disqus_thread" style="padding:1%;"></div>
@@ -577,7 +592,7 @@
 				<div class="row">
 					<div class="col-sm-8">
 						<p class="footer">
-						Designed by Brent Earl | &copy; 2014 Exit Status One. All Rights Reserved.
+						&copy; 2014 Brent Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
 						</p>
 					</div>
 				</div>

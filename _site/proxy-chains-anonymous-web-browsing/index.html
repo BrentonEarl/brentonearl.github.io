@@ -93,6 +93,8 @@
 						<p>
 						07-06-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a>
 						</p>
+						
+
 						<p>
 						Category <a href="/categories/security/">security</a>
 						</p>
@@ -107,7 +109,7 @@
 
 <p>This Bash Script will check to see if your proxy list has any inactive IP addresses.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash </span>
+<div class="highlight"><pre><code class="bash"><span class="c">#!/bin/bash </span>
 
 <span class="c"># One IP Address per line, formated like so 111.222.333.444:1234</span>
 <span class="nv">proxy_list</span><span class="o">=</span><span class="s1">&#39;list.txt&#39;</span>
@@ -118,16 +120,17 @@
 
 
 <span class="nv">timeout</span><span class="o">=</span>1
-cat <span class="nv">$proxy_list</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read </span>line 
+cat <span class="nv">$proxy_list</span> <span class="p">|</span> <span class="k">while </span><span class="nb">read </span>line 
 <span class="k">do</span>
-        <span class="nv">result</span><span class="o">=</span><span class="sb">`</span>HEAD -d -p http://<span class="nv">$line</span> -t <span class="nv">$timeout</span>  <span class="nv">$url</span><span class="sb">`</span>
+<span class="k">        </span><span class="nv">result</span><span class="o">=</span><span class="sb">`</span>HEAD -d -p http://<span class="nv">$line</span> -t <span class="nv">$timeout</span>  <span class="nv">$url</span><span class="sb">`</span>
                 <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$result&quot;</span> <span class="o">=</span> <span class="s2">&quot;200 OK&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-                <span class="nb">echo</span> <span class="s2">&quot;$line $result (proxy works)&quot;</span>
+<span class="k">                </span><span class="nb">echo</span> <span class="s2">&quot;$line $result (proxy works)&quot;</span>
                 <span class="nb">echo</span> <span class="s2">&quot;$line&quot;</span> &gt;&gt; <span class="nv">$output_file</span>
         <span class="k">else</span>
-        <span class="nb">echo</span> <span class="s2">&quot;$line (proxy does not work or request timed out)&quot;</span>
+<span class="k">        </span><span class="nb">echo</span> <span class="s2">&quot;$line (proxy does not work or request timed out)&quot;</span>
         <span class="k">fi</span>
-<span class="k">done</span></code></pre></div>
+<span class="k">done</span>
+</code></pre></div>
 
 
 
@@ -247,10 +250,6 @@ cat <span class="nv">$proxy_list</span> <span class="p">|</span> <span class="k"
 						
 						
 						
-						
-						
-						
-						
 						<a class="list-group-item" href="/penetration-testing-nessus-metasploit/" title="Penetration Testing with Metasploit 4 and Nessus 5.2">Penetration Testing with Metasploit 4 and Nessus 5.2</a>
 						
 						
@@ -311,7 +310,11 @@ cat <span class="nv">$proxy_list</span> <span class="p">|</span> <span class="k"
 					</div>
 				</div>
 			</div>
+			<hr />
+<p>Is the information here outdated or incorrect? <a href="https://github.com/BrentonEarl/brentonearl.github.io/edit/source/_posts/2013-07-06-proxy-chains-anonymous-web-browsing.markdown"> Submit a pull request!</a></p>
+<hr />
 
+			
 <div class="row">
 	<div class="col-sm-8">
 		<div id="disqus_thread" style="padding:1%;"></div>
@@ -337,7 +340,7 @@ cat <span class="nv">$proxy_list</span> <span class="p">|</span> <span class="k"
 				<div class="row">
 					<div class="col-sm-8">
 						<p class="footer">
-						Designed by Brent Earl | &copy; 2014 Exit Status One. All Rights Reserved.
+						&copy; 2014 Brent Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
 						</p>
 					</div>
 				</div>

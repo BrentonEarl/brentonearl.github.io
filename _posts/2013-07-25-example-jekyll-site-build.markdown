@@ -5,6 +5,7 @@ date: 2013-07-25
 description:  "Tutorial showing how to build a full Jekyll web site.  Video included."
 comments: yes
 category: jekyll
+outdated: yes
 ---
 
 In my previous posts about Jekyll Static Site Generator I wrote about the different ways you can add features to your Jekyll blog.  This post is covers the steps to create a Jekyll Web Site from start to finish.  First, I will discuss the Jekyll configuration file.  Second, I will talk about how to add a layout for your pages and for your posts.  Then I will hash out the process of adding posts to your site.  Finally, I will explain how to build your site, start the ruby web server, and how to have the web server regenerate your site in the background as you add new content.

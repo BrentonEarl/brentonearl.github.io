@@ -93,6 +93,8 @@
 						<p>
 						08-14-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brent Earl</a>
 						</p>
+						
+
 						<p>
 						Category <a href="/categories/security/">security</a>
 						</p>
@@ -118,8 +120,8 @@
 </ul>
 
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Allow ssh</span>
-iptables -A INPUT -p tcp --dport <span class="m">22</span> -j ACCEPT
+<div class="highlight"><pre><code class="bash"><span class="c"># Allow ssh</span>
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 
 <span class="c"># Allow icmp</span>
 iptables -A INPUT -p icmp -j ACCEPT
@@ -138,7 +140,8 @@ iptables -A FORWARD -m limit --limit 5/min -j LOG --log-prefix <span class="s2">
 
 <span class="c"># Drop all other traffic</span>
 iptables -A INPUT -j DROP
-iptables -A FORWARD -j DROP</code></pre></div>
+iptables -A FORWARD -j DROP
+</code></pre></div>
 
 
 <h4>Intrusion Detection and Log Analysis</h4>
@@ -154,7 +157,7 @@ iptables -A FORWARD -j DROP</code></pre></div>
 </ul>
 
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">EMAIL_ADDRESSES             your@email.com<span class="p">;</span>
+<div class="highlight"><pre><code class="bash">EMAIL_ADDRESSES             your@email.com<span class="p">;</span>
 EMAIL_ALERT_DANGER_LEVEL    1<span class="p">;</span>
 
 FW_MSG_SEARCH               DROP<span class="p">;</span>
@@ -167,7 +170,8 @@ DANGER_LEVEL5               10000<span class="p">;</span>
 
 ENABLE_AUTO_IDS             Y<span class="p">;</span>
 AUTO_IDS_DANGER_LEVEL       2<span class="p">;</span> <span class="c"># Or your desired danger level</span>
-IPTABLES_BLOCK_METHOD       Y<span class="p">;</span></code></pre></div>
+IPTABLES_BLOCK_METHOD       Y<span class="p">;</span>
+</code></pre></div>
 
 
 <p>The rest of the options in the psad.conf should be left at defaults unless you have some sort of specific configuration.</p>
@@ -184,24 +188,26 @@ IPTABLES_BLOCK_METHOD       Y<span class="p">;</span></code></pre></div>
 </ul>
 
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>ssh<span class="o">]</span>
+<div class="highlight"><pre><code class="bash"><span class="o">[</span>ssh<span class="o">]</span>
 
 <span class="nv">enabled</span> <span class="o">=</span> <span class="nb">true</span>
 <span class="nv">port</span>    <span class="o">=</span> 3000
 <span class="nv">filter</span>  <span class="o">=</span> sshd
 <span class="nv">logpath</span>  <span class="o">=</span> /var/log/auth.log
-<span class="nv">maxretry</span> <span class="o">=</span> 1</code></pre></div>
+<span class="nv">maxretry</span> <span class="o">=</span> 1
+</code></pre></div>
 
 
 <p>Take it one step further and ban all DDoS attempts on SSH.  Again I chose to ban any activity that had more than one connection attempt.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>ssh-ddos<span class="o">]</span>
+<div class="highlight"><pre><code class="bash"><span class="o">[</span>ssh-ddos<span class="o">]</span>
 
 <span class="nv">enabled</span> <span class="o">=</span> <span class="nb">true</span>
 <span class="nv">port</span>    <span class="o">=</span> ssh
 <span class="nv">filter</span>  <span class="o">=</span> sshd-ddos
 <span class="nv">logpath</span>  <span class="o">=</span> /var/log/auth.log
-<span class="nv">maxretry</span> <span class="o">=</span> 1</code></pre></div>
+<span class="nv">maxretry</span> <span class="o">=</span> 1
+</code></pre></div>
 
 
 <h4>Password Strength</h4>
@@ -217,16 +223,17 @@ IPTABLES_BLOCK_METHOD       Y<span class="p">;</span></code></pre></div>
 </ul>
 
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">root@localhost~# apg
+<div class="highlight"><pre><code class="bash">root@localhost~# apg
 
-Please enter some random data <span class="o">(</span>only first <span class="m">16</span> are significant<span class="o">)</span>
+Please enter some random data <span class="o">(</span>only first 16 are significant<span class="o">)</span>
 <span class="o">(</span>eg. your old password<span class="o">)</span>:&gt;
 EfyurbAkUj4 <span class="o">(</span>Ef-yurb-Ak-Uj-FOUR<span class="o">)</span>
 ofdynErvEif5 <span class="o">(</span>of-dyn-Erv-Eif-FIVE<span class="o">)</span>
 UrtUttetEk8 <span class="o">(</span>Urt-Utt-et-Ek-EIGHT<span class="o">)</span>
 JocNadEnVam1 <span class="o">(</span>Joc-Nad-En-Vam-ONE<span class="o">)</span>
 Ur6Oboykyet <span class="o">(</span>Ur-SIX-Ob-oyk-yet<span class="o">)</span>
-CedsidIn3 <span class="o">(</span>Ceds-id-In-THREE<span class="o">)</span></code></pre></div>
+CedsidIn3 <span class="o">(</span>Ceds-id-In-THREE<span class="o">)</span>
+</code></pre></div>
 
 
 <hr />
@@ -334,10 +341,6 @@ CedsidIn3 <span class="o">(</span>Ceds-id-In-THREE<span class="o">)</span></code
 						
 						
 						
-						
-						
-						
-						
 						<a class="list-group-item" href="/proxy-chains-anonymous-web-browsing/" title="Proxy Chains – Anonymous Web Browsing">Proxy Chains – Anonymous Web Browsing</a>
 						
 						
@@ -414,7 +417,11 @@ CedsidIn3 <span class="o">(</span>Ceds-id-In-THREE<span class="o">)</span></code
 					</div>
 				</div>
 			</div>
+			<hr />
+<p>Is the information here outdated or incorrect? <a href="https://github.com/BrentonEarl/brentonearl.github.io/edit/source/_posts/2013-08-14-block-port-scan-brute-force.markdown"> Submit a pull request!</a></p>
+<hr />
 
+			
 <div class="row">
 	<div class="col-sm-8">
 		<div id="disqus_thread" style="padding:1%;"></div>
@@ -440,7 +447,7 @@ CedsidIn3 <span class="o">(</span>Ceds-id-In-THREE<span class="o">)</span></code
 				<div class="row">
 					<div class="col-sm-8">
 						<p class="footer">
-						Designed by Brent Earl | &copy; 2014 Exit Status One. All Rights Reserved.
+						&copy; 2014 Brent Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
 						</p>
 					</div>
 				</div>

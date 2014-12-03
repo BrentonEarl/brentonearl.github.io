@@ -5,6 +5,7 @@ date: 2013-07-21
 category: jekyll
 description: “Add a dynamically generated HTML Metadata, Navigation Menu, and Archives to Jekyll Site Generator”
 comments: yes
+outdated: yes
 ---
 
 I have been using Jekyll for about a month.  I continually find ways to improve my code and add more functionality.  I added a few new things to make my job easier and also make the site easier to navigate.  The header of each web site contains what is called "metadata" that tells your web browser and search engines how to interpret it.  I programmed the site to automatically generate metadata so I will not have to add it.  I also added the ability to automatically generate a new links to the navigation menu as new pages are added to the site.  Finally, I added an Archvies page and Category page, because it is important for viewers to find older posts that are no longer listed on the front page.

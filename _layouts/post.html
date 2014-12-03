@@ -8,6 +8,7 @@ layout: default
 						<p>
 						{{page.date | date: "%m-%d-%Y" }} by <a href="https://twitter.com/BrentonLeeEarl">{{ site.user }}</a>
 						</p>
+						{% include outdated_articles.html %}
 						<p>
 						Category <a href="/categories/{{page.category | downcase}}/">{{ page.category | downcase }}</a>
 						</p>
@@ -29,4 +30,5 @@ layout: default
 					</div>
 				</div>
 			</div>
-{% include disqus_comments.html %}
+			{% include submit_pull_request.html %}
+			{% include disqus_comments.html %}

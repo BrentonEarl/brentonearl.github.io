@@ -5,6 +5,7 @@ date: 2012-02-20
 category: Linux
 description: "Debian Squeeze runs kernel 2.6.32.  An extremely stable Linux Kernel Release, but in my case, not so much.  This article discusses the process of upgrading to Linux Kernel version 3.2 using the Debian Backports mirrors."
 comments: yes
+outdated: yes
 ---
 
  
