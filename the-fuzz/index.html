@@ -88,17 +88,24 @@
 		<div class="container">
 					<div class="row">
 				<div class="col-sm-8">
-						<article>
-						<h4>The Fuzz</h4>
+						<article itemscope itemtype="http://schema.org/Article">
+						<h4 itemprop="name">The Fuzz</h4>
 						<p>
-						12-13-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brenton Earl</a>
+							<span itemprop="datePublished" content="12-13-2013">12-13-2013</span> by 
+								<a href="https://twitter.com/BrentonLeeEarl">
+									<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+										<span itemprop="name">Brenton Earl</span>
+									</span>
+								</a>
+							</span>
 						</p>
 						
 
 						<p>
 						Category <a href="/categories/security/">security</a>
 						</p>
-						<p>Fuzz testing is the process of sending random or semi random data as input to a piece of software, network protocol, or file format in order to discover design flaws.  The process is generally automated but can be semi-automated to give the auditor the ability to modify input to achieve faster results.  There are two forms of fuzzing, mutation based and generation based, and it can be utilized by means of white-box, grey-box or black-box testing.  Today I will be talking about grey-box testing using a generation-based fuzzer on a network based application.</p>
+						<span itemprop="articleBody">
+							<p>Fuzz testing is the process of sending random or semi random data as input to a piece of software, network protocol, or file format in order to discover design flaws.  The process is generally automated but can be semi-automated to give the auditor the ability to modify input to achieve faster results.  There are two forms of fuzzing, mutation based and generation based, and it can be utilized by means of white-box, grey-box or black-box testing.  Today I will be talking about grey-box testing using a generation-based fuzzer on a network based application.</p>
 
 <p>The network based application I chose to test was the game Urban Terror.  My reasoning in choosing to test this particular software was that I have access to partial <a href="https://github.com/Barbatos/ioq3-for-UrbanTerror-4">source code</a> and I also have the ability to set up a gaming server.  This game is not 100% open source.  There is a portion of the code that is closed source that has not been released by the Frozen Sand Development team.  (Particularly the game server virtual machine code.)</p>
 
@@ -148,6 +155,7 @@
 </ul>
 
 
+						</span>
 					</article>
 				</div>
 				<div class="col-sm-4">

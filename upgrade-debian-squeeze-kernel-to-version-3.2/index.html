@@ -88,10 +88,16 @@
 		<div class="container">
 					<div class="row">
 				<div class="col-sm-8">
-						<article>
-						<h4>Upgrade Debian Squeeze to Backports Kernel Version 3.2</h4>
+						<article itemscope itemtype="http://schema.org/Article">
+						<h4 itemprop="name">Upgrade Debian Squeeze to Backports Kernel Version 3.2</h4>
 						<p>
-						02-20-2012 by <a href="https://twitter.com/BrentonLeeEarl">Brenton Earl</a>
+							<span itemprop="datePublished" content="02-20-2012">02-20-2012</span> by 
+								<a href="https://twitter.com/BrentonLeeEarl">
+									<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+										<span itemprop="name">Brenton Earl</span>
+									</span>
+								</a>
+							</span>
 						</p>
 						
 	<p>This article may be <i><mark>outdated...</mark></i></p>
@@ -100,7 +106,8 @@
 						<p>
 						Category <a href="/categories/linux/">linux</a>
 						</p>
-						<p>Upon realizing there is a bug in my kernel suspend feature, which also seems to cause a kernel Stack errors, I decided to upgrade my Debian Squeeze Kernel from 2.6.32-5-amd64 to 3.2.0-0.bpo.1-amd64.  After completing this task, I figured I would share with the world how easy it is to get a newer kernel than what Debian Squeeze offers in the regular repos.  I used the Debian Backports repo to pull this newer kernel down.</p>
+						<span itemprop="articleBody">
+							<p>Upon realizing there is a bug in my kernel suspend feature, which also seems to cause a kernel Stack errors, I decided to upgrade my Debian Squeeze Kernel from 2.6.32-5-amd64 to 3.2.0-0.bpo.1-amd64.  After completing this task, I figured I would share with the world how easy it is to get a newer kernel than what Debian Squeeze offers in the regular repos.  I used the Debian Backports repo to pull this newer kernel down.</p>
 
 <p><strong>Step 1:</strong></p>
 
@@ -141,6 +148,7 @@ In my case I chose linux-image 3.2 amd64.  So I would type and run the following
 
 <p>Now you are ready to reboot your system into the new kernel.  Upon reboot you will see a new entry in the Grub bootloader with your old kernel and your new kernel.  You should wait to remove the old kernel from your system. After you are sure that everything works in your new kernel you can remove the old one.  I have taken the approach of simply removing the old kernel entry from my grub menu, and leaving the old linux-image package installed on my system.</p>
 
+						</span>
 					</article>
 				</div>
 				<div class="col-sm-4">

@@ -88,17 +88,24 @@
 		<div class="container">
 					<div class="row">
 				<div class="col-sm-8">
-						<article>
-						<h4>Jekyll: Related and Recent Posts Widget</h4>
+						<article itemscope itemtype="http://schema.org/Article">
+						<h4 itemprop="name">Jekyll: Related and Recent Posts Widget</h4>
 						<p>
-						07-26-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brenton Earl</a>
+							<span itemprop="datePublished" content="07-26-2013">07-26-2013</span> by 
+								<a href="https://twitter.com/BrentonLeeEarl">
+									<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+										<span itemprop="name">Brenton Earl</span>
+									</span>
+								</a>
+							</span>
 						</p>
 						
 
 						<p>
 						Category <a href="/categories/jekyll/">jekyll</a>
 						</p>
-						<p>Creating a web site that is easily navigated is important.  It is also important to make it easy for viewers to find content that is related to what they are reading.  I wrote a piece of code that can be nested inside a page or post, preferably a page/post that has a category set.  The code will check if the current page has a category and inserts links to other pages with the same category.  It also adds a list to the most recent posts on the web site.  I added it inside a div tag and floated it right, works well.</p>
+						<span itemprop="articleBody">
+							<p>Creating a web site that is easily navigated is important.  It is also important to make it easy for viewers to find content that is related to what they are reading.  I wrote a piece of code that can be nested inside a page or post, preferably a page/post that has a category set.  The code will check if the current page has a category and inserts links to other pages with the same category.  It also adds a list to the most recent posts on the web site.  I added it inside a div tag and floated it right, works well.</p>
 
 <h4>Related Categories</h4>
 
@@ -156,6 +163,7 @@
 
 <p>With that, please be sure to check the blurb at the top right of the page that shows recent and similar posts!  Thanks for reading.</p>
 
+						</span>
 					</article>
 				</div>
 				<div class="col-sm-4">

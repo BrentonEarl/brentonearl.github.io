@@ -88,17 +88,24 @@
 		<div class="container">
 					<div class="row">
 				<div class="col-sm-8">
-						<article>
-						<h4>Install Debian on Droid 2 Global A956</h4>
+						<article itemscope itemtype="http://schema.org/Article">
+						<h4 itemprop="name">Install Debian on Droid 2 Global A956</h4>
 						<p>
-						06-22-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brenton Earl</a>
+							<span itemprop="datePublished" content="06-22-2013">06-22-2013</span> by 
+								<a href="https://twitter.com/BrentonLeeEarl">
+									<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+										<span itemprop="name">Brenton Earl</span>
+									</span>
+								</a>
+							</span>
 						</p>
 						
 
 						<p>
 						Category <a href="/categories/android/">android</a>
 						</p>
-						<p>In this article I will walk through the process of bootstrapping Debian Linux with the armel architecture and “booting up” the image on an Android Operating System.  It works by telling the Android OS where the image is at and then executing the appropriate commands to attach to the image and chroot into a Bash shell as root.</p>
+						<span itemprop="articleBody">
+							<p>In this article I will walk through the process of bootstrapping Debian Linux with the armel architecture and “booting up” the image on an Android Operating System.  It works by telling the Android OS where the image is at and then executing the appropriate commands to attach to the image and chroot into a Bash shell as root.</p>
 
 <p><strong><strong>Important:  You must have significant knowledge on how to use Linux, program in Bash, and a good understanding of how your Android device functions in order to complete this tutorial.  I am not responsible if you “brick” your phone.</strong></strong></p>
 
@@ -383,6 +390,7 @@ mount -o remount,ro -t yaffs2 /dev/block/mmcblk1p21 /system
 
 <p>Credit should be given to MRLANRAT @ lanrat.com.  His guide (http://lanrat.com/install-debian-on-android/) was a big help.  I had to modify a lot of the information in his tutorial because it is out dated.  I also had to rewrite the bootdebian boot script because it did not work on my Droid 2 Global.  However, he should be credited all the same.</p>
 
+						</span>
 					</article>
 				</div>
 				<div class="col-sm-4">

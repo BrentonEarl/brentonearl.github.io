@@ -88,17 +88,24 @@
 		<div class="container">
 					<div class="row">
 				<div class="col-sm-8">
-						<article>
-						<h4>Basic Sinatra Blog</h4>
+						<article itemscope itemtype="http://schema.org/Article">
+						<h4 itemprop="name">Basic Sinatra Blog</h4>
 						<p>
-						08-03-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brenton Earl</a>
+							<span itemprop="datePublished" content="08-03-2013">08-03-2013</span> by 
+								<a href="https://twitter.com/BrentonLeeEarl">
+									<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+										<span itemprop="name">Brenton Earl</span>
+									</span>
+								</a>
+							</span>
 						</p>
 						
 
 						<p>
 						Category <a href="/categories/sinatra/">sinatra</a>
 						</p>
-						<p>In my effort to learn <a href="http://www.sinatrarb.com/">Sinatra</a> I decided to create a few simple web applications that I will later combine into one full web application.  For now I created a basic blog that reads data from a MySQL database and displays a feed on the home page for each article.  When clicked on, each article is displayed in its own window.  The typical basic blog.  I also added the ability to search the database for Articles.</p>
+						<span itemprop="articleBody">
+							<p>In my effort to learn <a href="http://www.sinatrarb.com/">Sinatra</a> I decided to create a few simple web applications that I will later combine into one full web application.  For now I created a basic blog that reads data from a MySQL database and displays a feed on the home page for each article.  When clicked on, each article is displayed in its own window.  The typical basic blog.  I also added the ability to search the database for Articles.</p>
 
 <p>Rather than run my application using the default ruby web server <a href="http://www.ruby-doc.org/stdlib-2.0/libdoc/webrick/rdoc/WEBrick.html">WEBrick</a>, I chose to use <a href="http://code.macournoyer.com/thin/">Thin</a> web server.  I chose this option because Thin is faster than WEBrick, in my opinion anyway.</p>
 
@@ -215,6 +222,7 @@
 
 <p>Sinatra is by far my favorite web application framework even though it is mostly a micro framework.  The part I like most about Sinatra is how easy it is to get a basic web site up.  I also like the fact that you get a lot of freedom to make an application that is completely customized to your needs.   Sinatra also doesn't force you to follow conventions like other frameworks, specifically Ruby on Rails.</p>
 
+						</span>
 					</article>
 				</div>
 				<div class="col-sm-4">

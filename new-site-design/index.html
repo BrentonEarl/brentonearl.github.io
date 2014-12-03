@@ -88,17 +88,24 @@
 		<div class="container">
 					<div class="row">
 				<div class="col-sm-8">
-						<article>
-						<h4>New Site Design</h4>
+						<article itemscope itemtype="http://schema.org/Article">
+						<h4 itemprop="name">New Site Design</h4>
 						<p>
-						07-08-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brenton Earl</a>
+							<span itemprop="datePublished" content="07-08-2013">07-08-2013</span> by 
+								<a href="https://twitter.com/BrentonLeeEarl">
+									<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+										<span itemprop="name">Brenton Earl</span>
+									</span>
+								</a>
+							</span>
 						</p>
 						
 
 						<p>
 						Category <a href="/categories/jekyll/">jekyll</a>
 						</p>
-						<p>For several years Wordpress has been the content management system of choice for Exit Status one. Recently this web site moved from shared hosting to a virtual private server.  At this point it became important to minimize the memory footprint that Apache created in order to run Exit Status One.  After all, a VPS can be used for more than just web site hosting- and I intend to do so.  However, it is difficult to estimate how much system resources a web site uses when it is running on a shared host.  After analyzing the logs, bandwidth, system load, it was more than obvious that Wordpress was bogging down the rest of the running services.</p>
+						<span itemprop="articleBody">
+							<p>For several years Wordpress has been the content management system of choice for Exit Status one. Recently this web site moved from shared hosting to a virtual private server.  At this point it became important to minimize the memory footprint that Apache created in order to run Exit Status One.  After all, a VPS can be used for more than just web site hosting- and I intend to do so.  However, it is difficult to estimate how much system resources a web site uses when it is running on a shared host.  After analyzing the logs, bandwidth, system load, it was more than obvious that Wordpress was bogging down the rest of the running services.</p>
 
 <p>The issue at hand was deciding to continue publishing with Wordpress, or to move on to a new approach to blogging.  That is when I found <a href="http://jekyllrb.com/">Jekyll</a>.  Jekyll is simple, blog-aware, and it generates static web sites.  It is written in <a href="http://www.ruby-lang.org/">Ruby</a>, yet ruby code is not used to display the generated web site once it is time to go live with your site.</p>
 
@@ -124,6 +131,7 @@
 
 <p>All in all, the migration from Wordpress to Jekyll has been enjoyable.  The process of developing my site became easier and easier as I adjusted to the working environment.  Now all I have to do to write a new post is open a terminal with Vim!  There is no need to worry about Wordpress getting hacked.  There is nowhere to log in, inject code, or database to sql inject- no moving parts.  I will continually provide updates regarding my experiences with Jekyll.  I have plans to implement new plug ins, so keep checking back!</p>
 
+						</span>
 					</article>
 				</div>
 				<div class="col-sm-4">

@@ -88,10 +88,16 @@
 		<div class="container">
 					<div class="row">
 				<div class="col-sm-8">
-						<article>
-						<h4>Jekyll -  Metadata, Navigation, and Archives</h4>
+						<article itemscope itemtype="http://schema.org/Article">
+						<h4 itemprop="name">Jekyll -  Metadata, Navigation, and Archives</h4>
 						<p>
-						07-21-2013 by <a href="https://twitter.com/BrentonLeeEarl">Brenton Earl</a>
+							<span itemprop="datePublished" content="07-21-2013">07-21-2013</span> by 
+								<a href="https://twitter.com/BrentonLeeEarl">
+									<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+										<span itemprop="name">Brenton Earl</span>
+									</span>
+								</a>
+							</span>
 						</p>
 						
 	<p>This article may be <i><mark>outdated...</mark></i></p>
@@ -100,7 +106,8 @@
 						<p>
 						Category <a href="/categories/jekyll/">jekyll</a>
 						</p>
-						<p>I have been using Jekyll for about a month.  I continually find ways to improve my code and add more functionality.  I added a few new things to make my job easier and also make the site easier to navigate.  The header of each web site contains what is called "metadata" that tells your web browser and search engines how to interpret it.  I programmed the site to automatically generate metadata so I will not have to add it.  I also added the ability to automatically generate a new links to the navigation menu as new pages are added to the site.  Finally, I added an Archvies page and Category page, because it is important for viewers to find older posts that are no longer listed on the front page.</p>
+						<span itemprop="articleBody">
+							<p>I have been using Jekyll for about a month.  I continually find ways to improve my code and add more functionality.  I added a few new things to make my job easier and also make the site easier to navigate.  The header of each web site contains what is called "metadata" that tells your web browser and search engines how to interpret it.  I programmed the site to automatically generate metadata so I will not have to add it.  I also added the ability to automatically generate a new links to the navigation menu as new pages are added to the site.  Finally, I added an Archvies page and Category page, because it is important for viewers to find older posts that are no longer listed on the front page.</p>
 
 <p>If you have no idea what Jekyll is, please see: <a href="/new-site-design/">This Post</a></p>
 
@@ -248,6 +255,7 @@
 
 <p>I am pretty sure that everything I used in wordpress is now present on this site.  Time will tell. (O.o)   The only thing I do not have is an image gallery, which I am not all that crazy about, but may add as time progresses.</p>
 
+						</span>
 					</article>
 				</div>
 				<div class="col-sm-4">
