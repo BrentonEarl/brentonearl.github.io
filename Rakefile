@@ -26,10 +26,10 @@ namespace :blog do
 			"config"			=> "_config.yml"
 		})).process
 
-		print "Adding, committing and pushing changes to source branch\n"
-		system "git add ."
-		system "git commit -a"
-		system "git push origin source"
+#		print "Adding, committing and pushing changes to source branch\n"
+#		system "git add ."
+#		system "git commit -a"
+#		system "git push origin source"
 
 	end
 
