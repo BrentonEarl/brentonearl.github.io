@@ -16,3 +16,6 @@ exclude: [Gemfile, Gemfile.lock, README.md, Rakefile]
 
 gems:
   - jekyll-sitemap
+
+sass:
+  style:  :compressed
