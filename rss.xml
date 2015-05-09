@@ -6,9 +6,19 @@
 	<atom:link href="http://www.exitstatusone.com/rss.xml" rel="self" type="application/rss+xml" />
 	<description>A compilation of information about various interesting and uninteresting topics.</description>
 	<language>en-us</language>
-	<pubDate>Sat, 09 May 2015 15:06:09 -0600</pubDate>
-	<lastBuildDate>Sat, 09 May 2015 15:06:09 -0600</lastBuildDate>
+	<pubDate>Sat, 09 May 2015 16:43:39 -0600</pubDate>
+	<lastBuildDate>Sat, 09 May 2015 16:43:39 -0600</lastBuildDate>
 
+	
+	<item>
+	<title>Ruby and Nmap</title>
+	<link>http://www.exitstatusone.com/ruby-and-nmap/</link>
+	<pubDate>Sat, 09 May 2015 00:00:00 -0600</pubDate>
+	<author>Brenton Earl</author>
+	<guid>http://www.exitstatusone.com/ruby-and-nmap</guid>
+	<description>&lt;p&gt;I have been a fan of Nmap for many years because of its reliability and effectiveness.  For those of you who do not know what Nmap is: Nmap (or Network Mapper) is a free and open source network port scanner that identifies and probes network devices (computers, phones, routers etc.) of all types.  I have used it for basic tasks such as identifying what hosts are connected to my LAN.  I have used it for complicated tasks such as identifying vulnerabilities or finding holes in firewalls. It can be used on any type of network that uses the IP protocol.  Nmap can also be scripted using NSE (Nmap Scripting Engine) Scripts.  I am sure it has other uses, but those are the ways I have traditionally used Nmap.&lt;/p&gt;
+</description>
+	</item>
 	
 	<item>
 	<title>The Fuzz</title>
