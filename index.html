@@ -6,7 +6,7 @@ title: Sharing Knowledge Since 2007
 			<div class="row">
 				<div class="col-sm-8">
 					{% for post in site.posts limit: 5 %}
-					<h4>{{ post.title }}</h4>
+					<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
 					<p>{{ post.date | date: "%m-%d-%Y" }}</p>
 					{{ post.excerpt }}
 					<a href="{{ post.url }}">View Full Post</a>
