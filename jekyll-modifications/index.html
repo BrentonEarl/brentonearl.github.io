@@ -120,7 +120,7 @@
 
 <p>Anyway here is the code I include on the top and bottom of the default layout page that generates post listings.</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">align=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">align=</span><span class="s">&quot;right&quot;</span><span class="nt">&gt;</span>
 {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;</span>
@@ -132,8 +132,7 @@
 {% if paginator.next_page %}
     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/page{{ paginator.next_page }}&quot;</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;</span>
 {% endif %}
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 
 <p>You will notice how exceedingly simple it is to add functionality to an entire web site with just a few lines of code.</p>
@@ -150,16 +149,14 @@
 
 <p>Here is what I added to the Apache2 virtual host configuration:</p>
 
-<div class="highlight"><pre><code class="bash">ErrorDocument 404 /404.html
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">ErrorDocument <span class="m">404</span> /404.html</code></pre></div>
 
 
 <p>After that I added the following to the default layout template:</p>
 
-<div class="highlight"><pre><code class="html">{% if page.url == 404.html  %}
+<div class="highlight"><pre><code class="language-html" data-lang="html">{% if page.url == 404.html  %}
     <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;refresh&quot;</span> <span class="na">content=</span><span class="s">&quot;10; url=/&quot;</span><span class="nt">&gt;</span>
-{% endif %}
-</code></pre></div>
+{% endif %}</code></pre></div>
 
 
 <p>Once that was in place, non-existant URLs would be sent to the 404.html page and then the meta tag would refresh the page and send visitors to the index.</p>
@@ -365,7 +362,7 @@
 				<div class="row">
 					<div class="col-sm-8">
 						<p class="footer">
-						&copy; 2014 Brenton Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
+						&copy; 2015 Brenton Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
 						</p>
 					</div>
 				</div>

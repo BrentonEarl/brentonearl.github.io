@@ -179,7 +179,7 @@
 
 <p>I named my Debian boot script “bootdebian”.  You can name it whatever you like, just remember the name because it will be the command you execute as “su” on your Android once everything is in place.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c">#!/bin/bash</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
 
 <span class="nb">echo</span> “<span class="o">=========================</span>”
 <span class="nb">echo</span> “<span class="o">=========================</span>”
@@ -219,8 +219,8 @@ losetup -d /dev/block/loop99
 <span class="nb">echo</span> <span class="p">;</span>sleep 1
 <span class="k">fi</span>
 <span class="nb">echo</span>
-<span class="nb">echo</span> “Running mknod /dev/block/loop99 b 7 99″
-mknod /dev/block/loop99 b 7 99
+<span class="nb">echo</span> “Running mknod /dev/block/loop99 b <span class="m">7</span> 99″
+mknod /dev/block/loop99 b <span class="m">7</span> 99
 <span class="nb">echo</span> <span class="p">;</span> sleep 1
 
 <span class="nb">echo</span> “Running losetup /dev/block/loop99 /mnt/sdcard/debian.img”
@@ -258,7 +258,7 @@ mkdir <span class="nv">$mnt</span>/mnt/sdcard
 <span class="k">fi</span>
 busybox mount –bind /mnt/sdcard/ <span class="nv">$mnt</span>/mnt/sdcard
 
-<span class="nb">echo</span> “Executing chroot <span class="k">for </span>Debian System”
+<span class="nb">echo</span> “Executing chroot <span class="k">for</span> Debian System”
 <span class="nb">echo</span>
 chroot <span class="nv">$mnt</span> /bin/bash
 
@@ -280,8 +280,7 @@ umount <span class="nv">$mnt</span>
 <span class="nb">echo</span> “Removing /dev/block/loop99″
 losetup -d /dev/block/loop99
 <span class="nb">echo</span> “Remounting /system Read Only”
-mount -o remount,ro -t yaffs2 /dev/block/mmcblk1p21 /system
-</code></pre></div>
+mount -o remount,ro -t yaffs2 /dev/block/mmcblk1p21 /system</code></pre></div>
 
 
 <p>What this script does:</p>
@@ -588,7 +587,7 @@ mount -o remount,ro -t yaffs2 /dev/block/mmcblk1p21 /system
 				<div class="row">
 					<div class="col-sm-8">
 						<p class="footer">
-						&copy; 2014 Brenton Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
+						&copy; 2015 Brenton Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
 						</p>
 					</div>
 				</div>

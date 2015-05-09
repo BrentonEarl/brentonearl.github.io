@@ -112,7 +112,7 @@
 
 <h4>Related Categories</h4>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;h4&gt;</span>Related Posts<span class="nt">&lt;/h4&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h4&gt;</span>Related Posts<span class="nt">&lt;/h4&gt;</span>
 {% for post in site.posts %}
   {% for category in post.category %}
     {% if category == page.category %}
@@ -124,8 +124,7 @@
       {% endif %}
     {% endif %}
   {% endfor %}
-{% endfor %}
-</code></pre></div>
+{% endfor %}</code></pre></div>
 
 
 <ol>
@@ -141,7 +140,7 @@
 
 <h4>Recent Posts</h4>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;h4&gt;</span>Latest Posts<span class="nt">&lt;/h4&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h4&gt;</span>Latest Posts<span class="nt">&lt;/h4&gt;</span>
 {% for post in site.posts limit:4 %}
 {% if post.title != page.title %}
 <span class="nt">&lt;p&gt;</span>
@@ -149,8 +148,7 @@
 <span class="nt">&lt;span&gt;</span>{{ post.date | date: &#39;%B&#39; }} {{ post.date | date: &#39;%e&#39; }}<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/p&gt;</span>
 {% endif %}
-{% endfor %}
-</code></pre></div>
+{% endfor %}</code></pre></div>
 
 
 <ol>
@@ -365,7 +363,7 @@
 				<div class="row">
 					<div class="col-sm-8">
 						<p class="footer">
-						&copy; 2014 Brenton Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
+						&copy; 2015 Brenton Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
 						</p>
 					</div>
 				</div>
