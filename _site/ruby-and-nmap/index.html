@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<!-- Microdata markup added by Google Structured Data Markup Helper. -->
+<html lang="en">
+	<head>       
+		<meta charset=utf-8>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<title>Exit Status One - Ruby and Nmap</title>
+		<meta name="author" content="Brenton Earl" />
+		
+		<meta name="description" content="A short introduction to the useful Ruby Gem, ruby-nmap." />
+		
+		
+		<meta name="keywords" content="security" />
+		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" herf="/css/styles.css" type="text/css">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<p class="navbar-brand" href="#">Menu</p>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/" title=" Index">Home</a></li>
+						
+						
+						
+						<li><a href="/about.html" title="About the Author">About</a></li>
+						
+						
+						
+						<li><a href="/archive.html" title="Site Archives">Archives</a></li>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<li><a href="/rss.xml" title="RSS News Feed">News Feed</a></li>
+						
+						
+						
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="container">
+				<div class="page-header">
+					<h1>Exit Status One</h1>
+					<small>while : ; do echo 'Tinker, explore, hack, learn...' ; sleep 28800 ; clear ; done</small>
+				</div>
+			</div>
+		</header>
+	
+		<div class="container">
+					<div class="row">
+				<div class="col-sm-8">
+					<article itemscope itemtype="http://schema.org/Article">
+						<h4 itemprop="name">Ruby and Nmap</h4>
+						<p>
+							<span itemprop="datePublished" content="05-09-2015">							
+								05-09-2015
+							</span>
+							 by 
+							<a href="https://plus.google.com/+Exitstatusone" rel="publisher">
+								<span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+									<span itemprop="name">Brenton Earl</span>
+								</span>
+							</a>
+						</p>
+						
+
+						<p>
+						Category <a href="/categories/security/">security</a>
+						</p>
+						<span itemprop="articleBody">
+							<p>I have been a fan of Nmap for many years because of its reliability and effectiveness.  For those of you who do not know what Nmap is: Nmap (or Network Mapper) is a free and open source network port scanner that identifies and probes network devices (computers, phones, routers etc.) of all types.  I have used it for basic tasks such as identifying what hosts are connected to my LAN.  I have used it for complicated tasks such as identifying vulnerabilities or finding holes in firewalls. It can be used on any type of network that uses the IP protocol.  Nmap can also be scripted using NSE (Nmap Scripting Engine) Scripts.  I am sure it has other uses, but those are the ways I have traditionally used Nmap.</p>
+
+<p>Recently I decided to create a piece of software that uses Nmap to discover hosts on whatever network it is installed upon.  The software is written in ruby and has an interface that was created using Sinatra.  The software itself has some issues still, as I have not put much time into it to finish the project, but it does make use of Nmap through a Ruby gem called ruby-nmap.  Ruby-nmap is a gem created by a developer from <a href="https://github.com/sophsec">Sophsec</a> and is a pure ruby interface to using Nmap progmatically.  The gem itself is very useful for those who wish to define in Ruby exactly what Nmap will scan.</p>
+
+<p>Ruby-nmap will allow you to do all the same things you can do by just running the Nmap command at any command line interface in Linux, Windows or on a Mac, but in Ruby.  It is a great gem to use if you are building software written in Ruby that interfaces with Nmap.</p>
+
+<p><em>You need to install Sudo, Nmap, Ruby, Rubygems and the ruby-nmap gem to follow along!</em></p>
+
+<h4>Install Nmap, Ruby and Rubygems</h4>
+
+<p>I will not be covering how to install Nmap, Ruby or Rubygems because in this article because it is differently from Windows to Linux to Mac.  Sorry for that, but there are plenty of articles online that explain how to do this step already.</p>
+
+<h4>Install the Ruby-nmap Gem</h4>
+
+<p>I will assume you are running Linux or a Mac, because lets face it, Ruby on Windows is no fun.  Run the following at the command prompt:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">[~]</span><span class="err">$</span> <span class="n">gem</span> <span class="n">isntall</span> <span class="n">ruby</span><span class="o">-</span><span class="n">nmap</span></code></pre></div>
+
+
+<p>Next open an interactive ruby shell by running the irb command:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">[~]</span><span class="err">$</span> <span class="n">irb</span></code></pre></div>
+
+
+<p>If your prompt looks something like this, you are using the interactive ruby shell:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span></code></pre></div>
+
+
+<p>Now type in the following exactly as it is displayed and after you hit enter it should run a basic ping scan on your local host (the computer you are working on):</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="nb">require</span> <span class="s1">&#39;nmap/program&#39;</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="no">Nmap</span><span class="o">::</span><span class="no">Program</span><span class="o">.</span><span class="n">scan</span> <span class="k">do</span> <span class="o">|</span><span class="n">nmap</span><span class="o">|</span>
+<span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span>     <span class="n">nmap</span><span class="o">.</span><span class="n">ping</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="p">:</span><span class="mo">004</span><span class="o">?&gt;</span>   <span class="n">nmap</span><span class="o">.</span><span class="n">targets</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span>
+<span class="p">:</span><span class="mo">005</span><span class="o">?&gt;</span>   <span class="k">end</span>
+
+<span class="no">Starting</span> <span class="no">Nmap</span> <span class="mi">6</span><span class="o">.</span><span class="mi">47</span> <span class="p">(</span> <span class="ss">http</span><span class="p">:</span><span class="sr">//nm</span><span class="n">ap</span><span class="o">.</span><span class="n">org</span> <span class="p">)</span> <span class="n">at</span> <span class="mi">2015</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">09</span> <span class="mi">16</span><span class="p">:</span><span class="mi">24</span> <span class="no">MDT</span>
+<span class="no">Nmap</span> <span class="nb">scan</span> <span class="n">report</span> <span class="k">for</span> <span class="n">localhost</span> <span class="p">(</span><span class="mi">127</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+<span class="no">Host</span> <span class="n">is</span> <span class="n">up</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mo">000032</span><span class="n">s</span> <span class="n">latency</span><span class="p">)</span><span class="o">.</span>
+<span class="no">Nmap</span> <span class="ss">done</span><span class="p">:</span> <span class="mi">1</span> <span class="no">IP</span> <span class="n">address</span> <span class="p">(</span><span class="mi">1</span> <span class="n">host</span> <span class="n">up</span><span class="p">)</span> <span class="n">scanned</span> <span class="k">in</span> <span class="mi">0</span><span class="o">.</span><span class="mo">00</span> <span class="n">seconds</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="p">:</span><span class="mo">006</span> <span class="o">&gt;</span></code></pre></div>
+
+
+<p>The next example uses the sudo program to drop to root privileges so you can run a syn scan with nmap that requires higher permissions than a basic user (Hopefully you are not running as root user!):</p>
+
+<ul>
+<li>Skip the require if this is the same irb shell because its already required from the last example!</li>
+</ul>
+
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="nb">require</span> <span class="s1">&#39;nmap/program&#39;</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="no">Nmap</span><span class="o">::</span><span class="no">Program</span><span class="o">.</span><span class="n">sudo_scan</span> <span class="k">do</span> <span class="o">|</span><span class="n">nmap</span><span class="o">|</span>
+<span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span>     <span class="n">nmap</span><span class="o">.</span><span class="n">syn_scan</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="p">:</span><span class="mo">004</span><span class="o">?&gt;</span>   <span class="n">nmap</span><span class="o">.</span><span class="n">targets</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span>
+<span class="p">:</span><span class="mo">005</span><span class="o">?&gt;</span>   <span class="n">nmap</span><span class="o">.</span><span class="n">ports</span> <span class="o">=</span> <span class="o">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">110</span><span class="p">,</span><span class="mi">443</span><span class="p">,</span><span class="mi">512</span><span class="p">,</span><span class="mi">522</span><span class="p">,</span><span class="mi">8080</span><span class="p">,</span><span class="mi">1080</span><span class="o">]</span>
+<span class="p">:</span><span class="mo">006</span><span class="o">?&gt;</span>   <span class="k">end</span></code></pre></div>
+
+
+<p>And then you should see the following output asking for your user password followed by the results of the Nmap scan:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">[</span><span class="n">sudo</span><span class="o">]</span> <span class="n">password</span> <span class="k">for</span> <span class="ss">facerip</span><span class="p">:</span> <span class="p">(</span><span class="n">type</span> <span class="n">your</span> <span class="n">user</span> <span class="n">password</span> <span class="k">when</span> <span class="n">prompted!</span><span class="p">)</span>
+
+<span class="no">Starting</span> <span class="no">Nmap</span> <span class="mi">6</span><span class="o">.</span><span class="mi">47</span> <span class="p">(</span> <span class="ss">http</span><span class="p">:</span><span class="sr">//nm</span><span class="n">ap</span><span class="o">.</span><span class="n">org</span> <span class="p">)</span> <span class="n">at</span> <span class="mi">2015</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">09</span> <span class="mi">16</span><span class="p">:</span><span class="mi">29</span> <span class="no">MDT</span>
+<span class="no">Nmap</span> <span class="nb">scan</span> <span class="n">report</span> <span class="k">for</span> <span class="n">localhost</span> <span class="p">(</span><span class="mi">127</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+<span class="no">Host</span> <span class="n">is</span> <span class="n">up</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mo">000035</span><span class="n">s</span> <span class="n">latency</span><span class="p">)</span><span class="o">.</span>
+<span class="no">PORT</span>     <span class="no">STATE</span>  <span class="no">SERVICE</span>
+<span class="mi">20</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">closed</span> <span class="n">ftp</span><span class="o">-</span><span class="n">data</span>
+<span class="mi">21</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">closed</span> <span class="n">ftp</span>
+<span class="mi">22</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">closed</span> <span class="n">ssh</span>
+<span class="mi">23</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">closed</span> <span class="n">telnet</span>
+<span class="mi">25</span><span class="o">/</span><span class="n">tcp</span>   <span class="nb">open</span>   <span class="n">smtp</span>
+<span class="mi">80</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">closed</span> <span class="n">http</span>
+<span class="mi">110</span><span class="o">/</span><span class="n">tcp</span>  <span class="n">closed</span> <span class="n">pop3</span>
+<span class="mi">443</span><span class="o">/</span><span class="n">tcp</span>  <span class="n">closed</span> <span class="n">https</span>
+<span class="mi">512</span><span class="o">/</span><span class="n">tcp</span>  <span class="n">closed</span> <span class="nb">exec</span>
+<span class="mi">522</span><span class="o">/</span><span class="n">tcp</span>  <span class="n">closed</span> <span class="n">ulp</span>
+<span class="mi">1080</span><span class="o">/</span><span class="n">tcp</span> <span class="n">closed</span> <span class="n">socks</span>
+<span class="mi">8080</span><span class="o">/</span><span class="n">tcp</span> <span class="n">closed</span> <span class="n">http</span><span class="o">-</span><span class="n">proxy</span>
+
+<span class="no">Nmap</span> <span class="ss">done</span><span class="p">:</span> <span class="mi">1</span> <span class="no">IP</span> <span class="n">address</span> <span class="p">(</span><span class="mi">1</span> <span class="n">host</span> <span class="n">up</span><span class="p">)</span> <span class="n">scanned</span> <span class="k">in</span> <span class="mi">2</span><span class="o">.</span><span class="mi">35</span> <span class="n">seconds</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="p">:</span><span class="mo">007</span> <span class="o">&gt;</span></code></pre></div>
+
+
+<p>I hope you can see how useful the ruby-nmap gem can be from a rubyist's perspective.  Yes, these are very basic examples, but there is a whole wealth of useful ways to make use of this ruby gem.  If you decide you like the gem but it is missing some key feature, please contribute to the ruby-nmap project <a href="https://github.com/sophsec/ruby-nmap">here</a>.  The developer just released version 0.8.0 fixing a number of bugs.</p>
+
+<p>If you have any questions feel free to comment below and I should get back to you shortly.  I hope you enjoyed my article.</p>
+
+<h4>Article Resources</h4>
+
+<ul>
+<li><a href="https://nmap.org/">Nmap</a></li>
+<li><a href="http://www.sudo.ws/">Sudo</a></li>
+<li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+<li><a href="https://rubygems.org/">Rubygems</a></li>
+</ul>
+
+
+						</span>
+					</article>
+				</div>
+				<div class="col-sm-4">
+				<div class="list-group">
+	<h4 class="list-group-item">Related Posts</h4>
+	
+		
+			
+				
+			
+		
+	
+		
+			
+				
+					<a class="list-group-item" href="/the-fuzz/" title="The Fuzz">The Fuzz</a>
+				
+			
+		
+	
+		
+			
+		
+	
+		
+			
+				
+					<a class="list-group-item" href="/block-port-scan-brute-force/" title="Block Port Scans and Brute Force Attacks">Block Port Scans and Brute Force Attacks</a>
+				
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+				
+					<a class="list-group-item" href="/medusa-log-in-auditor/" title="Medusa - Parallel Network Login Auditor">Medusa - Parallel Network Login Auditor</a>
+				
+			
+		
+	
+		
+			
+				
+					<a class="list-group-item" href="/crunch-word-list-generator/" title="Crunch Word List Generator">Crunch Word List Generator</a>
+				
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+				
+					<a class="list-group-item" href="/anonymity/" title="Anonymity">Anonymity</a>
+				
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+				
+					<a class="list-group-item" href="/proxy-chains-anonymous-web-browsing/" title="Proxy Chains – Anonymous Web Browsing">Proxy Chains – Anonymous Web Browsing</a>
+				
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+				
+					<a class="list-group-item" href="/penetration-testing-nessus-metasploit/" title="Penetration Testing with Metasploit 4 and Nessus 5.2">Penetration Testing with Metasploit 4 and Nessus 5.2</a>
+				
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+</div>
+
+
+				</div>
+			</div>
+			<br /><br />
+<p><strong>If you feel the information here is outdated or incorrect, you can submit a <a href="https://github.com/BrentonEarl/brentonearl.github.io/edit/source/_posts/2015-05-09-ruby-and-nmap.markdown">Pull Request on Github!</a></strong></p>
+
+			
+<div class="row">
+	<div class="col-sm-8">
+		<div id="disqus_thread" style="padding:1%;"></div>
+		<script type="text/javascript">
+		var disqus_shortname = 'exitstatusone';
+		(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	</div>
+</div>
+
+
+
+		</div>
+	
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<p class="footer">
+						&copy; 2015 Brenton Earl. Powered by <a href="http://jekyllrb.com/" title="Jekyllrb">Jekyll</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	</body>
+</html>
