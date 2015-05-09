@@ -6,14 +6,14 @@
 	<atom:link href="http://www.exitstatusone.com/rss.xml" rel="self" type="application/rss+xml" />
 	<description>A compilation of information about various interesting and uninteresting topics.</description>
 	<language>en-us</language>
-	<pubDate>Wed, 03 Dec 2014 18:37:28 -0600</pubDate>
-	<lastBuildDate>Wed, 03 Dec 2014 18:37:28 -0600</lastBuildDate>
+	<pubDate>Sat, 09 May 2015 15:06:09 -0600</pubDate>
+	<lastBuildDate>Sat, 09 May 2015 15:06:09 -0600</lastBuildDate>
 
 	
 	<item>
 	<title>The Fuzz</title>
 	<link>http://www.exitstatusone.com/the-fuzz/</link>
-	<pubDate>Fri, 13 Dec 2013 00:00:00 -0600</pubDate>
+	<pubDate>Fri, 13 Dec 2013 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/the-fuzz</guid>
 	<description>&lt;p&gt;Fuzz testing is the process of sending random or semi random data as input to a piece of software, network protocol, or file format in order to discover design flaws.  The process is generally automated but can be semi-automated to give the auditor the ability to modify input to achieve faster results.  There are two forms of fuzzing, mutation based and generation based, and it can be utilized by means of white-box, grey-box or black-box testing.  Today I will be talking about grey-box testing using a generation-based fuzzer on a network based application.&lt;/p&gt;
@@ -23,7 +23,7 @@
 	<item>
 	<title>Urban Terror</title>
 	<link>http://www.exitstatusone.com/urban-terror/</link>
-	<pubDate>Sat, 16 Nov 2013 00:00:00 -0600</pubDate>
+	<pubDate>Sat, 16 Nov 2013 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/urban-terror</guid>
 	<description>&lt;p&gt;Way back in the day I played Doom, Quake 2, Quake 3, Action Quake, Medal of Honor: Allied Assault, Medal of Honor: Breakthrough.  I was a big fan of first person shooters.  Out of nostalgia I decided to start playing &lt;a href=&quot;http://www.urbanterror.info&quot;&gt;Urban Terror&lt;/a&gt; because it is based on the code from Quake 3 Arena.  Of course it has different player models and maps, but there are a few maps people recreated that I played in the previously mentioned first person shooters.  I used to be very strict about the realism involved in the games I played, but that all went away with my long time binge of MMO&#39;s. Some aspects of Urban Terror are realistic but Urban Terror plays more like Quake 2, which was not realistic at all.&lt;/p&gt;
@@ -33,7 +33,7 @@
 	<item>
 	<title>Block Port Scans and Brute Force Attacks</title>
 	<link>http://www.exitstatusone.com/block-port-scan-brute-force/</link>
-	<pubDate>Wed, 14 Aug 2013 00:00:00 -0500</pubDate>
+	<pubDate>Wed, 14 Aug 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/block-port-scan-brute-force</guid>
 	<description>&lt;p&gt;It is a guarantee that any internet facing desktop or server will be probed by attackers.  This discussion is geared toward Linux servers, but the same techniques can be applied to any other Linux installed device.  Assuming your server is accessible on public networks and it is running network services, it is important that you take the appropriate security precautions.  Port scans &lt;strong&gt;will&lt;/strong&gt; bombard your network card and brute force attempts will plague your log in services.  Sometimes a strong password just is not enough.  After all, brute force attempts and port scans do after use bandwidth and do cause your network to slow down.&lt;/p&gt;
@@ -43,7 +43,7 @@
 	<item>
 	<title>Responsive Web Design</title>
 	<link>http://www.exitstatusone.com/responsive-web-design/</link>
-	<pubDate>Fri, 09 Aug 2013 00:00:00 -0500</pubDate>
+	<pubDate>Fri, 09 Aug 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/responsive-web-design</guid>
 	<description>&lt;p&gt;According to statistics comparing Mobile device usage to Desktop usage from August 2012 to July 2013, Mobile device usage is up 5.18% in the United states.  Worldwide mobile device usage is up 1% more than that (6.26%).  What does this mean for web developers?  It means that designing web sites and web applications is ever increasingly more difficult as a result of the wide array of web site viewing options.  In other words, your web site needs to be just as presentable on a Desktop Computer Monitor as it would be on an IPhone or Android device screen.  It also means that images, advertising units, and even the code of your web page needs to be more compact than ever.  The page load time needs to be quick, because mobile device users are on the go and expect fast interaction with the web.  As a result of all of these new requirements, leading experts have established a new standard in web design.  Responsive Web Design.&lt;/p&gt;
@@ -53,7 +53,7 @@
 	<item>
 	<title>Convert Your Web Site To HTML5</title>
 	<link>http://www.exitstatusone.com/convert-web-site-from-html4-to-html5/</link>
-	<pubDate>Thu, 08 Aug 2013 00:00:00 -0500</pubDate>
+	<pubDate>Thu, 08 Aug 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/convert-web-site-from-html4-to-html5</guid>
 	<description>&lt;p&gt;The &lt;a href=&quot;http://www.w3.org/&quot;&gt;World Wide Web Consortium&lt;/a&gt; announced version 5 of the HTML standard in December, 2012.  During the time between last December and the present, HTML5 has gained a lot of traction. In the present state of the internet, HTML5 is supported by the most recent versions of Internet Explorer, Firefox, Google Chrome, Safari, Apple and Android Mobile web browsers.  HTML5 provides new tags that were created to match the needs of modern websites.  In my opinnion, Search Engine Optimization becomes much more manageable after converting your site to HTML5.  In adition, cascading style sheets are less of a headache.  Throughout the rest of this article I will build a case to help you decide whether your web site should be running HTML4 or HTML5.&lt;/p&gt;
@@ -63,7 +63,7 @@
 	<item>
 	<title>Cucumber, Capybara and Sinatra</title>
 	<link>http://www.exitstatusone.com/cucumber-capybara-with-sinatra/</link>
-	<pubDate>Sun, 04 Aug 2013 00:00:00 -0500</pubDate>
+	<pubDate>Sun, 04 Aug 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/cucumber-capybara-with-sinatra</guid>
 	<description>&lt;p&gt;Simply put, &lt;a href=&quot;http://en.wikipedia.org/wiki/Behavior-driven_development&quot;&gt;Behaviour Driven Development&lt;/a&gt; is the process of building a software from the Outside - In while providing software testing and basic documentation.  Creating a web application, or any program for that matter, from the outside-in, simplifies the process of developing software.  The process of software development always starts with communication between a consumer and a software developer to formulate a model.  Typically programmers have to find a way to describe technial programming jargon to consumers in order to explain how a piece of software will be developed.&lt;/p&gt;
@@ -73,7 +73,7 @@
 	<item>
 	<title>Basic Sinatra Blog</title>
 	<link>http://www.exitstatusone.com/sinatra-simple-blog/</link>
-	<pubDate>Sat, 03 Aug 2013 00:00:00 -0500</pubDate>
+	<pubDate>Sat, 03 Aug 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/sinatra-simple-blog</guid>
 	<description>&lt;p&gt;In my effort to learn &lt;a href=&quot;http://www.sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt; I decided to create a few simple web applications that I will later combine into one full web application.  For now I created a basic blog that reads data from a MySQL database and displays a feed on the home page for each article.  When clicked on, each article is displayed in its own window.  The typical basic blog.  I also added the ability to search the database for Articles.&lt;/p&gt;
@@ -83,7 +83,7 @@
 	<item>
 	<title>Jekyll: Related and Recent Posts Widget</title>
 	<link>http://www.exitstatusone.com/jekyll-related-posts-widget/</link>
-	<pubDate>Fri, 26 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Fri, 26 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/jekyll-related-posts-widget</guid>
 	<description>&lt;p&gt;Creating a web site that is easily navigated is important.  It is also important to make it easy for viewers to find content that is related to what they are reading.  I wrote a piece of code that can be nested inside a page or post, preferably a page/post that has a category set.  The code will check if the current page has a category and inserts links to other pages with the same category.  It also adds a list to the most recent posts on the web site.  I added it inside a div tag and floated it right, works well.&lt;/p&gt;
@@ -93,7 +93,7 @@
 	<item>
 	<title>Learn to build your own Jekyll Website</title>
 	<link>http://www.exitstatusone.com/example-jekyll-site-build/</link>
-	<pubDate>Thu, 25 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Thu, 25 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/example-jekyll-site-build</guid>
 	<description>&lt;p&gt;In my previous posts about Jekyll Static Site Generator I wrote about the different ways you can add features to your Jekyll blog.  This post is covers the steps to create a Jekyll Web Site from start to finish.  First, I will discuss the Jekyll configuration file.  Second, I will talk about how to add a layout for your pages and for your posts.  Then I will hash out the process of adding posts to your site.  Finally, I will explain how to build your site, start the ruby web server, and how to have the web server regenerate your site in the background as you add new content.&lt;/p&gt;
@@ -103,7 +103,7 @@
 	<item>
 	<title>Introducing: Sinatra Web Application Framework</title>
 	<link>http://www.exitstatusone.com/introducing-sinatra-web-application-framework/</link>
-	<pubDate>Wed, 24 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Wed, 24 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/introducing-sinatra-web-application-framework</guid>
 	<description>&lt;p&gt;&lt;a href=&quot;http://www.sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt; is great at saving time and effort by way of simplicity.  As an alternative to &lt;a href=&quot;http://rubyonrails.org/&quot;&gt;Ruby on Rails&lt;/a&gt;, &lt;a href=&quot;http://www.merbivore.com/&quot;&gt;Merb&lt;/a&gt;, and others, Sinatra is quite the toolkit.  Sinatra has the ability to launch web applications using many different web servers and run in multitudes of environments.  Just this week alone, I implemented some software that allows me to upload a post to my blog remotely over encrypted connections and another that processes the new post and automatically re-generates my &lt;a href=&quot;jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; static web site.   I have plans to create an Android web application that will allow me to create posts from my phone as well.  Further down the road I plan to implement a network monitoring suite using various open source tools with Sinatra as the web front end.  Yes, its that simple to write software with &lt;a href=&quot;http://www.sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt;.&lt;/p&gt;
@@ -113,7 +113,7 @@
 	<item>
 	<title>Jekyll -  Metadata, Navigation, and Archives</title>
 	<link>http://www.exitstatusone.com/jekyll-metadata-navigation-archives/</link>
-	<pubDate>Sun, 21 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Sun, 21 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/jekyll-metadata-navigation-archives</guid>
 	<description>&lt;p&gt;I have been using Jekyll for about a month.  I continually find ways to improve my code and add more functionality.  I added a few new things to make my job easier and also make the site easier to navigate.  The header of each web site contains what is called &quot;metadata&quot; that tells your web browser and search engines how to interpret it.  I programmed the site to automatically generate metadata so I will not have to add it.  I also added the ability to automatically generate a new links to the navigation menu as new pages are added to the site.  Finally, I added an Archvies page and Category page, because it is important for viewers to find older posts that are no longer listed on the front page.&lt;/p&gt;
@@ -123,7 +123,7 @@
 	<item>
 	<title>Medusa - Parallel Network Login Auditor</title>
 	<link>http://www.exitstatusone.com/medusa-log-in-auditor/</link>
-	<pubDate>Tue, 16 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Tue, 16 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/medusa-log-in-auditor</guid>
 	<description>&lt;p&gt;Medusa is a login credential auditor.  It has the ability to remotely brute force many different network protocols.  This article discusses the process of auditing the SSH (secure shell) protocol.  SSH is a service installed on systems that require access to the command line via a remote connection.  The remote system in this scenario is located on the local area network running the Metasploitable Virtual Machine.  Metasploitable was built by Rapid7, creator of the Metasploit Penetration Testing Framework.  The process discussed includes the usage of Virtual Box (Virtualization Software), nmap (Port Scanner), and Medusa (Brute Force Software).&lt;/p&gt;
@@ -133,7 +133,7 @@
 	<item>
 	<title>Crunch Word List Generator</title>
 	<link>http://www.exitstatusone.com/crunch-word-list-generator/</link>
-	<pubDate>Mon, 15 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Mon, 15 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/crunch-word-list-generator</guid>
 	<description>&lt;p&gt;&lt;a href=&quot;http://sourceforge.net/projects/crunch-wordlist/&quot;&gt;Crunch&lt;/a&gt; is a word list generator with a lot of functionality to create diverse word lists for a variety of tasks.  The most common task is to generate a list of passwords and user names used to test the strength of log in credentials for services that require a user to log in.  It has the ability to generate word lists based on a few different switches.&lt;/p&gt;
@@ -143,7 +143,7 @@
 	<item>
 	<title>Useful, Free Android Apps</title>
 	<link>http://www.exitstatusone.com/useful-android-apps/</link>
-	<pubDate>Fri, 12 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Fri, 12 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/useful-android-apps</guid>
 	<description>&lt;p&gt;Most of the really good Android Apps out there are not free.  Finding the really useful Android Apps can be a task, and takes a lot of time to achieve.  Aside from games and Apps like Facebook or twitter, there is a plethora of Apps out there that have many different uses.  The obvious ones are Apps like Facebook, Twitter and Youtube that are commonly built into Android OS and Apple based phones.    This article is meant to be an outline of the Apps I use from day to day for a variety of tasks.  Most of these Apps can be found in the Google Play store.&lt;/p&gt;
@@ -153,7 +153,7 @@
 	<item>
 	<title>Tools to Write, Edit, and Author for Linux</title>
 	<link>http://www.exitstatusone.com/linux-writing-tools/</link>
-	<pubDate>Thu, 11 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Thu, 11 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/linux-writing-tools</guid>
 	<description>&lt;p&gt;Most Writing and Editing is done from Mac or Windows.  What about those who use Linux that wish to Author a book, a short story or create a blog?  Most will say all that is needed is a word processor and a nice cup of tea.  Generally speaking, it is important to write in a creative and focused environment.  Structure is needed to be successful.  Thoughts need to be organized so that content can be methodically laid out.  A writer’s work area needs to compliment their personality and allow for ideas to flow freely.  For large projects, it is important to be organized as well.  There are a number of pieces of software that allow for such an environment.  I will outline the tools I use to stay structured, organized, creative, focused and successful.&lt;/p&gt;
@@ -163,7 +163,7 @@
 	<item>
 	<title>Anonymity</title>
 	<link>http://www.exitstatusone.com/anonymity/</link>
-	<pubDate>Wed, 10 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Wed, 10 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/anonymity</guid>
 	<description>&lt;p&gt;It is public knowledge that the NSA, among other Federal and State level agencies, have been monitoring Internet activity, voice, text and written digital communications.  I find it difficult to listen to the opinion of some people regarding this topic.  Some people say that they have nothing to hide, who cares if Big Brother is on the watch.  Others say they will not change a thing about their day to day habits.  A larger group of people are outraged and want to do everything they can to secure their digital habits and communications.  Freedom of speech is a fundamental part of being an American.  In this article I will outline what is being monitored, and how you can potentially become anonymous not only on the Internet or in your communications, but also out in the world.&lt;/p&gt;
@@ -173,7 +173,7 @@
 	<item>
 	<title>Jekyll: Pagination, Site Map and 404 Redirects</title>
 	<link>http://www.exitstatusone.com/jekyll-modifications/</link>
-	<pubDate>Tue, 09 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Tue, 09 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/jekyll-modifications</guid>
 	<description>&lt;p&gt;Previously I discussed the new site design and introduced the Jekyll static site generator.  As mentioned, the site was migrated from Wordpress to Jekyll.  Beginning a new Jekyll project generates a basic set of files with a predefined style sheet and site layout.  After modifying the layouts and adding pages, a few features were still missing.  Pagination, Site Maps, and a 404 redirect page were amongst the missing features.  Not difficult to implement, but I feel I should share my experience so that new Jekyll users can find more of the basics in one documented spot.  The &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; web site does document &lt;em&gt;how&lt;/em&gt; to use the API, but it does not show in depth guides on how to add certain features.  Searching the web yielded many methods of implementing said features and other features I had not thought to add.&lt;/p&gt;
@@ -183,7 +183,7 @@
 	<item>
 	<title>New Site Design</title>
 	<link>http://www.exitstatusone.com/new-site-design/</link>
-	<pubDate>Mon, 08 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Mon, 08 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/new-site-design</guid>
 	<description>&lt;p&gt;For several years Wordpress has been the content management system of choice for Exit Status one. Recently this web site moved from shared hosting to a virtual private server.  At this point it became important to minimize the memory footprint that Apache created in order to run Exit Status One.  After all, a VPS can be used for more than just web site hosting- and I intend to do so.  However, it is difficult to estimate how much system resources a web site uses when it is running on a shared host.  After analyzing the logs, bandwidth, system load, it was more than obvious that Wordpress was bogging down the rest of the running services.&lt;/p&gt;
@@ -193,7 +193,7 @@
 	<item>
 	<title>Proxy Chains – Anonymous Web Browsing</title>
 	<link>http://www.exitstatusone.com/proxy-chains-anonymous-web-browsing/</link>
-	<pubDate>Sat, 06 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Sat, 06 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/proxy-chains-anonymous-web-browsing</guid>
 	<description>&lt;p&gt;Proxychains is a tool that proxifies any program. It allows TCP and DNS tunneling through proxies and it has support for HTTP, SOCKS4 and SOCKS5 proxy servers. Proxychanins can mix different proxy types together in the same proxy chain. If you have HTTP and SOCKS proxies mixed in your configuration, proxychains will switch between protocols.  Proxychains makes it possible to access the internet from behind a restrictive firewall and hide your IP address. You can also use proxychains to access intranets from outside a local area network through a reverse proxy. It is possible to execute curl, wget, ssh, nmap, telnet, ftp, web browsers and vnc through proxychains.  The Proxychains web site can be found &lt;a href=&quot;http://proxychains.sourceforge.net/&quot;&gt;Here&lt;/a&gt;&lt;/p&gt;
@@ -203,7 +203,7 @@
 	<item>
 	<title>Android Operating System Vulnerabilities</title>
 	<link>http://www.exitstatusone.com/android-system-vulnerabilities/</link>
-	<pubDate>Sat, 06 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Sat, 06 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/android-system-vulnerabilities</guid>
 	<description>&lt;p&gt;Every part of a individual’s social life and financial life can be integrated into to their mobile device.  Banking, Communications and nearly every portion of personal information can be present within a smartphone or tablet.  Android Mobile devices are vulnerable to a number of different attacks.  Some of the vulnerabilities are Man in the Middle Attacks, Bluebugging, Bluesnarfing, Phishing, Denial of Service, Remote Code Execution, Buffer Overflows, Privilege Escalation, Keylogging and Backdoors.  Attacks against Android devices can be automated using the &lt;a href=&quot;http://www.bulbsecurity.com/smartphone-pentest-framework/&quot;&gt;Smartphone Pentest Framework&lt;/a&gt;, Metasploit, &lt;a href=&quot;https://www.trustedsec.com/downloads/social-engineer-toolkit/&quot;&gt;Social Engineering Toolkit&lt;/a&gt;, Ettercap an a variety of other tools.&lt;/p&gt;
@@ -213,7 +213,7 @@
 	<item>
 	<title>Free Music Archive</title>
 	<link>http://www.exitstatusone.com/free-music-archive/</link>
-	<pubDate>Fri, 05 Jul 2013 00:00:00 -0500</pubDate>
+	<pubDate>Fri, 05 Jul 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/free-music-archive</guid>
 	<description>&lt;p&gt;Recently I decided to start creating videos to go along with my posts.  Typically I do not like to speak in my videos (bad microphone) and I have been desperate to find some audio content to mix into each video to create a better viewing experience.  Many people would tell me to download a torrent, but I think I found an alternative .  Hopefully this will inspire podcasters, remixers, and anyone who likes to listen to music to utilize The Free Music Archive to enhance their audio experience.&lt;/p&gt;
@@ -223,7 +223,7 @@
 	<item>
 	<title>Penetration Testing with Metasploit 4 and Nessus 5.2</title>
 	<link>http://www.exitstatusone.com/penetration-testing-nessus-metasploit/</link>
-	<pubDate>Sat, 29 Jun 2013 00:00:00 -0500</pubDate>
+	<pubDate>Sat, 29 Jun 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/penetration-testing-nessus-metasploit</guid>
 	<description>&lt;p&gt;Metasploit is a powerful penetration testing tool. The web GUI is simplified penetration testing to the fullest. Just about anyone with a little bit of knowledge of operating systems and security can install Metasploit in order to start auditing networks. When coupled with Nessus Vulnerability Scanner, it is difficult to miss a security risk on a host within a network. Nessus has the ability to export its vulnerability reports into a format that can be imported into Metasploit. Using this imported data will allow Metasploit to recognize a larger spectrum of vulnerabilities on the target host.&lt;/p&gt;
@@ -233,7 +233,7 @@
 	<item>
 	<title>How to Jailbreak Droid 2 Global</title>
 	<link>http://www.exitstatusone.com/jailbreak-droid-2-global/</link>
-	<pubDate>Sat, 22 Jun 2013 00:00:00 -0500</pubDate>
+	<pubDate>Sat, 22 Jun 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/jailbreak-droid-2-global</guid>
 	<description>&lt;p&gt;In this article I will discuss the process of Jail breaking / rooting a Droid 2 Global.  This process should work on newer versions of the Motorola Droid as well.  I will explain how to gain root access using a Terminal Emulator from the Google Play Store.  Gaining root access to a smart phone allows the user to unlock the full capability of the phone and the installed Operating System.&lt;/p&gt;
@@ -243,7 +243,7 @@
 	<item>
 	<title>Install Debian on Droid 2 Global A956</title>
 	<link>http://www.exitstatusone.com/install-debian-on-droid-2-global-a956/</link>
-	<pubDate>Sat, 22 Jun 2013 00:00:00 -0500</pubDate>
+	<pubDate>Sat, 22 Jun 2013 00:00:00 -0600</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/install-debian-on-droid-2-global-a956</guid>
 	<description>&lt;p&gt;In this article I will walk through the process of bootstrapping Debian Linux with the armel architecture and “booting up” the image on an Android Operating System.  It works by telling the Android OS where the image is at and then executing the appropriate commands to attach to the image and chroot into a Bash shell as root.&lt;/p&gt;
@@ -253,7 +253,7 @@
 	<item>
 	<title>Cisco - Basic Router Configuration</title>
 	<link>http://www.exitstatusone.com/cisco-basic-router-configuration/</link>
-	<pubDate>Sat, 03 Mar 2012 00:00:00 -0600</pubDate>
+	<pubDate>Sat, 03 Mar 2012 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/cisco-basic-router-configuration</guid>
 	<description>&lt;p&gt;In this article I will be walking my readers through a quick tutorial on Basic Cisco Router configuration.  We will be setting the hostname, the priviledged exec mode password, the global configuration mode password, the console password, and the virtual terminal password.  This should give the reader a basic start to getting a Cisco router up and running. &lt;strong&gt;It is important to note that I am executing this tutorial with the use of the Packet Tracer program created by Cisco.&lt;/strong&gt;&lt;/p&gt;
@@ -263,7 +263,7 @@
 	<item>
 	<title>Cisco Basic Ripv2 Configuration</title>
 	<link>http://www.exitstatusone.com/cisco-basic-ripv2-configuration/</link>
-	<pubDate>Sat, 03 Mar 2012 00:00:00 -0600</pubDate>
+	<pubDate>Sat, 03 Mar 2012 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/cisco-basic-ripv2-configuration</guid>
 	<description>&lt;p&gt;In this article I will be walking my readers through the process of configuring a Cisco router to use the RIPv2 routing protocol.  RIP, or Routing Information Protocol, is a distance vector protocol that employs the hop count as a routing metric.  The maximum allowable hops for RIP is 15 hops.  For more information on RIP or RIPv2, please read RFC 1058, 1388, 2453, 2082, 4822, and 2080.  Wikipedia also has a great article covering RIP and RIPv2 in great detail: &lt;a href=&quot;http://en.wikipedia.org/wiki/Routing_Information_Protocol&quot;&gt;Wikipedia: Routing Information Protocol&lt;/a&gt;&lt;/p&gt;
@@ -273,7 +273,7 @@
 	<item>
 	<title>Cisco - Basic OSPF Configuration</title>
 	<link>http://www.exitstatusone.com/cisco-basic-ospf-configuration/</link>
-	<pubDate>Sat, 03 Mar 2012 00:00:00 -0600</pubDate>
+	<pubDate>Sat, 03 Mar 2012 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/cisco-basic-ospf-configuration</guid>
 	<description>&lt;p&gt;In this article I will be walking my readers through the process of configuring a Cisco router to use the OSPF routing protocol.  OSPF stands for Open Shortest Path First.  OSPF is an adaptive routing protocol for internet protocol networks.  OSPF uses link state routing and it uses the link state routing algorithm.  OSPF falls into the category of interior routing protocols. It operates as a single autonomous system.  For protocol specific information, please view RFC 2328 and RFC 5340.  For an in depth backgroun on the OSPF routing protocol, please view: &lt;a href=&quot;http://en.wikipedia.org/wiki/Open_Shortest_Path_First&quot;&gt;Wikipedia: OSPF&lt;/a&gt;.&lt;/p&gt;
@@ -283,7 +283,7 @@
 	<item>
 	<title>Debian Backports - Upgrade Iceweasel to a Newer Version</title>
 	<link>http://www.exitstatusone.com/backports-upgrade-iceweasel/</link>
-	<pubDate>Sat, 03 Mar 2012 00:00:00 -0600</pubDate>
+	<pubDate>Sat, 03 Mar 2012 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/backports-upgrade-iceweasel</guid>
 	<description>&lt;p&gt;In this article I will be discussing for my viewers how to upgrade Iceweasel (Iceweasel is Debian’s Mozilla Firefox package) from version 3.5.16-12 to version 10.0.2-1 on Debian Squeeze.  Like many, I get complaints from Gmail or Google Apps stating that my browser is old and I need a newer version of Firefox to gain all of Google’s site features.  Basically this tutorial will give you a more recent version of Mozilla Firefox so that you can have more modern web browsing on your Debian System.  We will be using a combination of repository sources to complete this task.&lt;/p&gt;
@@ -293,7 +293,7 @@
 	<item>
 	<title>Creating a Minimal Debian Live System</title>
 	<link>http://www.exitstatusone.com/create-minimal-debian-live-system/</link>
-	<pubDate>Wed, 29 Feb 2012 00:00:00 -0600</pubDate>
+	<pubDate>Wed, 29 Feb 2012 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/create-minimal-debian-live-system</guid>
 	<description>&lt;p&gt;In this article I will walk through the steps required to make a Minimal Debian Live CD.  I will show you how to add WiFi drivers, choose the kernel architecture, and add packages for each Live CD you are creating.  It is important to note that this is an introductory article on how to use the Debian Live live-build scripts.  &lt;a href=&quot;http://packages.debian.org/squeeze/live-build&quot;&gt;Live-build&lt;/a&gt; is the name of the package you will need to install in order to build Live CDs on your Debian operating system.  Another important fact to note is that I am using a Debian Squeeze system to build this Live CD.&lt;/p&gt;
@@ -303,7 +303,7 @@
 	<item>
 	<title>Hamster Time Tracker</title>
 	<link>http://www.exitstatusone.com/hamster-time-tracker/</link>
-	<pubDate>Sat, 25 Feb 2012 00:00:00 -0600</pubDate>
+	<pubDate>Sat, 25 Feb 2012 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/hamster-time-tracker</guid>
 	<description>&lt;p&gt;Recently I found the need to track my time due to recent work opportunities.  I originally thought it best to install one of the various time clock software that are available to Linux.  After searching around and much contemplating, I found &lt;a href=&quot;http://projecthamster.wordpress.com/&quot;&gt;Hamster&lt;/a&gt;.  Hamster is a simple desktop applet that embeds in the Gnome task bar.  I also found &lt;a href=&quot;http://userbase.kde.org/KTimeTracker&quot;&gt;KTimeTracker&lt;/a&gt; but I didn’t find it as appealing as Hamster.&lt;/p&gt;
@@ -313,7 +313,7 @@
 	<item>
 	<title>Dia - The Diagram Creation Tool</title>
 	<link>http://www.exitstatusone.com/dia/</link>
-	<pubDate>Sat, 25 Feb 2012 00:00:00 -0600</pubDate>
+	<pubDate>Sat, 25 Feb 2012 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/dia</guid>
 	<description>&lt;p&gt;For the passed few months I have been looking for software to create network diagrams for my CCNA class at ITT Tech.  I actually found the answer by accident while searching through my Google Reader feeds.  What I found is a free, open-source software called Dia. The best part is that Dia runs on Linux, OSX, and Windows.&lt;/p&gt;
@@ -323,7 +323,7 @@
 	<item>
 	<title>Upgrade Debian Squeeze to Backports Kernel Version 3.2</title>
 	<link>http://www.exitstatusone.com/upgrade-debian-squeeze-kernel-to-version-3.2/</link>
-	<pubDate>Mon, 20 Feb 2012 00:00:00 -0600</pubDate>
+	<pubDate>Mon, 20 Feb 2012 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/upgrade-debian-squeeze-kernel-to-version-3.2</guid>
 	<description>&lt;p&gt;Upon realizing there is a bug in my kernel suspend feature, which also seems to cause a kernel Stack errors, I decided to upgrade my Debian Squeeze Kernel from 2.6.32-5-amd64 to 3.2.0-0.bpo.1-amd64.  After completing this task, I figured I would share with the world how easy it is to get a newer kernel than what Debian Squeeze offers in the regular repos.  I used the Debian Backports repo to pull this newer kernel down.&lt;/p&gt;
@@ -333,7 +333,7 @@
 	<item>
 	<title>Install Cisco Packet Tracer on Debian 64 bit</title>
 	<link>http://www.exitstatusone.com/cisco-packet-tracer-debian-64bit/</link>
-	<pubDate>Wed, 15 Feb 2012 00:00:00 -0600</pubDate>
+	<pubDate>Wed, 15 Feb 2012 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/cisco-packet-tracer-debian-64bit</guid>
 	<description>&lt;p&gt;I am taking a class that requires me to use Cisco&#39;s Packet Tracer to do labs.  I grew tired of being forced to boot into Windows 7 to do class work, as I would rather stay using Linux for all of my needs.  After trying to install the Windows .exe in wine and receiving errors, and shortly after a crash, I found: &lt;a href=&quot;http://www.ubuntubuzz.com/2011/05/installing-and-running-cisco-packet.html&quot;&gt;Installing Cisco Packet Tracer 5.3 in Ubuntu&lt;/a&gt;.  This tutorial, however, did not meet 100% of my needs.  I am running Debian Squeeze on AMD64, so the binary package gave the error after the EULA:&lt;/p&gt;
@@ -343,7 +343,7 @@
 	<item>
 	<title>Full CLI Desktop in Debian Linux</title>
 	<link>http://www.exitstatusone.com/command-line-desktop-debian/</link>
-	<pubDate>Sun, 12 Feb 2012 00:00:00 -0600</pubDate>
+	<pubDate>Sun, 12 Feb 2012 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/command-line-desktop-debian</guid>
 	<description>&lt;p&gt;Let&#39;s say you wanted to do away with Gnome, KDE, Xfce, LXDE, or any other GUI based desktop environment on your Debian system. There are many reasons somebody would want to do this.... save disk space, novelty, minimalism, or you simply want to use a different interface.&lt;/p&gt;
@@ -353,7 +353,7 @@
 	<item>
 	<title>Broadcom 4313 WiFi Debian Linux</title>
 	<link>http://www.exitstatusone.com/broadcom-4313-wifi-debian-linux/</link>
-	<pubDate>Wed, 01 Feb 2012 00:00:00 -0600</pubDate>
+	<pubDate>Wed, 01 Feb 2012 00:00:00 -0700</pubDate>
 	<author>Brenton Earl</author>
 	<guid>http://www.exitstatusone.com/broadcom-4313-wifi-debian-linux</guid>
 	<description>&lt;p&gt;&lt;strong&gt;Background:&lt;/strong&gt;  Debian Linux does not come with working wireless card
