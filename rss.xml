@@ -6,9 +6,19 @@
 	<atom:link href="http://www.exitstatusone.com/rss.xml" rel="self" type="application/rss+xml" />
 	<description>A compilation of information about various interesting and uninteresting topics.</description>
 	<language>en-us</language>
-	<pubDate>Mon, 18 May 2015 01:41:37 -0600</pubDate>
-	<lastBuildDate>Mon, 18 May 2015 01:41:37 -0600</lastBuildDate>
+	<pubDate>Mon, 18 May 2015 18:38:47 -0600</pubDate>
+	<lastBuildDate>Mon, 18 May 2015 18:38:47 -0600</lastBuildDate>
 
+	
+	<item>
+	<title>The Switch To Slackware</title>
+	<link>http://www.exitstatusone.com/the-switch-to-slackware/</link>
+	<pubDate>Mon, 18 May 2015 00:00:00 -0600</pubDate>
+	<author>Brenton Earl</author>
+	<guid>http://www.exitstatusone.com/the-switch-to-slackware</guid>
+	<description>&lt;p&gt;For the majority of my Linux user experience I have been a Debian Linux user.  The first distribution of Linux I ever used was Damn Small Linux back in 2002.  Following that I tried an installation of Gentoo Linux based on the recommendation of a friend of mine from school.  Being a complete novice to Linux, I failed miserably at installing Gentoo.  After that I tried out (in no particular order) Slackware, Fedora, Gentoo (again), Ubuntu, and finally Debian.  I fell in love with the Debian Linux distribution almost immediately.  I have been a hard core Debian user since 2004 until now.&lt;/p&gt;
+</description>
+	</item>
 	
 	<item>
 	<title>Ruby and Nmap</title>
