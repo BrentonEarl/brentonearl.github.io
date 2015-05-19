@@ -5,10 +5,10 @@
 		<meta charset=utf-8>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-		<title>Exit Status One - Debian Backports - Upgrade Iceweasel to a Newer Version</title>
+		<title>Exit Status One - The Switch To Slackware</title>
 		<meta name="author" content="Brenton Earl" />
 		
-		<meta name="description" content="Explanation of how to upgrade Iceweasel (Firefox) using the Debian Backport mirrors.  Good example of how to use the Debian Backports for any other type of software upgrade, in any release of Debian." />
+		<meta name="description" content="The process of how I switched from Debian to Slackware, discussing the why and the how." />
 		
 		
 		<meta name="keywords" content="linux" />
@@ -90,10 +90,10 @@
 					<div class="row">
 				<div class="col-sm-8">
 					<article itemscope itemtype="http://schema.org/Article">
-						<h4 itemprop="name">Debian Backports - Upgrade Iceweasel to a Newer Version</h4>
+						<h4 itemprop="name">The Switch To Slackware</h4>
 						<p>
-							<span itemprop="datePublished" content="03-03-2012">							
-								03-03-2012
+							<span itemprop="datePublished" content="05-18-2015">							
+								05-18-2015
 							</span>
 							 by 
 							<a href="https://plus.google.com/+Exitstatusone" rel="publisher">
@@ -103,52 +103,36 @@
 							</a>
 						</p>
 						
-	<p>This article may be <i><mark>outdated...</mark></i></p>
-
 
 						<p>
 						Category <a href="/categories/linux/">linux</a>
 						</p>
 						<span itemprop="articleBody">
-							<p>In this article I will be discussing for my viewers how to upgrade Iceweasel (Iceweasel is Debian’s Mozilla Firefox package) from version 3.5.16-12 to version 10.0.2-1 on Debian Squeeze.  Like many, I get complaints from Gmail or Google Apps stating that my browser is old and I need a newer version of Firefox to gain all of Google’s site features.  Basically this tutorial will give you a more recent version of Mozilla Firefox so that you can have more modern web browsing on your Debian System.  We will be using a combination of repository sources to complete this task.</p>
+							<p>For the majority of my Linux user experience I have been a Debian Linux user.  The first distribution of Linux I ever used was Damn Small Linux back in 2002.  Following that I tried an installation of Gentoo Linux based on the recommendation of a friend of mine from school.  Being a complete novice to Linux, I failed miserably at installing Gentoo.  After that I tried out (in no particular order) Slackware, Fedora, Gentoo (again), Ubuntu, and finally Debian.  I fell in love with the Debian Linux distribution almost immediately.  I have been a hard core Debian user since 2004 until now.</p>
 
-<p><strong>Step 1:</strong></p>
+<p>When I first discovered Debian, I found it to be user friendly, compact, and stable.  Over the years the Debian community has grown immensely, and that friendliness I valued disappeared with the masses of new users.  For the passed year or so I ran Debian Jessie while it was the Testing branch.  I noticed that Debian was no longer the compact installation it once was with all the new and extra dependencies.  Upon reinstalling I found it very much a struggle to strip down a Debian system without removing large quantities of the system.  All that remains is Debian's stability.  That is great and all except the software in the Stable branch is so old, you are forced to run the Testing or Unstable branch to do anything of consequence.  This is great for a server environment, but I have no servers at the moment and the only machine I own is a laptop.  I want to be able to use my laptop.  I do not want to fight the battle of dependencies while trying to install the newer software I need to develop other software, or to play media, or to play the latest games.</p>
 
-<p>First you need to edit your repositories.  I like to do this using a terminal window and vim.  You can also use gedit, nano, or any other text editor to do this.  You will need to have sudo or root (su) privileges.</p>
+<p>Last weekend I decided I was going to do something about my frustration and move to a new distribution.  I decided I was going to install and use whichever distribution I picked for a few days in a virtual machine.  I would install and configure this new distribution to function as my stand in Desktop.  I tried this with a few distributions, namely, Free-BSD and Slackware.  Both distributions ran smoothly in the virtual environments, but only one was able to recognize enough of the hardware on my now 5 year old laptop in order to complete a full installation.  Free-BSD was scratched off the list and I was left with Slackware.  As a result I have fallen in love with a new distribution to me, which just so happens to be the oldest active Linux distribution out there.</p>
 
-<ul>
-<li>sudo vim /etc/apt/sources.list</li>
-</ul>
+<p>So far I have had a few scuffles with Slackware because of my poor knowledge of the Slackware way.  I ended up installing Slackware64 14.1.  My laptop is purring like a kitten after a 3.18.13 Linux kernel compile, configuring Xorg, installing multilib support, and acclimating to Slackware's package management.  Not only is my laptop running smoothly, but it is running faster than it did with Debian.  I even have hardware that stopped working for unapprent reason in Debian, working again.  My full installation of Slackware is at 11GB- 5GB less disk space used than Debian prior to wiping my hard disk.  From now on I highly recommend that everyone new to Linux check out Slackware.  I also recommend that veteran Linux users check out Slackware as well.</p>
 
+<p>Please head over to docs.slackware.com and read <a href="http://docs.slackware.com/slackware:philosophy">The Slackware Way</a>.  You should also read <a href="http://www.slackbook.org/">The Slackware Essentials</a> book if you are new to Slackware or to Linux.  I also recommend joining irc.freenode.net and entering the #slackware channel.  You will find helpful and friendly people that are as refreshing as the Slackware Linux distribution.</p>
 
-<p>Add the following lines to your sources.list file and save your work.</p>
+<p>With that said, I may have strayed a bit and become carried away with my praise of Slackware.  In case my little rant appealed to you, below are additional resources for Slackware, as well as a screen shot of my current Slackware desktop running Xfce with composition enabled.</p>
 
-<ul>
-<li>deb http://backports.debian.org/debian-backports squeeze-backports main contrib non-free</li>
-<li>deb http://mozilla.debian.net/ squeeze-backports iceweasel-release</li>
-</ul>
+<p>(Click image to enlarge)</p>
 
+<p><a href="/assets/posts/Screenshot_Slackware_14_1.png" /><img src="/assets/posts/Screenshot_Slackware_14_1.png" width="300" height="175" /></a></p>
 
-<p><strong>Step 2:</strong></p>
-
-<p>Next you will need to update apt or aptitude’s indices.  Do this by running an sudo apt-get update or sudo aptitude update.  You will see apt/aptitude do its thing, resulting in a complaint stating you do not have the repository archive key for the mozilla debian repository.  You can fix this by installing the package pkg-mozilla-archive-keyring.</p>
+<h4>Article Resources</h4>
 
 <ul>
-<li>sudo aptitude update</li>
-<li>sudo aptitude install pkg-mozilla-archive-keyring</li>
+<li><a href="http://www.slackware.com/">Slackware Web Site</a></li>
+<li><a href="http://www.linuxquestions.org/questions/slackware-14/">Slackware Forums</a></li>
+<li><a href="http://docs.slackware.com/">The Slackware Documentation Project</a></li>
+<li><a href="http://www.slackware.com/getslack/">Get Slack!</a></li>
 </ul>
 
-
-<p><strong>Step 3:</strong></p>
-
-<p>Finally you will be installing the newer version of Iceweasel, version 10.0.2-1.  Do this by running sudo aptitude install -t squeeze-backports iceweasel.  You should now have the newest version of Iceweasel on your system.</p>
-
-<ul>
-<li>sudo aptitude install -t squeeze-backports iceweasel</li>
-</ul>
-
-
-<p>This completes this tutorial on upgrading Iceweasel on your Debian Squeeze System.  As always, please send an email with questions or concerns.  I will do my best to answer your questions.</p>
 
 						</span>
 					</article>
@@ -160,125 +144,125 @@
 		
 			
 				
-					<a class="list-group-item" href="/the-switch-to-slackware/" title="The Switch To Slackware">The Switch To Slackware</a>
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
 				
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-			
+					<a class="list-group-item" href="/backports-upgrade-iceweasel/" title="Debian Backports - Upgrade Iceweasel to a Newer Version">Debian Backports - Upgrade Iceweasel to a Newer Version</a>
 				
 			
 		
@@ -333,7 +317,7 @@
 				</div>
 			</div>
 			<br /><br />
-<p><strong>If you feel the information here is outdated or incorrect, you can submit a <a href="https://github.com/BrentonEarl/brentonearl.github.io/edit/source/_posts/2012-03-03-backports-upgrade-iceweasel.markdown">Pull Request on Github!</a></strong></p>
+<p><strong>If you feel the information here is outdated or incorrect, you can submit a <a href="https://github.com/BrentonEarl/brentonearl.github.io/edit/source/_posts/2015-05-18-the-switch-to-slackware.markdown">Pull Request on Github!</a></strong></p>
 
 			
 <div class="row">
