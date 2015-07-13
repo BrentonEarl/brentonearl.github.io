@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Proxy Chains – Anonymous Web Browsing
+title: Proxy Chains - Anonymous Web Browsing
 date: 2013-07-06
 category: Security
 description: "Learn how to become Anonymous in your Web Browser.  Software used is named Proxychains."
