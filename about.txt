@@ -1,0 +1,29 @@
+About the Author
+-----------------
+
+.2015-07-22: Welcome to my site!
+****
+My name is 'Brenton Earl'.  Here I will share a brief background 
+covering my skill set and my philosophy about Technology.
+	
+My education involves Computer Networking and System Administration.  
+I have professional experience administering Debian and CentOS 
+servers on a large scale basis.  My training and experience include 
+best practice security techniques with Linux Systems, Windows systems, 
+and small to medium scale networks.
+
+I prefer the freedom offered by Open Source software, so you will not catch me using a proprietary Operating System. I believe that software should be free.  I also believe that the very nature of Open Source communites 
+allow the Information Technology community to grow.  Open Source 
+allows IT to grow in ways that would never be possible if society 
+strictly relied on proprietary software companies.
+
+I enjoy expanding my horizons.  For this very reason I make an effort 
+to involve myself in various Open Source projects to contribute in any 
+way my skill set allows.  I do not contribute because I wish to 
+receive credit or because I receive any type of compensation.  I do what 
+I do because of my passion for technology and to sate my hunger to help 
+others in any way I can.  Contributing to Open Source projects allows 
+me to feel a sense of pride in what I know and in my work.  
+
+'-Brenton Earl'
+****

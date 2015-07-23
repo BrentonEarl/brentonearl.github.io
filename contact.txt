@@ -1,0 +1,17 @@
+Contact
+--------
+
+.Twitter
+****
+* https://twitter.com/BrentonLeeEarl[@BrentonLeeEarl]
+****
+
+.LinkedIn
+****
+* https://www.linkedin.com/in/brentonearl[My LinkedIn Profile]
+****
+
+.GitHub
+****
+* https://github.com/BrentonEarl[My Github Profile]
+****

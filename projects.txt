@@ -1,0 +1,37 @@
+Projects
+---------
+
+.Blogging Software
+****
+Some time ago I created a minimalistic blogging software.  It was my 
+first real attempt at developing a Ruby based web application.  I 
+titled it *Blotter*.  It really can easily be adapted to multiple uses 
+aside from blogging.  It includes authentication and a number of other 
+features.
+
+https://github.com/BrentonEarl/Blotter[Blotter Blogging Software]
+****
+
+Contributions
+--------------
+
+.SlackBuilds Repository
+****
+I maintain and test a number of *SlackBuilds* for the Slackware 
+distribution Slackbuilds.org repository.  Slackbuilds.org is a third 
+party software repository that contains build scripts to aid in 
+compiling software sources into binaries for the Slackware 
+distribution.
+
+https://github.com/BrentonEarl/es1-slackware-stuff[My SlackBuilds]
+https://github.com/willysr/slackbuilds[SBo GIT Repository]
+****
+
+.Slpkg Package Manager
+****
+*Slpkg* is a user-friendly pacage manager for Slackware installations.  
+This software boasts automatic dependency resolution. Many GNU/Linux 
+users consider dependency resolution an important feature for their 
+Operating System.  Mostly I test this software and report bugs to aid 
+in the development process.
+****

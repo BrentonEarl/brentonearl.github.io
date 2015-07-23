@@ -1,4 +1,0 @@
-User-Agent: *
-Disallow: 
-
-Sitemap: http://exitstatusone.com/sitemap.xml
