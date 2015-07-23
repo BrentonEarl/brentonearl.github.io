@@ -1,7 +1,7 @@
 Projects
 ---------
 
-.Blogging Software
+.Blotter Blogging Software
 ****
 Some time ago I created a minimalistic blogging software.  It was my 
 first real attempt at developing a Ruby based web application.  I 
@@ -12,10 +12,7 @@ features.
 https://github.com/BrentonEarl/Blotter[Blotter Blogging Software]
 ****
 
-Contributions
---------------
-
-.SlackBuilds Repository
+.My SlackBuilds Repository
 ****
 I maintain and test a number of *SlackBuilds* for the Slackware 
 distribution Slackbuilds.org repository.  Slackbuilds.org is a third 
@@ -24,8 +21,10 @@ compiling software sources into binaries for the Slackware
 distribution.
 
 https://github.com/BrentonEarl/es1-slackware-stuff[My SlackBuilds]
-https://github.com/willysr/slackbuilds[SBo GIT Repository]
 ****
+
+Contributions
+--------------
 
 .Slpkg Package Manager
 ****
@@ -34,4 +33,6 @@ This software boasts automatic dependency resolution. Many GNU/Linux
 users consider dependency resolution an important feature for their 
 Operating System.  Mostly I test this software and report bugs to aid 
 in the development process.
+
+https://github.com/dslackw/slpkg[Slpkg Repository]
 ****
