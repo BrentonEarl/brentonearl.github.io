@@ -1,7 +1,7 @@
 About the Author
 -----------------
 
-.2015-07-22: Welcome to my site!
+.Welcome to my site!
 ****
 My name is 'Brenton Earl'.  Here I will share a brief background 
 covering my skill set and my philosophy about Technology.

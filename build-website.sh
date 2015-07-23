@@ -1,7 +1,7 @@
 #!/bin/sh
 
-VERS="0.1"
-DATE="2015-07-21"
+VERS="1.0"
+DATE="2015-07-22"
 
 # Leave the desired layout uncommented.
 #LAYOUT=layout1      # Tables based layout.
