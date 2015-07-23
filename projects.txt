@@ -42,3 +42,14 @@ in the development process.
 
 https://github.com/dslackw/slpkg[Slpkg Repository]
 ****
+
+.LQ ISO - LinuxQuestions.org
+****
+*LQ ISO* is a web site dedicated to providing an accessible means for
+GNU/Linux users to download new releases of up and coming distributions. 
+I am one of the maintainers that updates the site with reviews, download 
+mirrors, and other information about freshly released GNU/Linux 
+distributions.
+
+http://iso.linuxquestions.org/[LQ ISO @ LinuxQuestions.org]
+****
