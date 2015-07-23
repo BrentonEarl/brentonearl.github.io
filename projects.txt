@@ -34,7 +34,7 @@ Contributions
 
 .Slpkg Package Manager
 ****
-*Slpkg* is a user-friendly pacage manager for Slackware installations.  
+*Slpkg* is a user-friendly package manager for Slackware installations.  
 This software boasts automatic dependency resolution. Many GNU/Linux 
 users consider dependency resolution an important feature for their 
 Operating System.  Mostly I test this software and report bugs to aid 
