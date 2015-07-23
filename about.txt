@@ -1,3 +1,9 @@
+:keywords:	  Linux, Ruby, Python, Web Development, Security, Technology
+:description: Exit Status One is a compilation of information about +
+			  Brenton Earl, his life, his projects, and how to get in +
+			  contact with him.  Brenton Earl is an open source +
+			  developer working with Linux, Ruby, and Python.
+
 About the Author
 -----------------
 
