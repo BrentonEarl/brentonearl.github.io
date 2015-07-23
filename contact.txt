@@ -1,6 +1,11 @@
 Contact
 --------
 
+.Email
+****
+* brent -at- exitstatusone [dot] com
+****
+
 .Twitter
 ****
 * https://twitter.com/BrentonLeeEarl[@BrentonLeeEarl]
