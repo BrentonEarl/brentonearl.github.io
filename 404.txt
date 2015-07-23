@@ -1,0 +1,10 @@
+Page Not Found!
+---------------
+
+.404: Page Not Found
+****
+Regretfully you have reached a page that no longer exists.  Please 
+visit the site index for more information.
+
+http://exitstatusone.com/index.html[Click here for Site Index]
+****

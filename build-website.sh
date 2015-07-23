@@ -13,3 +13,4 @@ $ASCIIDOC_HTML index.txt
 $ASCIIDOC_HTML about.txt
 $ASCIIDOC_HTML projects.txt
 $ASCIIDOC_HTML contact.txt
+$ASCIIDOC_HTML 404.txt
