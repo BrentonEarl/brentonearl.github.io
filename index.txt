@@ -18,7 +18,7 @@ Github repository.  More news on this at a later date.
 
 I have also decided to move from http://jekyllrb.com/[Jekyll] to 
 http://asciidoc.org/index.html[AsciiDoc].  Jekyll has been a great 
-asset in assiting a simplified blogging process.  However, in the future 
+asset in assisting a simplified blogging process.  However, in the future 
 the functionality of the site will no longer require all of what Jekyll 
 provides.  AsciiDoc will allow me to simplify site development in ways 
 that Jekyll will not.
