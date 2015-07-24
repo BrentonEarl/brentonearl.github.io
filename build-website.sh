@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERS="1.7"
+VERS="2.0"
 DATE="2015-07-23"
 
 # Leave the desired layout uncommented.
