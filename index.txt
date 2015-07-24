@@ -6,6 +6,25 @@
 
 News
 -----
+.2015-07-23:  Old Site Content 
+****
+As stated previously, this site has undergone major changes.  For 
+those readers who wish to access the old site content, it can be 
+found
+https://github.com/BrentonEarl/brentonearl.github.io/tree/old_source[here].
+As long as GitHub remains in existence, all of this content will 
+continue to be available.  To use this source you can view 
+articles in the _posts directory as plain text in any text editor.  
+Or if you choose to, you can install Ruby and 
+http://jekyllrb.com/[Jekyll] to run the site on your computer.
+
+To download it, please use the git command shown below.
+
+----
+git clone -b old_source --single-branch https://github.com/BrentonEarl/brentonearl.github.io.git
+----
+****
+
 .2015-07-22:  Major Site Update
 ****
 After several years of blogging, I've decided to call it quits.  I 
@@ -25,6 +44,4 @@ that Jekyll will not.
 
 The http://exitstatusone.com[Exit Status One] web site will continue to 
 be available at this domain.
-
-'Brenton Earl'
 ****
