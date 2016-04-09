@@ -14,3 +14,4 @@ $ASCIIDOC_HTML about.txt
 $ASCIIDOC_HTML projects.txt
 $ASCIIDOC_HTML contact.txt
 $ASCIIDOC_HTML 404.txt
+$ASCIIDOC_HTML howto/Slackware-Grsecurity-How-To.txt
