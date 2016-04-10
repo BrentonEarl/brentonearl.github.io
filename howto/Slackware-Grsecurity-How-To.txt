@@ -1,4 +1,4 @@
-:keywords:    Linux, Ruby, Python, Web Development, Security, Technology
+:keywords:    Linux, Security, Kernel, Grsecurity, PaX, Technology
 :description: Exit Status One is a compilation of information about +
               Brenton Earl, his life, his projects, and how to get in +
               contact with him.  Brenton Earl is a free lance  +
@@ -27,7 +27,8 @@ compile a custom kernel in Slackware:
 
 http://docs.slackware.com/slackbook:linux_kernel
 
-.Acquiring Kernel Source
+Acquiring Kernel Source
+------------------------
 The kernel source should already be installed in /usr/src/.  In this case, it
 is in /usr/src/linux (symbolic link) or in /usr/src/linux-4.4.6.  This source
 code is ready to use as is with grsecurity.
@@ -39,7 +40,8 @@ packages can also be found on your Slackware installation medium.
 http://mirrors.slackware.com/slackware/
 
 
-.Obtaining the Grsecurity Patch
+Obtaining the Grsecurity Patch
+-------------------------------
 There are three things you need to acquire.
 
 1.  The grsecurity kernel patch
@@ -54,7 +56,8 @@ Please also consider verifying your download with the available GPG signature.
 https://grsecurity.net/download.php
 
 
-.Patching your Kernel
+Patching your Kernel
+--------------------
 Assuming that you saved the grsecurity patch to /usr/src, run:
 
 cd /usr/src/linux
@@ -81,7 +84,8 @@ documentation discussing this topic futher here:
 https://en.wikibooks.org/wiki/Grsecurity/Configuring_and_Installing_grsecurity#Configuring_the_Kernel
 
 
-.Build and Install your Patched  Kernel
+Build and Install your Patched  Kernel
+--------------------------------------
 In order to compile your kernel you must run the following:
 
 cd /usr/src/linux
@@ -100,7 +104,8 @@ points to remember:
 
 lilo -v
 
-.Obtaining the Grsecurity Administrative Utilities
+Obtaining the Grsecurity Administrative Utilities
+--------------------------------------------------
 There are a few things to do once you are booted into your newly created
 grsecurity kernel.  There will be some configurations to do so that your
 system is free of hiccups.  First though you need to download the following
