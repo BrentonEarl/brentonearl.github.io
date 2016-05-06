@@ -1,0 +1,12 @@
+# Site settings
+title: Exit Status One
+email: brent-at-exitstatusone[dot]com
+description: A compilation of information about myself, technology, my projects, 
+  and how to contact me.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://exitstatusone.com" # the base hostname & protocol for your site
+twitter_username: BrentonLeeEarl
+github_username:  BrentonEarl
+
+# Build settings
+markdown: rdiscount
