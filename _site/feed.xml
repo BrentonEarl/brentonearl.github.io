@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exit Status One</title>
+    <description>A compilation of information about myself, technology, my projects, and how to contact me.</description>
+    <link>http://exitstatusone.com/</link>
+    <atom:link href="http://exitstatusone.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 06 May 2016 09:58:32 -0600</pubDate>
+    <lastBuildDate>Fri, 06 May 2016 09:58:32 -0600</lastBuildDate>
+    <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>Back to Jekyll</title>
+        <description>&lt;p&gt;I wanted to switch back to Jekyll for quite some time now.  Using
+AsciiDoc for my web site proved to be very low maintenance and required
+very little effort to add new content.  I am going back to Jekyll
+because I want to see how the project has progressed since I last used
+it.  AsciiDoc is great but it is very boring to use!&lt;/p&gt;
+
+&lt;p&gt;I plan to use this version of the site as a blog.  I will post updates
+or tutorials depending on what project I am working on, and what I think
+may be of interest to others.&lt;/p&gt;
+
+&lt;p&gt;I will not be bringing back old site content from my previous jekyll
+site.  There have been far too many advancements and changes with Jekyll
+since I used that source code.  You can find the old source code on my
+GitHub account If you are interested in looking it over.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/BrentonEarl/brentonearl.github.io&quot;&gt;My GitHub
+Account&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 06 May 2016 08:40:23 -0600</pubDate>
+        <link>http://exitstatusone.com/update/2016/05/06/Back-to-Jekyll.html</link>
+        <guid isPermaLink="true">http://exitstatusone.com/update/2016/05/06/Back-to-Jekyll.html</guid>
+        
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>
