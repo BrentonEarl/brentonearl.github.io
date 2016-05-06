@@ -1,8 +1,9 @@
 # Site settings
 title: Exit Status One
 email: brent-at-exitstatusone[dot]com
+keywords: Linux, Slackware, Bash, Ruby, Technology, News, Security, Networking
 description: A compilation of information about myself, technology, my projects, 
-  and how to contact me.
+  and a way to contact me.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://exitstatusone.com" # the base hostname & protocol for your site
 twitter_username: BrentonLeeEarl
@@ -10,3 +11,6 @@ github_username:  BrentonEarl
 
 # Build settings
 markdown: rdiscount
+
+# Stuff to exclude when jekyll builds
+exclude: [Gemfile, Gemfile.lock, README.md, Rakefile]
