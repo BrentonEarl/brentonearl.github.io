@@ -5,9 +5,68 @@
     <description>A compilation of information about myself, technology, my projects, and a way to contact me.</description>
     <link>http://exitstatusone.com/</link>
     <atom:link href="http://exitstatusone.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 06 May 2016 10:52:19 -0600</pubDate>
-    <lastBuildDate>Fri, 06 May 2016 10:52:19 -0600</lastBuildDate>
-    <generator>Jekyll v3.0.5</generator>
+    <pubDate>Sun, 03 Jul 2016 13:24:32 -0600</pubDate>
+    <lastBuildDate>Sun, 03 Jul 2016 13:24:32 -0600</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Slackware 14.2 released</title>
+        <description>&lt;p&gt;The long awaited release of Slackware Linux 14.2 is finally here.  I
+know I am a bit late with my post.  I have been very busy updating my
+systems at home and for clients.  This includes my 2 Raspberry Pi&#39;s, old
+Dell Inspiron laptop, My ZaReason Stratta 7440, and several virtual
+private servers.&lt;/p&gt;
+
+&lt;p&gt;Everything is extremely stable.  I guess I forgot what it meant to run a
+stable system due to the fact that the last couple years I was either
+tracking Debian Sid/Unstable or Slackware -current (Slackware
+development branch).&lt;/p&gt;
+
+&lt;p&gt;You are missing out if you are not running Slackware on at least one of
+your systems!  Slackware provides a systemd free environment, stable
+software, and empowers the user to take advantage of complete control of
+the operating system.&lt;/p&gt;
+
+&lt;p&gt;The ChangeLog.txt for Slackware 14.2...&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Thu Jun 30 20:26:57 UTC 2016
+Slackware 14.2 x86_64 stable is released!&lt;/p&gt;
+
+&lt;p&gt;The long development cycle (the Linux community has lately been living
+in &quot;interesting times&quot;, as they say) is finally behind us, and we&#39;re
+proud to announce the release of Slackware 14.2.  The new release
+brings many updates and modern tools, has switched from udev and eudev
+(no systemd), and adds well over a hundred new packages to the system.
+Thanks to the team, the upstream developers, the dedicated Slackware
+community, and everyone else who pitched in to help make this release
+a reality.&lt;/p&gt;
+
+&lt;p&gt;The ISOs are off to be replicated, a 6 CD-ROM 32-bit set and a
+dual-sided 32-bit/64-bit x86/x86_64 DVD.  Please consider supporting
+the Slackware project by picking up a copy from store.slackware.com.
+We&#39;re taking pre-orders now, and offer a discount if you sign up for a
+subscription.&lt;/p&gt;
+
+&lt;p&gt;Have fun :-)&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Links to stuff:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.slackware.com/&quot;&gt;Slackware.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://store.slackware.com&quot;&gt;Slackware Store&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mirrors.slackware.com/slackware/slackware-14.2/ChangeLog.txt&quot;&gt;x86&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mirrors.slackware.com/slackware/slackware64-14.2/ChangeLog.txt&quot;&gt;x86_64&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 03 Jun 2016 12:52:00 -0600</pubDate>
+        <link>http://exitstatusone.com/linux/2016/06/03/Slackware-14-2-released.html</link>
+        <guid isPermaLink="true">http://exitstatusone.com/linux/2016/06/03/Slackware-14-2-released.html</guid>
+        
+        
+        <category>Linux</category>
+        
+      </item>
     
       <item>
         <title>Back to Jekyll</title>
